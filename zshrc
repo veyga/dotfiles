@@ -111,6 +111,7 @@ alias lal="ls -al"
 alias chrome="google-chrome-stable"
 alias pacmanremoveorphans="sudo pacman -Rns $(pacman -Qtdq)"
 
+bindkey -v
 
 export BROWSER=/usr/bin/google-chrome-stable
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
