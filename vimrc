@@ -32,4 +32,9 @@ map <leader>w :w<CR>
 map <leader>q :q<CR>
 map <leader>qq :q!<CR>
 map <leader>wq :wq<CR>
+map <leader>wall :wall
 
+" Edit multiple files without saving
+set hidden
+
+syntax enable
