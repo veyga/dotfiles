@@ -111,6 +111,7 @@ alias vimconfig="vim ~/.vimrc"
 alias lal="ls -al"
 alias chrome="google-chrome-stable"
 alias pacmanremoveorphans="sudo pacman -Rns $(pacman -Qtdq)"
+alias batsave="sudo tlp start && sudo powertop --auto-tune"
 
 bindkey -v
 
