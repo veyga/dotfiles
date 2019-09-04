@@ -216,8 +216,8 @@ for_window [class="emulator64-cras"] floating enable
 #floating_maximum_size 75x50
 
 # sound/brightness
-bindsym XF86MonBrightnessUp exec "light -A 5"
-bindsym XF86MonBrightnessDown exec "light -U 5"
+bindsym XF86MonBrightnessUp exec "sudo light -A 5"
+bindsym XF86MonBrightnessDown exec "sudo light -U 5"
 #exec --no-startup-id volumeicon
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
