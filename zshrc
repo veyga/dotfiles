@@ -4,7 +4,7 @@ export LANG="en_US.UTF-8"
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/veyga/.oh-my-zsh"
+ export ZSH="/home/veyga/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -113,6 +113,7 @@ alias chrome="google-chrome-stable"
 alias pacmanremoveorphans="sudo pacman -Rns $(pacman -Qtdq)"
 alias batsave="sudo tlp start && sudo powertop --auto-tune"
 
+# sets vim mode for terminal commands
 bindkey -v
 
 export BROWSER=/usr/bin/google-chrome-stable

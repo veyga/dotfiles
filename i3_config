@@ -240,6 +240,6 @@ exec redshift-gtki
 bindsym F7 exec --no-startup-id touchpad_toggle.sh
 focus_follows_mouse no
 
-# exec xrandr -s 2560x1440
+# exec xrandr -s 2560x1440  LEAVE THIS COMMENTED. MANUALLY SET RESOLUTION OR ELSE WINDOWS RENDER OFF CENTER
 exec sudo powertop --auto-tune
 exec --no-startup-id sudo tlp start
