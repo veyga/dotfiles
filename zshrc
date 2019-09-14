@@ -116,7 +116,7 @@ alias batsave="sudo tlp start && sudo powertop --auto-tune"
 # sets vim mode for terminal commands
 bindkey -v
 
-export BROWSER=/usr/bin/google-chrome-stable
+export BROWSER=/usr/bin/firefox
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/veyga/.sdkman"
 [[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
