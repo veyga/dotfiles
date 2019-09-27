@@ -1,5 +1,6 @@
 export LANG="en_US.UTF-8"
 
+export EDITOR=vim
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -109,6 +110,8 @@ alias i3config="vim ~/.config/i3/config"
 alias vimconfig="vim ~/.vimrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lal="ls -al"
+alias lsg="ls -l --group-directories-first"
+alias lalg="ls -al --group-directories-first"
 alias chrome="google-chrome-stable"
 alias pacmanremoveorphans="sudo pacman -Rns \$(pacman -Qtdq)"
 alias batsave="sudo tlp start && sudo powertop --auto-tune"

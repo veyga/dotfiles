@@ -1,3 +1,9 @@
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
+
+nmap <S-CR> O<Esc>
+nmap <CR> o<Esc>
 " Enable line numbering
 set nu
 
