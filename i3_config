@@ -227,7 +227,7 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 bindsym $mod+Shift+x exec "betterlockscreen -u /usr/share/backgrounds/blue_lines.jpg -l"
 exec --no-startup-id feh --bg-scale /usr/share/backgrounds/blue_lines.jpg
 
-exec --no-startup-id dropbox
+# exec --no-startup-id dropbox
 # move dropbox/bluetooth to systemd??
 
 # fade effect
