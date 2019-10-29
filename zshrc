@@ -3,7 +3,7 @@ export LANG="en_US.UTF-8"
 export EDITOR=vim
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
 # Path to your oh-my-zsh installation.
  export ZSH="/home/veyga/.oh-my-zsh"
 
