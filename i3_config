@@ -234,7 +234,7 @@ exec --no-startup-id feh --bg-scale /usr/share/backgrounds/blue_lines.jpg
 exec_always compton -f
 
 # night shift  (use nightshift tui?)
-exec redshift-gtki
+# exec redshift-gtki
 
 
 bindsym F7 exec --no-startup-id touchpad_toggle.sh
