@@ -230,8 +230,8 @@ exec --no-startup-id feh --bg-scale /usr/share/backgrounds/blue_lines.jpg
 # exec --no-startup-id dropbox
 # move dropbox/bluetooth to systemd??
 
-# fade effect
-exec_always compton -f
+# fade effect (formerly compton)
+# exec_always picom -f
 
 # night shift  (use nightshift tui?)
 # exec redshift-gtki
