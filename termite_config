@@ -33,7 +33,8 @@ browser = /usr/bin/firefox
 #filter_unmatched_urls = true
 
 # Emit escape sequences for extra modified keys
-#modify_other_keys = false
+# modify_other_keys = false
+
 
 # set size hints for the window
 #size_hints = false
