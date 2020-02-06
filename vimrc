@@ -1,13 +1,15 @@
+colo zellner
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'Valloric/YouCompleteMe', {'do':'./install.py --all --clangd-completer'}
-Plug '/usr/bin/fzf'
-Plug '/usr/share/fzf'
-Plug 'junegunn/fzf'
+Plug 'preservim/nerdtree'
 call plug#end()
 
-"Plug 'preservim/nerdtree'
+"Plug 'vim-utils/vim-alt-mappings'
+"Plug '/usr/bin/fzf'
+"Plug '/usr/share/fzf'
+"Plug 'junegunn/fzf'
 "set rtp+=/usr/share/fzf
 "set rtp+=/usr/bin/fzf
 "Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -16,13 +18,15 @@ filetype plugin on " for nerd commenter
 
 "autocmd vimenter * NERDTree
 
+":let g:NERDTreeHijackNetrw=0
+
 set laststatus=2 "needed for lightline
 
 let g:lightline = {
 	\ 'colorscheme': 'jellybeans'
 	\ }	
 
-inoremap {<CR> {<CR>}<Esc>ko<BS><BS><BS><BS>
+"inoremap {<CR> {<CR>}<Esc>ko<BS><BS><BS><BS>
 " needed for youcompleteme
 set encoding=utf-8
 
@@ -55,6 +59,7 @@ set showcmd
 " 
 set wildmenu
 " 
+"
 set incsearch
 " 
 " " Ignore case when searching
@@ -72,6 +77,7 @@ set si
 " 
 " " Color scheme (~/.vim/color)
 
+" \ is leader by default 
 :let mapleader = "]"
 " quit current buffer without closing window (needed for nerdtree)
 "nnoremap <leader>q :bp<cr>:bd #<cr>
@@ -98,7 +104,7 @@ map <leader>, <C-w><
 map <leader>. <C-w>>
 map <leader>= <C-w>+
 map <leader>- <C-w>-
-"map <leader>1 :NERDTreeToggle<CR>
+map <leader>1 :NERDTreeToggle<CR>
 map <leader>w :bp<cr>:bd #<cr>
 map <leader>s :w<CR>
 map <leader>n :bn<CR>
@@ -109,5 +115,7 @@ set hidden
 " 
 set splitright
 set splitbelow
-
 " syntax enable
+"map <^-a> ggVG
+"
+map <ESC>1 :NERDTreeToggle<CR>

@@ -5,7 +5,7 @@ export EDITOR=vim
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
 # Path to your oh-my-zsh installation.
- export ZSH="/home/veyga/.oh-my-zsh"
+export ZSH="/home/veyga/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -115,7 +115,7 @@ alias lalg="ls -alh --group-directories-first"
 alias chrome="google-chrome-stable"
 alias pacmanremoveorphans="sudo pacman -Rns \$(pacman -Qtdq)"
 alias batsave="sudo tlp start && sudo powertop --auto-tune"
-
+alias cd4="cd ~/Dropbox/NEU/spring20/cs5600/hw4/starter-hw04"
 # sets vim mode for terminal commands
 bindkey -v
 
@@ -123,5 +123,3 @@ export BROWSER=/usr/bin/firefox
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/veyga/.sdkman"
 [[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
