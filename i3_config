@@ -238,3 +238,6 @@ exec sudo powertop --auto-tune
 exec --no-startup-id sudo tlp start
 
 bindsym Print exec "scrot '/home/veyga/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
+
+# need to load these every time???  check path with xset q
+#xset +fp /usr/share/fonts/nerd-fonts-complete/TTF

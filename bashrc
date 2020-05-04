@@ -29,3 +29,4 @@ unset __conda_setup
 
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export PATH=/home/veyga/.local/share/fury/bin:/home/veyga/.local/share/fury/opt:$PATH # Added by Fury

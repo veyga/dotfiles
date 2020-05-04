@@ -1,129 +1,3 @@
-:let mapleader = " "
-colo zellner
-call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'preservim/nerdcommenter'
-Plug 'preservim/nerdtree'
-"Plug 'scalameta/coc-metals', {'do':'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc.nvim', {'branch':'release'}
-call plug#end()
-
-function! CocCurrentFunction()
-    return get(b:, 'coc_current_function', '')
-endfunction
-
-
-au BufRead,BufNewFile *.sbt set filetype=scala
-autocmd FileType json syntax match Comment +\/\/.\+$+
-"Plug 'Valloric/YouCompleteMe', {'do':'./install.py --all --clangd-completer'}
-"Plug 'vim-utils/vim-alt-mappings'
-"Plug '/usr/bin/fzf'
-"Plug '/usr/share/fzf'
-"Plug 'junegunn/fzf'
-"set rtp+=/usr/share/fzf
-"set rtp+=/usr/bin/fzf
-"Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-filetype plugin on " for nerd commenter 
-"autocmd vimenter * NERDTree
-":let g:NERDTreeHijackNetrw=0
-set laststatus=2 "needed for lightline
-let g:lightline = {
-	\ 'colorscheme': 'jellybeans'
-	\ }	
-"inoremap {<CR> {<CR>}<Esc>ko<BS><BS><BS><BS>
-" needed for youcompleteme
-set encoding=utf-8
-set shiftwidth=4
-set tabstop=4
-set softtabstop=4
-"set expandtab
-"execute pathogen#infect()
-	"syntax on
-	"filetype plugin indent on
-syntax on
-" filetype plugin indent on
-" " show existing tab with 4 spaces width
-" " On pressing tab, insert 4 spaces
-nmap <S-CR> O<Esc>
-nmap <CR> o<Esc>
-" " Enable line numbering
-set nu
-" 
-" " Show cursor position
-set ruler
-" 
-" " Show incomplete commands
-set showcmd
-" 
-" 
-set wildmenu
-" 
-"
-set incsearch
-" 
-" " Ignore case when searching
-set ignorecase
-set smartcase
-" 
-" " Don't line wrap midword
-set lbr
-" 
-" " Auto indent/Smart indent
-set ai
-set si
-" 
-" set bg=dark
-" 
-" " Color scheme (~/.vim/color)
-
-" \ is leader by default 
-":let mapleader = "]"
-" quit current buffer without closing window (needed for nerdtree)
-"nnoremap <leader>q :bp<cr>:bd #<cr>
-"nnoremap ]q :bp<cr>:bd #<cr>
-" moving between windows and resizing
-"map <A-w> :w<CR>
-"map <A-h> <C-w>h
-"map <A-j> <C-w>j
-"map <A-k> <C-w>k
-"map <A-l> <C-w>l
-"map <A-<> <C-w><
-"map <A->> <C-w>>
-"map <A-=> <C-w>+
-"map <A--> <C-w>-
-"map <A-1> :NERDTreeToggle<CR>
-
-
-map <leader>w :w<CR>
-map <leader>h <C-w>h
-map <leader>j <C-w>j
-map <leader>k <C-w>k
-map <leader>l <C-w>l
-map <leader>, <C-w><
-map <leader>. <C-w>>
-map <leader>= <C-w>+
-map <leader>- <C-w>-
-map <leader>1 :NERDTreeToggle<CR>
-map <leader>w :bp<cr>:bd #<cr>
-map <leader>s :w<CR>
-map <leader>n :bn<CR>
-map <leader>p :bp<CR>
-" 
-" " Edit multiple files without saving
-set hidden
-" 
-set splitright
-set splitbelow
-map <ESC>1 :NERDTreeToggle<CR>
-
-
-
-
-
-
-
-
-" ~/.vimrc
 " Configuration for coc.nvim
 
 " If hidden is not set, TextEdit might fail.
@@ -247,10 +121,10 @@ inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Toggle panel with Tree Views
-nnoremap <silent> <spae>t :<C-u>CocCommand metals.tvp<CR>
+nnoremap <silent> <space>t :<C-u>ocCommand metals.tvp<CR>
 " Toggle Tree View 'metalsBuild'
 nnoremap <silent> <space>tb :<C-u>CocCommand metals.tvp metalsBuild<CR>
 " Toggle Tree View 'metalsCompile'
 nnoremap <silent> <space>tc :<C-u>CocCommand metals.tvp metalsCompile<CR>
 " Reveal current current class (trait or object) in Tree View 'metalsBuild'
-nnoremap <silent> <space>tf :<C-u>CocCommand metals.revealInTreeView metalsBuild<CR>c
+nnoremap <silent> <space>tf :<C-u>CocCommand metals.revealInTreeView metalsBuild<CR>C

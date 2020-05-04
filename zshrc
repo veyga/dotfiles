@@ -1,17 +1,20 @@
 export LANG="en_US.UTF-8"
 
-export EDITOR=vim
+export EDITOR=nvim
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
 # Path to your oh-my-zsh installation.
 export ZSH="/home/veyga/.oh-my-zsh"
+export NVIM_HOME="~/.config/nvim"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
+#
 #ZSH_THEME="gnzh"
 
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
@@ -105,9 +108,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
-alias i3config="vim ~/.config/i3/config"
+alias zshconfig="nvim ~/.zshrc"
+alias i3config="nvim ~/.config/i3/config"
 alias vimconfig="vim ~/.vimrc"
+alias nvimconfig="nvim ~/.config/nvim"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias lal="ls -alh"
 alias lsg="ls -lh --group-directories-first"
@@ -115,7 +119,9 @@ alias lalg="ls -alh --group-directories-first"
 alias chrome="google-chrome-stable"
 alias pacmanremoveorphans="sudo pacman -Rns \$(pacman -Qtdq)"
 alias batsave="sudo tlp start && sudo powertop --auto-tune"
-alias cd4="cd ~/Dropbox/NEU/spring20/cs5600/hw4/starter-hw04"
+alias mountphone="simple-mtpfs --device 1 ~/mount/cell"
+alias unmountphone="fusermount -u ~/mount/cell"
+# alias vim="/usr/bin/nvim"
 # sets vim mode for terminal commands
 bindkey -v
 
@@ -123,3 +129,6 @@ export BROWSER=/usr/bin/firefox
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/veyga/.sdkman"
 [[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
+export PATH=/home/veyga/.local/share/fury/bin:/home/veyga/.local/share/fury/opt:$PATH # Added by Fury
+fpath=(/home/veyga/.local/share/fury/usr/0.15.1-7-g02392cc/script /home/veyga/.local/share/fury/completions $fpath) # Added by Fury
+autoload -U compinit && compinit # Added by Fury

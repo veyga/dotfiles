@@ -6,7 +6,9 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = Source Code Pro 9
+font = SauceCodePro Nerd Font 9
+#font = Source Code Pro 9
+#font = Hasklug Nerd Font Italic 12
 #powerlevel9k theme overrides this?
 #fullscreen = true
 #icon_name = terminal
@@ -51,6 +53,9 @@ modify_other_keys = true
 #foreground = #dcdccc
 #foreground_bold = #ffffff
 #background = #3f3f3f
+
+
+# overrides vim??
 background = #000000
 
 # 20% background transparency (requires a compositor)
