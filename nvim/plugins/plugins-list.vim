@@ -26,7 +26,7 @@ Plug 'junegunn/fzf.vim'
 "automatch parens
 Plug 'jiangmiao/auto-pairs'
 
-"show marks in the gutter
+"show marks labels in the gutter
 Plug 'kshenoy/vim-signature'
 
 "enhanced register view
@@ -34,10 +34,13 @@ Plug 'junegunn/vim-peekaboo'
 let g:peekaboo_window = "botright 30new"
 
 "language support
-Plug 'sheerun/vim-polyglot'
+"Plug 'sheerun/vim-polyglot'
 
 "enhanced start screen
 Plug 'mhinz/vim-startify'
+
+"absolute line num for current line, relative for rest
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 "color scheme
 Plug 'flazz/vim-colorschemes'
@@ -50,5 +53,11 @@ Plug 'ryanoasis/vim-devicons'
 
 " color to icons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" easier movement of line blocks in visual mode (alt + arrows)
+Plug 'matze/vim-move'
+
+" highlight yanked text
+Plug 'machakann/vim-highlightedyank'
 
 call plug#end()

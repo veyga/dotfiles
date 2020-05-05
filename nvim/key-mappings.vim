@@ -17,3 +17,15 @@ nnoremap <C-l> :vertical resize +2<CR>
 
 "close buffer without closing window
 nnoremap <M-w> :bp<cr>:bd #<cr>
+
+
+nnoremap <M-2> :source ~/.config/nvim/init.vim<CR>
+nnoremap <M-3> :ColorToggle<CR>
+
+nmap <leader>sp :call <SID>SynStack()<CR>
+function! <SID>SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc

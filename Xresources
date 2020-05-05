@@ -1,5 +1,3 @@
 Xft.dpi: 140
-xterm*eightBitInput true
-termite*eightBitInput true
-
+"XTerm*termName: xterm-256color
 
