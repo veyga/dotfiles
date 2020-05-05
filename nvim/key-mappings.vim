@@ -3,12 +3,15 @@ let g:mapleader = "\<Space>"
 nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
-"navigation
-nnoremap <M-h> <C-w>h
-nnoremap <M-j> <C-w>j
-nnoremap <M-k> <C-w>k
-nnoremap <M-l> <C-w>l
-
+"navigation (alt)
+tnoremap <A-h> <C-\><C-N><C-w>h
+tnoremap <A-j> <C-\><C-N><C-w>j
+tnoremap <A-k> <C-\><C-N><C-w>k
+tnoremap <A-l> <C-\><C-N><C-w>l
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 "resizing
 nnoremap <C-j> :resize +2<CR>
 nnoremap <C-k> :resize -2<CR>

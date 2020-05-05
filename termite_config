@@ -7,7 +7,7 @@
 #clickable_url = true
 #dynamic_title = true
 font = SauceCodePro Nerd Font 9
-#font = Source Code Pro 9
+#font = Source Code Pro 10
 #font = Hasklug Nerd Font Italic 12
 #powerlevel9k theme overrides this?
 #fullscreen = true
@@ -83,8 +83,9 @@ color14 = #93e0e3
 color15 = #ffffff
 
 [hints]
-font = Monospace 12
-foreground = #dcdccc
+#font = Monospace 12
+#foreground = #dcdccc
+
 #background = #3f3f3f
 #active_foreground = #e68080
 #active_background = #3f3f3f

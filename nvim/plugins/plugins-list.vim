@@ -7,6 +7,10 @@ Plug 'preservim/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" dont want custom material theme to be overrriden on update
+" theme
+"Plug 'kaicataldo/material.vim'
+
 "conquerer of completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -25,6 +29,9 @@ Plug 'junegunn/fzf.vim'
 
 "automatch parens
 Plug 'jiangmiao/auto-pairs'
+
+" git marks
+Plug 'airblade/vim-gitgutter'
 
 "show marks labels in the gutter
 Plug 'kshenoy/vim-signature'
@@ -59,5 +66,6 @@ Plug 'matze/vim-move'
 
 " highlight yanked text
 Plug 'machakann/vim-highlightedyank'
+
 
 call plug#end()
