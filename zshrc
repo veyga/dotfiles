@@ -13,13 +13,14 @@ export NVIM_HOME="~/.config/nvim"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
+
 POWERLEVEL9K_MODE="nerdfont-complete"
 ZSH_THEME="powerlevel9k/powerlevel9k"
-#
-#ZSH_THEME="gnzh"
-
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+#ZSH_THEME="arrow"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -131,5 +132,5 @@ export BROWSER=/usr/bin/firefox
 export SDKMAN_DIR="/home/veyga/.sdkman"
 [[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
 export PATH=/home/veyga/.local/share/fury/bin:/home/veyga/.local/share/fury/opt:$PATH # Added by Fury
-fpath=(/home/veyga/.local/share/fury/usr/0.15.1-7-g02392cc/script /home/veyga/.local/share/fury/completions $fpath) # Added by Fury
+fpath=(/home/veyga/.local/share/fury/usr/0.15.1-32-gd4d6047/script /home/veyga/.local/share/fury/completions $fpath) # Added by Fury
 autoload -U compinit && compinit # Added by Fury

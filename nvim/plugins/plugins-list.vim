@@ -3,9 +3,15 @@ call plug#begin('~/.config/vim-plug-plugins-sources')
 "filesystem navigation
 Plug 'preservim/nerdtree'
 
+"regex helper
+Plug 'markonm/traces.vim'
+
 "status bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+
+"side bar class view
+Plug 'majutsushi/tagbar'
 
 " dont want custom material theme to be overrriden on update
 " theme
@@ -24,7 +30,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'justinmk/vim-sneak'
 
 "fuzzy finder
-Plug 'junegunn/fzf'  
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 "automatch parens
@@ -67,5 +73,8 @@ Plug 'matze/vim-move'
 " highlight yanked text
 Plug 'machakann/vim-highlightedyank'
 
+"rainbow highlights
+"Plug 'luochen1990/rainbow'
+Plug 'kien/rainbow_parentheses.vim'
 
 call plug#end()

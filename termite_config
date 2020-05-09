@@ -6,7 +6,7 @@
 #cell_width_scale = 1.0
 #clickable_url = true
 #dynamic_title = true
-font = SauceCodePro Nerd Font 9
+font = SauceCodePro Nerd Font 8
 #font = Source Code Pro 10
 #font = Hasklug Nerd Font Italic 12
 #powerlevel9k theme overrides this?
@@ -71,13 +71,13 @@ color2 = #60b48a
 color3 = #dfaf8f
 color4 = #506070
 color5 = #dc8cc3
-color6 = #8cd0d3
+color6 = #678cb1
 color7 = #dcdccc
 color8 = #709080
 color9 = #dca3a3
 color10 = #c3bf9f
 color11 = #f0dfaf
-color12 = #94bff3
+color12 = #678cb1
 color13 = #ec93d3
 color14 = #93e0e3
 color15 = #ffffff

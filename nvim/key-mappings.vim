@@ -13,17 +13,19 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 "resizing
-nnoremap <C-j> :resize +2<CR>
 nnoremap <C-k> :resize -2<CR>
+nnoremap <C-j> :resize +2<CR>
 nnoremap <C-h> :vertical resize -2<CR>
 nnoremap <C-l> :vertical resize +2<CR>
 
 "close buffer without closing window
 nnoremap <M-w> :bp<cr>:bd #<cr>
 
-
-nnoremap <M-2> :source ~/.config/nvim/init.vim<CR>
-nnoremap <M-3> :ColorToggle<CR>
+nnoremap <leader>h :History<CR>
+nnoremap <A-2> :CocCommand metals.tvp<CR>
+nnoremap <A-3> :TagbarToggle<CR>
+nnoremap <M-9> :source ~/.config/nvim/init.vim<CR>
+nnoremap <M-0> :ColorToggle<CR>
 
 nmap <leader>sp :call <SID>SynStack()<CR>
 function! <SID>SynStack()
