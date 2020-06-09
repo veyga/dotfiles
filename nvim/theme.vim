@@ -1,6 +1,7 @@
 let g:material_theme_style = 'deepocean'
 let g:material_terminal_italics = 1
 colorscheme material
+hi HighlightedyankRegion term=bold ctermbg=0 guibg=#13354A
 
 let g:terminal_color_0 =  '#3f3f3f'
 let g:terminal_color_1 =  '#705050'
@@ -18,36 +19,4 @@ let g:terminal_color_12 = '#678cb1'
 let g:terminal_color_13 = '#ec93d3'
 let g:terminal_color_14 = '#93e0e3'
 let g:terminal_color_15 = '#ff0000'
-"
-" color0 = #3f3f3f
-" color1 = #705050
-" color2 = #60b48a
-" color3 = #dfaf8f
-" color4 = #506070
-" color5 = #dc8cc3
-" color6 = #678cb1
-" color7 = #dcdccc
-" color8 = #709080
-" color9 = #dca3a3
-" color10 = #c3bf9f
-" color11 = #f0dfaf
-" color12 = #678cb1
-" color13 = #ec93d3
-" color14 = #93e0e3
-" color15 = #ffffff
-" let g:terminal_color_0  = '#2e3436'
-" let g:terminal_color_1  = '#cc0000'
-" let g:terminal_color_2  = '#4e9a06'
-" let g:terminal_color_3  = '#c4a000'
-" let g:terminal_color_4  = '#3465a4'
-" let g:terminal_color_5  = '#75507b'
-" let g:terminal_color_6  = '#0b939b'
-" let g:terminal_color_7  = '#d3d7cf'
-" let g:terminal_color_8  = '#555753'
-" let g:terminal_color_9  = '#ef2929'
-" let g:terminal_color_10 = '#8ae234'
-" let g:terminal_color_11 = '#fce94f'
-" let g:terminal_color_12 = '#729fcf'
-" let g:terminal_color_13 = '#ad7fa8'
-" let g:terminal_color_14 = '#00f5e9'
-" let g:terminal_color_15 = '#eeeeec'
+

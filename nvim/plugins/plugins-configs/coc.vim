@@ -70,23 +70,37 @@ nmap <leader>rn <Plug>(coc-rename)
 " Remap for format selected region
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>F  <Plug>(coc-format)
 
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType scala setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
 
+nmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+" Remap for do codeAction of selected region  (coc-actions)
+" function! s:cocActionsOpenFromSelected(type) abort
+"   execute 'CocCommand actions.open ' . a:type
+" endfunction
+" xmap <silent> <leader>a :<C-u>execute 'CocCommand actions.open ' . visualmode()<CR>
+" nmap <silent> <leader>a :<C-u>set operatorfunc=<SID>cocActionsOpenFromSelected<CR>g@
 " Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-xmap <leader>a  <Plug>(coc-codeaction-selected)
-nmap <leader>a  <Plug>(coc-codeaction-selected)
+"<leader>a then..
+    " <leader>a for the current selected range
+    " <leader>aw for the current word
+    " <leader>aas for the current sentence
+    " <leader>aap for the current paragraph
+
+" xmap <leader>a  <Plug>(coc-codeaction-selected)
+" nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap for do codeAction of current line
-nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
+
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
+
+" xmap <leader>t  <Plug>(coc-terminal-toggle)
+nmap <leader>t  <Plug>(coc-terminal-toggle)
+
+" show yank list
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
@@ -99,7 +113,7 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 nnoremap <leader>cl :<C-u>call CocActionAsync('codeLensAction')<CR>
 
 " Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent> <space>d  :<C-u>CocList diagnostics<cr>
 " Manage extensions
 nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
 " Show commands
@@ -120,11 +134,20 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
       \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+
+augroup mygroup
+  autocmd!
+  " Setup formatexpr specified filetype(s).
+  autocmd FileType scala setl formatexpr=CocAction('formatSelected')
+  " Update signature help on jump placeholder
+  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+augroup end
+
 " Toggle panel with Tree Views
-nnoremap <silent> <space>t :<C-u>ocCommand metals.tvp<CR>
+nnoremap <silent> <space>T :<C-u>ocCommand metals.tvp<CR>
 " Toggle Tree View 'metalsBuild'
-nnoremap <silent> <space>tb :<C-u>CocCommand metals.tvp metalsBuild<CR>
+nnoremap <silent> <space>Tb :<C-u>CocCommand metals.tvp metalsBuild<CR>
 " Toggle Tree View 'metalsCompile'
-nnoremap <silent> <space>tc :<C-u>CocCommand metals.tvp metalsCompile<CR>
+nnoremap <silent> <space>Tc :<C-u>CocCommand metals.tvp metalsCompile<CR>
 " Reveal current current class (trait or object) in Tree View 'metalsBuild'
-nnoremap <silent> <space>tf :<C-u>CocCommand metals.revealInTreeView metalsBuild<CR>C
+nnoremap <silent> <space>Tf :<C-u>CocCommand metals.revealInTreeView metalsBuild<CR>C

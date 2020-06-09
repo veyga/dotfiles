@@ -27,6 +27,7 @@ nnoremap <A-3> :TagbarToggle<CR>
 nnoremap <M-9> :source ~/.config/nvim/init.vim<CR>
 nnoremap <M-0> :ColorToggle<CR>
 
+" nmap <leader>fj %!python3 -m json.tool<CR>
 nmap <leader>sp :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")

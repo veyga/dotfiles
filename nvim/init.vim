@@ -10,3 +10,4 @@ source $NVIM_HOME/plugins/plugins-configs/coc-metals.vim
 source $NVIM_HOME/plugins/plugins-configs/tagbar.vim
 source $NVIM_HOME/plugins/plugins-configs/commentary.vim
 source $NVIM_HOME/plugins/plugins-configs/start-screen.vim
+source $NVIM_HOME/plugins/plugins-configs/indentline.vim

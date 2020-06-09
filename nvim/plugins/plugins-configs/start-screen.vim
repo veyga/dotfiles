@@ -3,4 +3,6 @@ let g:startify_bookmarks = [
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'p': '~/.config/nvim/plugins/plugins-list.vim' },
             \ { 'z': '~/.zshrc' },
+            \ { 't': '~/dotfiles/nvim/material.vim' },
             \ ]
+            " \ { 't': '~/.config/vim-plug-plugins-sources/vim-colorschemes/colors/material.vim' },

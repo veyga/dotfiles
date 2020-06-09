@@ -9,6 +9,8 @@ export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
 export ZSH="/home/veyga/.oh-my-zsh"
 export NVIM_HOME="~/.config/nvim"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+fpath+=~/.zfunc
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -115,7 +117,7 @@ alias i3config="nvim ~/.config/i3/config"
 alias vimconfig="vim ~/.vimrc"
 alias nvimconfig="nvim ~/.config/nvim"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias lal="ls -alh"
+alias lal="ls -Alh"
 alias lsg="ls -lh --group-directories-first"
 alias lalg="ls -alh --group-directories-first"
 alias chrome="google-chrome-stable"
@@ -132,5 +134,5 @@ export BROWSER=/usr/bin/firefox
 export SDKMAN_DIR="/home/veyga/.sdkman"
 [[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
 export PATH=/home/veyga/.local/share/fury/bin:/home/veyga/.local/share/fury/opt:$PATH # Added by Fury
-fpath=(/home/veyga/.local/share/fury/usr/0.15.1-32-gd4d6047/script /home/veyga/.local/share/fury/completions $fpath) # Added by Fury
+fpath=(/home/veyga/.local/share/fury/usr/0.15.1-73-gc13865e/script /home/veyga/.local/share/fury/completions $fpath) # Added by Fury
 autoload -U compinit && compinit # Added by Fury
