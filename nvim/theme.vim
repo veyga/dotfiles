@@ -1,7 +1,7 @@
 let g:material_theme_style = 'deepocean'
 let g:material_terminal_italics = 1
 colorscheme material
-hi HighlightedyankRegion term=bold ctermbg=0 guibg=#13354A
+hi HighlightedyankRegion term=bold ctermbg=0 guibg=#2c3b41
 hi CocRustChainingHint guifg=#303030
 " hi CocHintSign guifg=#303030
 

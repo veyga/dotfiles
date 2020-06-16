@@ -155,7 +155,6 @@ call s:SetHighlight('Cursor', s:bg, s:caret, '')
 call s:SetHighlight('CursorColumn', '', s:line_highlight, '')
 call s:SetHighlight('CursorLine', '', s:line_highlight, '')
 call s:SetHighlight('CursorLineNr', s:line_numbers, '', '')
-hi CursorLineNr guifg=#707070 guibg=#000000
 " call s:SetHighlight('CursorLineNr', s:line_numbers, '', '')
 " hi Directory guifg=#808080
 " call s:SetHighlight('Directory', s:pink, '', '')
@@ -167,7 +166,6 @@ call s:SetHighlight('DiffChange', s:bg, s:red, '')
 call s:SetHighlight('ErrorMsg', s:fg, s:red, 'bold')
 call s:SetHighlight('FoldColumn', s:line_numbers, s:bg, '')
 call s:SetHighlight('Folded', s:brown, s:bg, 'bold')
-hi LineNr guifg=#707070 guibg=#161e21
 " call s:SetHighlight('LineNr', s:line_numbers, '', '')
 " call s:SetHighlight('MatchParen', s:cyan, s:purple, 'bold')
 hi MatchParen guifg=#89ddff guibg=#de1fcf gui=bold
@@ -184,7 +182,6 @@ call s:SetHighlight('Question', s:blue, '', '')
 call s:SetHighlight('IncSearch', s:white, s:comments, 'none')
 call s:SetHighlight('Search', s:white, s:comments, 'none')
 " call s:SetHighlight('SignColumn', s:fg, s:bg, '')
-hi SignColumn guibg=#161e21
 call s:SetHighlight('SpecialKey', s:comments, '', '')
 call s:SetHighlight('SpellCap', s:blue, '', 'undercurl')
 call s:SetHighlight('SpellBad', s:red, '', 'undercurl')
@@ -227,6 +224,9 @@ call s:SetHighlight('Error', s:fg, s:red, '')
 hi Error guifg=#000000 guibg=#ff0000
 " call s:SetHighlight('Todo', s:yellow, s:yellow, 'italic')
 hi Todo guifg=#ffffff guibg=#555555
+hi CursorLineNr guifg=#606060 guibg=#000000 gui=bold
+hi LineNr guifg=#606060 guibg=#000000
+hi SignColumn guibg=#000000
 
 
 "#f5bcf1 #93c763

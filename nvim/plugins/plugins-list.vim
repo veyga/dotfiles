@@ -10,8 +10,8 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['rust','typescript','scal
 Plug 'markonm/traces.vim'
 
 "status bar
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 "side bar class view
 Plug 'majutsushi/tagbar'
