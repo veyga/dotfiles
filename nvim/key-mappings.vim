@@ -22,7 +22,6 @@ nnoremap <C-l> :vertical resize +2<CR>
 nnoremap <M-w> :bp<cr>:bd #<cr>
 
 nnoremap <leader>h :History<CR>
-nnoremap <A-2> :CocCommand metals.tvp<CR>
 nnoremap <A-3> :TagbarToggle<CR>
 nnoremap <M-9> :source ~/.config/nvim/init.vim<CR>
 nnoremap <M-0> :ColorToggle<CR>

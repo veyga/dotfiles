@@ -106,6 +106,15 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+
+# TODO DELETE NETKIT
+export NETKIT_HOME="/home/veyga/Downloads/NETKIT/filez/netkit"
+export MANPATH=:$NETKIT_HOME/man
+export PATH="$NETKIT_HOME/bin:$PATH"
+# export NETKIT_HOME="/home/veyga/Downloads/NETKIT/ng/netkit-ng"
+# export MANPATH=:$NETKIT_HOME/man
+# export PATH="$NETKIT_HOME/bin:$PATH"
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.

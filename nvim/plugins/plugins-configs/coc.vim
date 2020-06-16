@@ -143,6 +143,7 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+nnoremap <A-2> :CocCommand metals.tvp<CR>
 " Toggle panel with Tree Views
 nnoremap <silent> <space>T :<C-u>ocCommand metals.tvp<CR>
 " Toggle Tree View 'metalsBuild'

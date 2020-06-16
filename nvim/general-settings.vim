@@ -1,6 +1,7 @@
 "colorscheme myobsidian
 set number relativenumber
 set hidden
+set autoread
 set clipboard+=unnamedplus
 "unnamed  = one line deletes/yanks will cycle through registers
 set termguicolors

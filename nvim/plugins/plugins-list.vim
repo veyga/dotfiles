@@ -78,6 +78,8 @@ Plug 'chrisbra/colorizer'
 " highlight yanked text
 " Plug 'machakann/vim-highlightedyank'
 
+Plug 'puremourning/vimspector'
+
 "text indent guide
 Plug 'Yggdroot/indentLine'
 
