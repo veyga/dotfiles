@@ -1,0 +1,9 @@
+{
+  "coc.preferences.formatOnType": false,
+  "codeLens.enable": true,
+  "metals.statusBarEnabled": true,
+  "rust-analyzer.trace.server": "messages",
+  "python.jediEnabled": false,
+  "python.linting.mypyEnabled": true,
+  "python.linting.enabled": true
+}

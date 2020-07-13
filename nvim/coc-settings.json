@@ -1,8 +1,0 @@
-{
-    "coc.preferences.formatOnType": false,
-    "codeLens.enable":true,
-    "metals.statusBarEnabled": true,
-    "rust-analyzer.trace.server": "messages",
-    "yank.highlight.duration": "1000",
-    "yank.list.maxsize": "10"
-}

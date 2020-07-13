@@ -1,0 +1,19 @@
+Install:
+zsh
+tmux
+nvim
+npm? (required for CoC)
+nerdfonts? (only needed for devicons)
+
+PlugInstall everything
+
+
+# symlinks
+
+ln -s $HOME/dotfiles/shells/bash/.bash_profile ~/.bash_profile
+ln -s $HOME/dotfiles/shells/bash/.bashrc ~/.bashrc
+ln -s $HOME/dotfiles/shells/zsh/.zshrc ~/.zshrc
+sudo ln -s $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
+
+# would need to change vim82 to vimXX based on version
+sudo ln -s $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/vim/vim82/colors/obsidian.vim
