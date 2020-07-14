@@ -1,4 +1,17 @@
-autoload -U colors && colors
+# autoload doesn't work in bash
+# autoload -U colors && colors
+
+# # TODO git integration/ pyvenvs?
+# export PS1="
+# %B%{$fg[magenta]%}╭─ %~
+# ╰─%b "
+
+# History in cache directory:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.cache/bash/history
+
+export PS2=".. "
 source $HOME/dotfiles/shells/.aliasrc
 source /usr/share/doc/find-the-command/ftc.bash 2>/dev/null
 

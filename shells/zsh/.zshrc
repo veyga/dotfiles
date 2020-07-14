@@ -1,7 +1,7 @@
 # zoomer shell
 autoload -U colors && colors
 
-# TODO git integration/ pyvenvs?
+# TODO git integration/ pyvenvs? / reset colors?
 export PS1="
 %B%{$fg[magenta]%}╭─ %~
 ╰─%b "
