@@ -1,6 +1,6 @@
-#
-# ~/.bash_profile
-#
+# This is not loaded for user-veyga since login shell is zsh
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
-
+# load globals
+if [ -f ~/.profile ]; then
+	source ~/.profile
+fi

@@ -1,19 +1,32 @@
+# insert/edit commands based on target system, make executable
+
+git clone https://github.com/veyga/dotfiles
+
 Install:
 zsh
 tmux
 nvim
+ripgrep?
+sdkman?
 npm? (required for CoC)
 nerdfonts? (only needed for devicons)
 
-PlugInstall everything
+chsh -s $(which zsh)
 
+mkdir ~/.config/vim-plug-plugins-sources
+(enter nvim)
+:PlugInstall everything
 
 # symlinks
-
-ln -s $HOME/dotfiles/shells/bash/.bash_profile ~/.bash_profile
-ln -s $HOME/dotfiles/shells/bash/.bashrc ~/.bashrc
-ln -s $HOME/dotfiles/shells/zsh/.zshrc ~/.zshrc
-sudo ln -s $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
+ln -sf $HOME/dotfiles/wms/.xinitrc $HOME/.xinitrc
+ln -sf $HOME/dotfiles/wms/.Xresources $HOME/.Xresources
+ln -sf $HOME/dotfiles/shells/bash/.bash_profile $HOME/.bash_profile
+ln -sf $HOME/dotfiles/shells/bash/.bashrc $HOME/.bashrc
+ln -sf $HOME/dotfiles/shells/zsh/.zshrc $HOME/.zshrc
+ln -sf $HOME/dotfiles/shells/zsh/.zshenv $HOME/.zshenv
+ln -sf $HOME/dotfiles/shells/zsh/.zprofile $HOME/.zprofile
+ln -sf $HOME/dotfiles/editors/nvim $HOME/config/nvim
+sudo ln -sf $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
 
 # would need to change vim82 to vimXX based on version
-sudo ln -s $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/vim/vim82/colors/obsidian.vim
+sudo ln -sf $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/vim/vim82/colors/obsidian.vim
