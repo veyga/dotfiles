@@ -9,7 +9,6 @@ export BROWSER="firefox"
 export NVIM_HOME="$HOME/dotfiles/editors/nvim"
 export VIM_HOME="$HOME/dotfiles/editors/vim"
 export SHELLS_HOME="$HOME/dotfiles/shells"
-export ZDOTDIR="$SHELLS_HOME/zsh"
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
 export PATH=/home/veyga/.local/bin:/home/veyga/.local/bin/custom:$PATH
