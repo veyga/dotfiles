@@ -33,6 +33,10 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# power savings
+# sudo tlp start &
+# sudo powertop --auto-tune &
+
 # switch control and caps
 setxkbmap -option caps:swapescape
 
@@ -40,10 +44,7 @@ setxkbmap -option caps:swapescape
 xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
 xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
 
-# power savings
-# sudo tlp start &
-# sudo powertop --auto-tune &
-
 # resolution
 xrandr -s 2560x1440
+redshift &
 exec i3

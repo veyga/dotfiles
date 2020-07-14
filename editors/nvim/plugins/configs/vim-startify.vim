@@ -1,8 +1,9 @@
 let g:startify_bookmarks = [
-            \ { 'c': '~/.config/i3/config' },
             \ { 'i': '~/.config/nvim/init.vim' },
-            \ { 'p': '~/.config/nvim/plugins/plugins-list.vim' },
+            \ { 'p': '~/.config/nvim/plugins/plugins.vim' },
+            \ { 'o': '~/dotfiles/editors/nvim/theme/obsidian.vim' },
             \ { 'z': '~/.zshrc' },
-            \ { 't': '~/dotfiles/nvim/material.vim' },
+            \ { 'b': '~/.bashrc' },
+            \ { 'c': '~/.config/i3/config' },
+            \ { 'x': '~/dotfiles/X11/.Xresources' },
             \ ]
-            " \ { 't': '~/.config/vim-plug-plugins-sources/vim-colorschemes/colors/material.vim' },

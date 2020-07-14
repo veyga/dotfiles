@@ -30,7 +30,7 @@ font pango:Terminus 14px
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -195,11 +195,6 @@ bar {
 gaps inner 10
 gaps outer -1
 
-## switch control and caps
-#exec setxkbmap -option caps:swapescape
-##enable touchpad click
-#exec xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
-#exec xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
 
 # switch to workspace with urgent window automatically  (needed??)
 for_window [urgent=latest] focus
@@ -226,8 +221,6 @@ bindsym $mod+Shift+x exec "betterlockscreen -u /usr/share/backgrounds/blue_lines
 #exec --no-startup-id feh --bg-scale /usr/share/backgrounds/blue_lines.jpg
 
 
-# night shift  (use nightshift tui?)
-# exec redshift-gtki
 
 
 bindsym F7 exec --no-startup-id touchpad_toggle
@@ -239,7 +232,7 @@ focus_follows_mouse no
 
 # does this fix chrome/code flickering issues? no
 # DO NOT EVER USE PICOM. CAUSES FREQUENT FREEZES
-#exec picom &
+# exec picom &
 
 bindsym Print exec "scrot '/home/veyga/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx$h.png'"
 
@@ -248,4 +241,4 @@ bindsym Print exec "scrot '/home/veyga/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx
 #
 
 # start a terminal on i3 initialization
-exec --no-startup-id termite
+exec --no-startup-id xterm

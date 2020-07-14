@@ -3,7 +3,6 @@ let g:mapleader = "\<Space>"
 "********************************************************
 "***************   INITIALIZE THEME *********************
 "********************************************************
-" source $NVIM_HOME/theme/theme.vim
 source $NVIM_HOME/theme/obsidian.vim
 
 "********************************************************
@@ -11,7 +10,6 @@ source $NVIM_HOME/theme/obsidian.vim
 "********************************************************
 source $NVIM_HOME/plugins/plugins.vim
 
-"colorscheme myobsidian
 set number relativenumber
 set hidden
 set autoread

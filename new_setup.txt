@@ -18,8 +18,8 @@ mkdir ~/.config/vim-plug-plugins-sources
 :PlugInstall everything
 
 # symlinks
-ln -sf $HOME/dotfiles/wms/.xinitrc $HOME/.xinitrc
-ln -sf $HOME/dotfiles/wms/.Xresources $HOME/.Xresources
+ln -sf $HOME/dotfiles/X11/.xinitrc $HOME/.xinitrc
+ln -sf $HOME/dotfiles/X11/.Xresources $HOME/.Xresources
 ln -sf $HOME/dotfiles/shells/bash/.bash_profile $HOME/.bash_profile
 ln -sf $HOME/dotfiles/shells/bash/.bashrc $HOME/.bashrc
 ln -sf $HOME/dotfiles/shells/zsh/.zshrc $HOME/.zshrc
