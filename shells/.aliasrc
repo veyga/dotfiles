@@ -1,0 +1,8 @@
+alias la="ls -A --color=auto"
+alias ls="ls --color=auto"
+alias lal="ls -Alh --color=auto"
+alias lsg="ls -lh --group-directories-first --color=auto"
+alias lalg="ls -Alh --group-directories-first --color=auto"
+alias chrome="google-chrome-stable"
+alias pacmanremoveorphans="sudo pacman -Rns \$(pacman -Qtdq)"
+alias batsave="sudo tlp start && sudo powertop --auto-tune"
