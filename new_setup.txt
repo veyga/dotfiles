@@ -13,6 +13,10 @@ nerdfonts? (only needed for devicons)
 
 chsh -s $(which zsh)
 
+Install vim-plug:
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vi
+
 mkdir ~/.config/vim-plug-plugins-sources
 (enter nvim)
 :PlugInstall everything

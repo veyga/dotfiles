@@ -1,6 +1,19 @@
 let g:mapleader = "\<Space>"
 
 "********************************************************
+"****************** STATUS LINE *************************
+"********************************************************
+set statusline=
+set statusline+=\ %F
+set statusline+=%=
+set statusline+=\ %y
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
+set statusline+=%#CursorColumn#
+set statusline+=\ 
+
+
+"********************************************************
 "***************   INITIALIZE THEME *********************
 "********************************************************
 source $NVIM_HOME/theme/obsidian.vim
@@ -32,8 +45,7 @@ set colorcolumn=100
 set textwidth=100
 set wrap
 set noswapfile
-"set autochdir
-
+set autochdir
 
 
 "********************************************************

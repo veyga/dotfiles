@@ -15,10 +15,6 @@ Plug 'bling/vim-bufferline'
 " show ctags in side bar
 Plug 'majutsushi/tagbar'
 
-" dont want custom material theme to be overrriden on update
-" theme
-"Plug 'kaicataldo/material.vim'
-
 " conquer of completion (LSP client)
 " build from source
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
@@ -103,5 +99,6 @@ source $NVIM_HOME/plugins/configs/rainbow.vim
 source $NVIM_HOME/plugins/configs/tagbar.vim
 source $NVIM_HOME/plugins/configs/vim-bufferline.vim
 source $NVIM_HOME/plugins/configs/vim-commentary.vim
+source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/vim-startify.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim

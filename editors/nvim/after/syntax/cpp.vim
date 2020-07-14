@@ -15,6 +15,4 @@ syn match cppPipe /|/
 syn match cppPipeL /</
 syn match cppPipeR />/
 syn match cppPreprocessorLine '\#.*\n'
-
-
  " syn match cppOp /[+-\*&=]/

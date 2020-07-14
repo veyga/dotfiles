@@ -4,6 +4,6 @@ let g:startify_bookmarks = [
             \ { 'o': '~/dotfiles/editors/nvim/theme/obsidian.vim' },
             \ { 'z': '~/.zshrc' },
             \ { 'b': '~/.bashrc' },
+            \ { 'x': '~/.Xresources' },
             \ { 'c': '~/.config/i3/config' },
-            \ { 'x': '~/dotfiles/X11/.Xresources' },
             \ ]

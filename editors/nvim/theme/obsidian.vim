@@ -1,8 +1,6 @@
 "Vim Color File
 " Name: obsidian.vim
-" Maintainer: changme
-" License: The MIT License (MIT)
-
+" Maintainer: andrew stefanich
 " === Configuration ===
 
 " Clear any other set colors
@@ -51,10 +49,16 @@ endfun
 let s:bg = { 'gui': '#000000', 'cterm': 'none' }
 let s:fg = { 'gui': '#e0e2e4', 'cterm': 231 }
 let s:invisibles = { 'gui': '#161e21', 'cterm': 66 }
-let s:comments = { 'gui': '#464b5d', 'cterm': 145 }
+" let s:comments = { 'gui': '#464b5d', 'cterm': 145 }
+let s:comments = { 'gui': '#404040', 'cterm': 145 }
 let s:caret = { 'gui': '#ffcc00', 'cterm': 220 }
-let s:selection = { 'gui': '#1f2233', 'cterm': 239 }
-let s:guides = { 'gui': '#1f2233', 'cterm': 17 }
+" the background color selections
+" let s:selection = { 'gui': '#1f2233', 'cterm': 239 }
+" let s:guides = { 'gui': '#1f2233', 'cterm': 17 }
+" let s:selection = { 'gui': '#0e1122', 'cterm': 239 }
+" let s:guides = { 'gui': '#0e1122', 'cterm': 17 }
+let s:selection = { 'gui': '#202020', 'cterm': 239 }
+let s:guides = { 'gui': '#202020', 'cterm': 17 }
 let s:line_numbers = { 'gui': '#3b3f51', 'cterm': 145 }
 let s:line_highlight = { 'gui': '#0a0c12', 'cterm': 235 }
 let s:white = { 'gui': '#ffffff', 'cterm': 231 }
@@ -74,17 +78,6 @@ let s:violet = { 'gui': '#bb80b3', 'cterm': 139 }
 
 " let s:violet = { 'gui': '#bb80b3', 'cterm': 139 }
 
-" Theme-specific color overrides
-" if g:obsidian_theme_style == 'deepocean'
-"   let s:bg = { 'gui': '#000000', 'cterm': 'none' }
-"   let s:fg = { 'gui': '#e0e2e4', 'cterm': 103 }
-"   let s:invisibles = { 'gui': '#161e21', 'cterm': 103 }
-"   let s:comments = { 'gui': '#464b5d', 'cterm': 60 }
-"   let s:selection = { 'gui': '#1f2233', 'cterm': 60 }
-"   let s:guides = { 'gui': '#3b3f51', 'cterm': 17 }
-"   let s:line_numbers = { 'gui': '#3b3f51', 'cterm': 60 }
-"   let s:line_highlight = { 'gui': '#0a0c12', 'cterm': 0 }
-" endif
 
 " Defined globally so that the Airline theme has access
 let g:obsidian_colorscheme_map = {}
@@ -641,40 +634,44 @@ if has('nvim')
   hi NERDTree guibg=#000000
 endif
 
-" if has('nvim')
-"   let g:terminal_color_background = '#000000'
-"   let g:terminal_color_foreground = '#dcdccc'
-"   let g:terminal_color_0 = '#3f3f3f'
-"   let g:terminal_color_1 = '#705050'
-"   let g:terminal_color_2 = '#60b48a'
-"   let g:terminal_color_3 = '#dfaf8f'
-"   let g:terminal_color_4 = '#94bff3'
-"   let g:terminal_color_5 = '#dc8cc3'
-"   let g:terminal_color_6 = '#8cd0d3'
-"   let g:terminal_color_7 = '#dcdccc'
-"   let g:terminal_color_8 = '#709080'
-"   let g:terminal_color_9 =  '#dca3a3'
-"   let g:terminal_color_10 = '#c3bf9f'
-"   let g:terminal_color_11 = '#f0dfaf'
-"   let g:terminal_color_12 = '#ff0000'
-"   let g:terminal_color_13 = '#ec93d3'
-"   let g:terminal_color_14 = '#94bff3'
-"   let g:terminal_color_15 = '#ffffff'
-" endif
-
+" These match .Xresources
+" let g:terminal_color_background = '#000000'
+" let g:terminal_color_foreground = '#dcdccc'
 " let g:terminal_color_0 =  '#3f3f3f'
 " let g:terminal_color_1 =  '#705050'
 " let g:terminal_color_2 =  '#60b48a'
 " let g:terminal_color_3 =  '#dfaf8f'
 " let g:terminal_color_4 =  '#506070'
 " let g:terminal_color_5 =  '#dc8cc3'
-" let g:terminal_color_6 =  '#678cb1'
+" let g:terminal_color_6 =  '#8cd0d3'
 " let g:terminal_color_7 =  '#dcdccc'
 " let g:terminal_color_8 =  '#709080'
 " let g:terminal_color_9 =  '#dca3a3'
 " let g:terminal_color_10 = '#c3bf9f'
 " let g:terminal_color_11 = '#f0dfaf'
-" let g:terminal_color_12 = '#678cb1'
+" let g:terminal_color_12 = '#94bff3'
 " let g:terminal_color_13 = '#ec93d3'
 " let g:terminal_color_14 = '#93e0e3'
-" let g:terminal_color_15 = '#ff0000'
+" let g:terminal_color_15 = '#ffffff'
+
+if has('nvim')
+  let g:terminal_color_background = '#000000'
+  let g:terminal_color_foreground = '#dcdccc'
+  let g:terminal_color_0 = '#3f3f3f'
+  let g:terminal_color_1 = '#705050'
+  let g:terminal_color_2 = '#60b48a'
+  let g:terminal_color_3 = '#dfaf8f'
+  let g:terminal_color_4 = '#94bff3'
+  let g:terminal_color_5 = '#dc8cc3'
+  let g:terminal_color_6 = '#8cd0d3'
+  let g:terminal_color_7 = '#dcdccc'
+  let g:terminal_color_8 = '#709080'
+  let g:terminal_color_9 =  '#dca3a3'
+  let g:terminal_color_10 = '#c3bf9f'
+  let g:terminal_color_11 = '#f0dfaf'
+  let g:terminal_color_12 = '#ff0000'
+  let g:terminal_color_13 = '#ec93d3'
+  let g:terminal_color_14 = '#94bff3'
+  let g:terminal_color_15 = '#ffffff'
+endif
+

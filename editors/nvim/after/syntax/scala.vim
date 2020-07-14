@@ -10,5 +10,3 @@ syn match scalaEquals /=/
 syn match scalaMapArrow "->"
 syn match scalaIter "<-"
 syn match scalaDollar "$"
-" syn region scalaMethodCall start="/\." end="\(/"
-

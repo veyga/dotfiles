@@ -3,10 +3,6 @@ syn match pyDocString /""".*"""/
 syn match pyDocString /'''.*'''/
 syn match pyDocString /"""\_.\{-}"""/
 syn match pyDocString /'''\_.\{-}'''/
-" syn match pyDocStringDoubleQuotes /""".*"""/
-" syn match pyDocStringSingleQuotes /'''.*'''/
-" syn match pyMultilineDocStringDoubleQuotes /"""\_.\{-}"""/
-" syn match pyMultilineDocStringSingleQuotes /'''\_.\{-}'''/
 syn match pyBraceL /{/
 syn match pyBraceR /}/
 syn match pyBracketL /\[/
@@ -27,10 +23,9 @@ syn match pyRightAngleBracket ">"
 syn match pyLogicalAnd "&"
 syn match pyLogicalOr "|"
 syn match pyXor /\^/ 
-" syn match pyType /[int]
 
 
-" all this so the class name can be highlighted
+" **All this so the class name can be highlighted?
 " Clear default
 syn clear pythonStatement
 
@@ -43,12 +38,6 @@ syn keyword pythonStatement    def nextgroup=pythonFunction skipwhite
 " Now make seperate syntax groups for the class.
 syn keyword pythonClassStmt class nextgroup=pythonClass skipwhite
 syn match   pythonClass "\h\w*" display contained
-
-" Avoid highlighting attributes as builtins – just added "pythonClass" here.
-" syn clear pythonAttribute
-" syn match   pythonAttribute /\.\h\w*/hs=s+1
-"     \ contains=ALLBUT,pythonBuiltin,pythonFunction,pythonClass,pythonAsync
-"     \ transparent
 
 " Highlight the class statement and the class name.
 hi def link pythonClassStmt Statement

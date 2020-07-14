@@ -1,5 +1,5 @@
-source $SHELLS_HOME/.aliases
-
+autoload -U colors && colors
+source $HOME/dotfiles/shells/.aliasrc
 source /usr/share/doc/find-the-command/ftc.bash 2>/dev/null
 
 # This must be in the rc files (does not properly load if placed in .profile)
