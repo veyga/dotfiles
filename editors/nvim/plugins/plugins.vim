@@ -9,7 +9,7 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript
 "regex helper: highlights regions as you type in regex searches
 Plug 'markonm/traces.vim'
 
-" display buffers in statusline
+" display buffers under statusline
 Plug 'bling/vim-bufferline'
 
 " show ctags in side bar
@@ -100,5 +100,5 @@ source $NVIM_HOME/plugins/configs/tagbar.vim
 source $NVIM_HOME/plugins/configs/vim-bufferline.vim
 source $NVIM_HOME/plugins/configs/vim-commentary.vim
 source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
-source $NVIM_HOME/plugins/configs/vim-startify.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
+source $NVIM_HOME/plugins/configs/vim-startify.vim

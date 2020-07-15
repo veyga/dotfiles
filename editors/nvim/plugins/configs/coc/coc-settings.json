@@ -3,6 +3,8 @@
   "codeLens.enable": true,
   "rust-analyzer.trace.server": "messages",
   "python.jediEnabled": false,
-  "python.linting.mypyEnabled": true,
   "python.linting.enabled": true
 }
+
+// This can conflict with pytest?
+// "python.linting.mypyEnabled": true,

@@ -55,10 +55,10 @@ let s:caret = { 'gui': '#ffcc00', 'cterm': 220 }
 " the background color selections
 " let s:selection = { 'gui': '#1f2233', 'cterm': 239 }
 " let s:guides = { 'gui': '#1f2233', 'cterm': 17 }
-" let s:selection = { 'gui': '#0e1122', 'cterm': 239 }
-" let s:guides = { 'gui': '#0e1122', 'cterm': 17 }
-let s:selection = { 'gui': '#202020', 'cterm': 239 }
-let s:guides = { 'gui': '#202020', 'cterm': 17 }
+let s:selection = { 'gui': '#0e1122', 'cterm': 239 }
+let s:guides = { 'gui': '#0e1122', 'cterm': 17 }
+" let s:selection = { 'gui': '#202020', 'cterm': 239 }
+" let s:guides = { 'gui': '#202020', 'cterm': 17 }
 let s:line_numbers = { 'gui': '#3b3f51', 'cterm': 145 }
 let s:line_highlight = { 'gui': '#0a0c12', 'cterm': 235 }
 let s:white = { 'gui': '#ffffff', 'cterm': 231 }
@@ -75,6 +75,7 @@ let s:brown = { 'gui': '#c17e70', 'cterm': 137 }
 " let s:pink = { 'gui': '#f07178', 'cterm': 204 }
 let s:pink = { 'gui': '#f5bcf1', 'cterm': 204 }
 let s:violet = { 'gui': '#bb80b3', 'cterm': 139 }
+let s:gray = { 'gui': '#808080', 'cterm': 7 }
 
 " let s:violet = { 'gui': '#bb80b3', 'cterm': 139 }
 
@@ -103,6 +104,7 @@ let g:obsidian_colorscheme_map.purple = s:purple
 let g:obsidian_colorscheme_map.brown = s:brown
 let g:obsidian_colorscheme_map.pink = s:pink
 let g:obsidian_colorscheme_map.violet = s:violet
+let g:obsidian_colorscheme_map.gray = s:gray
 
 " === Highlights ===
 
@@ -147,12 +149,12 @@ call s:SetHighlight('StatusLine', s:fg, s:selection, '')
 call s:SetHighlight('StatusLineNC', s:comments, s:selection, '')
 call s:SetHighlight('StatusLineTerm', s:bg, s:fg, '')
 call s:SetHighlight('StatusLineTermNC', s:bg, s:fg, '')
-call s:SetHighlight('TabLine', s:fg, s:bg, '')
-call s:SetHighlight('TabLineFill', s:fg, s:bg, '')
-call s:SetHighlight('TabLineSel', s:bg, s:cyan, '')
+call s:SetHighlight('TabLine', s:red, s:bg, '')
+call s:SetHighlight('TabLineFill', s:pink, s:bg, '')
+call s:SetHighlight('TabLineSel', s:bg, s:selection, '')
 call s:SetHighlight('Title', s:pink, '', '') " was s:green
 call s:SetHighlight('VertSplit', s:comments, '', '')
-call s:SetHighlight('Visual', s:fg, s:selection, '')
+call s:SetHighlight('Visual', s:black, s:gray, '')
 call s:SetHighlight('WarningMsg', s:red, '', '')
 call s:SetHighlight('WildMenu', s:bg, s:cyan, '')
 
@@ -624,7 +626,6 @@ hi link SignifySignDelete GitGutterDelete
 " vim-better-whitespace
 call s:SetHighlight('ExtraWhitespace', '', s:red, '')
 
-
 " NERDTree
 if has('nvim')
   " call s:SetHighlight('NERDTreeFile', s:purple, '', '')
@@ -674,4 +675,5 @@ if has('nvim')
   let g:terminal_color_14 = '#94bff3'
   let g:terminal_color_15 = '#ffffff'
 endif
+
 

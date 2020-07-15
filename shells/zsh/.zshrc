@@ -1,17 +1,26 @@
-# zoomer shell
 autoload -U colors && colors
+export CLICOLOR=TRUE
 
-# TODO git integration/ pyvenvs? / reset colors?
+
+# function __virtualenv_ps1 {
+#     echo "${VIRTUAL_ENV:+(venv:${VIRTUAL_ENV##*/})}"
+# }
+# # disable the default virtualenv prompt change
+# export VIRTUAL_ENV_DISABLE_PROMPT=1
+
+# # the '...' are for irrelevant info here.
+# export PS1="%~ $(__virtualenv_ps1) $ "
+
+## TODO git integration / pyenv right align
 export PS1="
-%B%{$fg[magenta]%}╭─ %~
-╰─%b "
+ %B%{$fg[magenta]%}╭─ %~
+ ╰─%b "
 export PS2=".. "
 
 # History in cache directory:
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
-
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -34,7 +43,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
 
-# Change cursor shape for different vi modes.
+## Change cursor shape for different vi modes.
 function zle-keymap-select {
   if [[ ${KEYMAP} == vicmd ]] ||
      [[ $1 = 'block' ]]; then
@@ -54,7 +63,7 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
+## end of Change cursor shape for different vi modes.
 
 # Edit line in vim with ctrl-e (must be in insert mode):
 autoload edit-command-line; zle -N edit-command-line

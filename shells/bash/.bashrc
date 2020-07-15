@@ -1,5 +1,6 @@
 # autoload doesn't work in bash
 # autoload -U colors && colors
+export CLICOLOR=TRUE
 
 # # TODO git integration/ pyvenvs?
 # export PS1="

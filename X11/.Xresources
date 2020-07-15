@@ -17,7 +17,7 @@ XTerm*VT100.translations: #override \n\
  
 XTerm*background: #000000
 XTerm*foreground: #dcdccc
-XTerm*cursorColor: #303030
+XTerm*cursorColor: #808080
 XTerm*color0: #3f3f3f
 XTerm*color1: #705050
 XTerm*color2: #60b48a

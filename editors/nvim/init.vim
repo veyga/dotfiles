@@ -87,8 +87,10 @@ nnoremap <C-j> :resize +2<CR>
 nnoremap <C-h> :vertical resize -2<CR>
 nnoremap <C-l> :vertical resize +2<CR>
 
-" close buffer without closing window
+" close buffer without closing window (prompt for save)
 nnoremap <M-w> :bp<cr>:bd #<cr>
+" close buffer without closing window (no prompt - useful for exiting terminal)
+nnoremap <M-W> :bp<cr>:bd! #<cr>
 
 " display syntax group of selected item in bufferline
 nmap <leader>sp :call <SID>SynStack()<CR>
