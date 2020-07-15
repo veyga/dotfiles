@@ -1,3 +1,4 @@
+alias take='function _take(){mkdir $1; cd $1; };_take'
 alias la="ls -A --color=auto"
 alias ls="ls --color=auto"
 alias lal="ls -Alh --color=auto"

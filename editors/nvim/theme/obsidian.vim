@@ -154,7 +154,8 @@ call s:SetHighlight('TabLineFill', s:pink, s:bg, '')
 call s:SetHighlight('TabLineSel', s:bg, s:selection, '')
 call s:SetHighlight('Title', s:pink, '', '') " was s:green
 call s:SetHighlight('VertSplit', s:comments, '', '')
-call s:SetHighlight('Visual', s:black, s:gray, '')
+" visual contols the visual select mode colors and the gutter error colors
+call s:SetHighlight('Visual', s:red, s:gray, '')
 call s:SetHighlight('WarningMsg', s:red, '', '')
 call s:SetHighlight('WildMenu', s:bg, s:cyan, '')
 
@@ -667,7 +668,8 @@ if has('nvim')
   let g:terminal_color_6 = '#8cd0d3'
   let g:terminal_color_7 = '#dcdccc'
   let g:terminal_color_8 = '#709080'
-  let g:terminal_color_9 =  '#dca3a3'
+  " let g:terminal_color_9 =  '#dca3a3'
+  let g:terminal_color_9 =  '#ff5370'
   let g:terminal_color_10 = '#c3bf9f'
   let g:terminal_color_11 = '#f0dfaf'
   let g:terminal_color_12 = '#ff0000'
