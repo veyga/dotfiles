@@ -24,18 +24,16 @@ HISTFILE=~/.cache/zsh/history
 
 # needed for zfunc autocompletions (needs to be before compinit)
 fpath+=~/.zfunc
-
-
 # this doesn't really load the menus
-autoload -U compinit && compinit
+# autoload -U compinit && compinit
 
 # # LS
 # # Basic auto/tab complete:
-# autoload -U compinit
-# zstyle ':completion:*' menu select
-# zmodload zsh/complist
-# compinit
-# _comp_options+=(globdots)		# Include hidden files.
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots)		# Include hidden files.
 
 # # sets vim mode for terminal commands
 # bindkey -v
