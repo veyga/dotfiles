@@ -52,7 +52,11 @@ fi
 
 
 ###### Settings for Kali Linux VM  #######
-###### start with "xinit (i3|xfce)"  or "startx ~/.xinitrc session"  #######
+###### start with "xinit (i3|xfce)"  or 'startx ~/.xinitrc "i3"'  #######
+
+## switch control and caps  (host machine swaps it. swap it back here)
+setxkbmap -option caps:swapescape
+
 # Here Xfce is kept as default
 session=${1:-xfce}
 
