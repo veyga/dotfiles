@@ -1,4 +1,5 @@
-call plug#begin('$HOME/.config/vim-plug-plugins-sources')
+" defaults to .plugged
+call plug#begin()
 
 "filesystem navigation
 Plug 'preservim/nerdtree'
@@ -16,10 +17,7 @@ Plug 'bling/vim-bufferline'
 Plug 'majutsushi/tagbar'
 
 " conquer of completion (LSP client)
-" build from source
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
-" release branch (use this for remote comps)
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "comment shortcuts
 Plug 'tpope/vim-commentary'
