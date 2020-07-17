@@ -11,9 +11,9 @@ export VIM_HOME="$HOME/dotfiles/editors/vim"
 export SHELLS_HOME="$HOME/dotfiles/shells"
 export CC=/usr/bin/clang
 export CXX=/usr/bin/clang++
-export PATH=/home/veyga/.local/bin:/home/veyga/.local/bin/custom:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/bin/custom:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
-export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
+export PATH=$PATH:$HOME/Android/Sdk/platform-tools
 
 # for colored man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'

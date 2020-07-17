@@ -1,6 +1,6 @@
-# This is not loaded for user-veyga since login shell is zsh
+# This is not loaded for users whose login shell is zsh
 
 # load globals
-if [ -f ~/.profile ]; then
-	source ~/.profile
+if [ -f $HOME/.profile ]; then
+	source $HOME/.profile
 fi

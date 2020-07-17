@@ -16,12 +16,12 @@ set statusline+=\
 "********************************************************
 "***************   INITIALIZE THEME *********************
 "********************************************************
-source $NVIM_HOME/theme/obsidian.vim
+source $HOME/dotfiles/editors/nvim/theme/obsidian.vim
 
 "********************************************************
 "**************   INITIALIZE PLUGINS ********************
 "********************************************************
-source $NVIM_HOME/plugins/plugins.vim
+source $HOME/dotfiles/editors/nvim/plugins/plugins.vim
 
 set number relativenumber
 set hidden
