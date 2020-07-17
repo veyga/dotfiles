@@ -33,18 +33,32 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# power savings
-# sudo tlp start &
-# sudo powertop --auto-tune &
+##### Settings for Arch Host (login and enter "startx") ########
+## power savings
+## sudo tlp start &
+## sudo powertop --auto-tune &
 
-# switch control and caps
-setxkbmap -option caps:swapescape
+## switch control and caps
+#setxkbmap -option caps:swapescape
 
-#enable touchpad click
-xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
-xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
+##enable touchpad click
+#xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
+#xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
 
-# resolution
-xrandr -s 2560x1440
-redshift &
-exec i3
+## resolution
+#xrandr -s 2560x1440
+#redshift &
+#exec i3
+
+
+###### Settings for Kali Linux VM  #######
+###### start with "xinit (i3|xfce)"  or "startx ~/.xinitrc session"  #######
+# Here Xfce is kept as default
+session=${1:-xfce}
+
+case $session in
+    i3|i3wm           ) exec i3;;
+    xfce|xfce4        ) exec startxfce4;;
+    # No known session, try to run it as command
+    *                 ) exec $1;;
+esac
