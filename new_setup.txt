@@ -17,7 +17,6 @@ Install vim-plug:
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vi
 
-mkdir ~/.config/vim-plug-plugins-sources
 (enter nvim)
 :PlugInstall everything
 
@@ -29,7 +28,8 @@ ln -sf $HOME/dotfiles/shells/bash/.bashrc $HOME/.bashrc
 ln -sf $HOME/dotfiles/shells/zsh/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/shells/zsh/.zshenv $HOME/.zshenv
 ln -sf $HOME/dotfiles/shells/zsh/.zprofile $HOME/.zprofile
-ln -sf $HOME/dotfiles/shells/zsh/.zcompdump ~/.zcompdump
+# ln -sf $HOME/dotfiles/shells/zsh/.zcompdump $HOME/.zcompdump   # needed?
+ln -sf $HOME/dotfiles/terminals/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/editors/nvim $HOME/config/nvim
 sudo ln -sf $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
 
