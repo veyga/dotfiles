@@ -1,5 +1,6 @@
 # insert/edit commands based on target system (pacman, apt, dnf, etc..)
 
+# set up new ssh keys and link to github or...
 git clone https://github.com/veyga/dotfiles
 
 # symlinks  (profile files will only be loaded if starting X from .xinitrc directly)
@@ -10,9 +11,10 @@ ln -sf $HOME/dotfiles/shells/zsh/.zprofile $HOME/.zprofile
 ln -sf $HOME/dotfiles/shells/zsh/.zshenv $HOME/.zshenv
 ln -sf $HOME/dotfiles/shells/zsh/.zshrc $HOME/.zshrc
 ln -sf $HOME/dotfiles/shells/zsh/.zfunc $HOME/.zfunc
+ln -sf $HOME/dotfiles/terminals/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/editors/vim/.vim $HOME/.vim
 ln -sf $HOME/dotfiles/editors/vim/.vimrc $HOME/.vimrc
-ln -sf $HOME/dotfiles/editors/nvim $HOME/config/nvim
+ln -sf $HOME/dotfiles/editors/nvim $HOME/.config/nvim
 sudo ln -sf $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
 ln -sf $HOME/dotfiles/wms/i3/config $HOME/.config/i3/config
 ln -sf $HOME/dotfiles/X11/.xinitrc $HOME/.xinitrc
@@ -41,5 +43,4 @@ coc-json
 coc-marketplace
 coc-python
 coc-snippets
-coc-tslint-plugin
-coc-tsserver
+...etc  (see CocList marketplace)
