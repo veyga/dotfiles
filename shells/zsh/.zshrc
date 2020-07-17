@@ -2,15 +2,6 @@ autoload -U colors && colors
 export CLICOLOR=TRUE
 source $HOME/dotfiles/shells/.aliasrc
 
-# function __virtualenv_ps1 {
-#     echo "${VIRTUAL_ENV:+(venv:${VIRTUAL_ENV##*/})}"
-# }
-# # disable the default virtualenv prompt change
-# export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# # the '...' are for irrelevant info here.
-# export PS1="%~ $(__virtualenv_ps1) $ "
-
 ## TODO git integration / pyenv right align
 export PS1="
  %B%{$fg[magenta]%}╭─ %~
@@ -24,18 +15,16 @@ HISTFILE=~/.cache/zsh/history
 
 # needed for zfunc autocompletions (needs to be before compinit)
 fpath+=~/.zfunc
-# this doesn't really load the menus
-# autoload -U compinit && compinit
+# autoload -U compinit && compinit   # this doesn't really load the menus?
 
-# # LS
-# # Basic auto/tab complete:
+# Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# # sets vim mode for terminal commands
+# sets vim mode for terminal commands
 bindkey -v
 export KEYTIMEOUT=1
 
@@ -55,7 +44,7 @@ function zle-keymap-select {
        [[ ${KEYMAP} == viins ]] ||
        [[ ${KEYMAP} = '' ]] ||
        [[ $1 = 'beam' ]]; then
-    echo -ne '\e[5 q'
+    echo -ne '\e[5 q' 
   fi
 }
 zle -N zle-keymap-select
@@ -74,20 +63,19 @@ bindkey '^e' edit-command-line
 
 # some zsh autosuggestions are loaded from ~/.zfunc
 # others loaded manually here...
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/doc/find-the-command/ftc.zsh 2>/dev/null
-source $HOME/dotfiles/shells/zsh/plugins/mvn/mvn.plugin.zsh 2>/dev/null
+# These should be install from distro package manager and sourced accordingly
+# source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
+# source /usr/share/doc/find-the-command/ftc.zsh 2>/dev/null
 # source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
-
-export PATH="~/.pyenv/bin:$PATH"
+# 
+# FIRST MUST INSTALL PYENV FROM APPROPRIATE PACKAGE MANAGER
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
-# eval "$(pyenv virtualenv-init -)"
-# SDKMAN must be in the rc files (does not properly load if placed in .profile)
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/veyga/.sdkman"
-[[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
-
+# This must be in the rc files (does not properly load if placed in .profile)
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 
 # Preferred editor for local and remote sessions
