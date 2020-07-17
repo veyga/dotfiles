@@ -2,23 +2,7 @@
 
 git clone https://github.com/veyga/dotfiles
 
-Install:
-zsh then "chsh -s $(which zsh)"
-pyenv (from a browser)
-pip
-i3-wm i3status dmenu
-neovim
-tmux
-ripgrep?
-sdkman?
-npm? (required for CoC)
-nerdfonts? (only needed for devicons)
-
-
-(enter nvim)
-:PlugInstall everything
-
-# symlinks
+# symlinks  (profile files will only be loaded if starting X from .xinitrc directly)
 ln -sf $HOME/dotfiles/shells/.profile $HOME/.profile
 ln -sf $HOME/dotfiles/shells/bash/.bash_profile $HOME/.bash_profile
 ln -sf $HOME/dotfiles/shells/bash/.bashrc $HOME/.bashrc
@@ -33,3 +17,29 @@ sudo ln -sf $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runti
 ln -sf $HOME/dotfiles/wms/i3/config $HOME/.config/i3/config
 ln -sf $HOME/dotfiles/X11/.xinitrc $HOME/.xinitrc
 ln -sf $HOME/dotfiles/X11/.Xresources $HOME/.Xresources
+
+
+## Install system packages:
+zsh [then "chsh -s $(which zsh)"]
+pyenv (from a browser link, not package manager)
+pip   (in debian this is python3-virtualenv ??)
+i3-wm i3status dmenu
+neovim
+tmux
+ripgrep
+fzf 
+node/yarn (needed for CoC)
+sdkman?
+nerdfonts? (only needed for devicons)
+
+## Install vim plugins
+:PlugInstall  
+
+## Install CoC plugins
+coc-actions
+coc-json
+coc-marketplace
+coc-python
+coc-snippets
+coc-tslint-plugin
+coc-tsserver
