@@ -1,0 +1,14 @@
+[user]
+        email = andrewstefanich@gmail.com
+        name = Andrew Stefanich
+[alias]
+        hist = log --all --graph --decorate --oneline
+        lga = log --pretty=fmt --date=short --graph --all
+        lg = log --pretty=fmt --date=short --graph
+        la = log --pretty=fmt --date=short --all
+        ll = log --pretty=fmt --date=short
+        lf = log --pretty=fuller --stat
+[core]
+        pager = less -F -X
+[pretty]
+        fmt = %C(auto)%h %C(magenta)%ad %C(cyan)%an%C(auto)%d %s
