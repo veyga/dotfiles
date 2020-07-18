@@ -37,14 +37,24 @@ fi
 # sudo tlp start &
 # sudo powertop --auto-tune &
 
-# switch control and caps
-setxkbmap -option caps:swapescape
+echo "Arch or Kali?"
+read targetsystem
 
-#enable touchpad click
-xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
-xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
+if [[ "$targetsystem" == "Arch" ]]; then
+  echo "starting Arch with i3"
+  setxkbmap -option caps:swapescape # switch control and caps
+  #enable touchpad click
+  xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
+  xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
+  xrandr -s 2560x1440  # resolution
+  redshift &
+  exec i3
+else [[ "$targetsystem" == "Kali" ]]; then
+  echo "starting Kali with xfce4"
+  setxkbmap -option caps:swapescape # switch control and caps
+  exec startxfce4
+else 
+  echo "unknown target system"
+fi
 
-# resolution
-xrandr -s 2560x1440
-redshift &
-exec i3
+
