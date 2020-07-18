@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# convenience script for starting arch (extra configs should be entered here)
+startx

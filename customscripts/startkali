@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# convenience script for starting kali VMs (configuration should be done here)
+startx ~/.xinitrc "xfce4"
