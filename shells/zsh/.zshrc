@@ -10,10 +10,9 @@ export PS1="
  ╰─%b "
 export PS2=".. "
 
-# History in cache directory
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/zsh/history
+# HISTFILE=~/.cache/zsh/history
 
 # Load ZSH plugins
 loadzshplugins() {
@@ -81,11 +80,14 @@ bindkey '^e' edit-command-line
 export PATH=$HOME/.local/bin:$HOME/.local/bin/customscripts:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
-export PATH="~/.pyenv/bin:$PATH"
-[[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# [[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
 
 # SDKMAN must be in the rc files (does not properly load if placed in .profile)
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
