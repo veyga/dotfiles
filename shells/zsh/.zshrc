@@ -2,32 +2,33 @@ autoload -U colors && colors
 export CLICOLOR=TRUE
 source $HOME/dotfiles/shells/.aliasrc
 
-# function __virtualenv_ps1 {
-#     echo "${VIRTUAL_ENV:+(venv:${VIRTUAL_ENV##*/})}"
-# }
-# # disable the default virtualenv prompt change
-# export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-# # the '...' are for irrelevant info here.
-# export PS1="%~ $(__virtualenv_ps1) $ "
-
-## TODO git integration / pyenv right align
 export PS1="
- %B%{$fg[magenta]%}╭─ %~
+ %B%{$fg[magenta]%}╭─ [%n@%M] %~
  ╰─%b "
 export PS2=".. "
 
-# History in cache directory:
+# History in cache directory
 HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.cache/zsh/history
 
-# needed for zfunc autocompletions (needs to be before compinit)
-fpath+=~/.zfunc
-# this doesn't really load the menus
-# autoload -U compinit && compinit
+# Load ZSH plugins
+loadzshplugins() {
+ 
+  # needs to be before compinit
+  fpath+=~/.zfunc
 
-# # LS
+  local autosuggestions=/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+  [[ -e "$autosuggestions" ]] && source $autosuggestions 2>/dev/null
+
+  local findcommand=/usr/share/doc/find-the-command/ftc.zsh
+  [[ -e "$findcommand" ]] && source $findcommand 2>/dev/null
+
+  source $HOME/dotfiles/shells/zsh/plugins/mvn/mvn.plugin.zsh 2>/dev/null
+}
+loadzshplugins
+
+# autoload -U compinit && compinit   # (this doesn't really load the menus?)
 # # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -66,37 +67,24 @@ zle-line-init() {
 zle -N zle-line-init
 echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-# ## end of Change cursor shape for different vi modes.
+# ## END of Change cursor shape for different vi modes.
 
 # Edit line in vim with ctrl-e (must be in insert mode):
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# some zsh autosuggestions are loaded from ~/.zfunc
-# others loaded manually here...
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh 2>/dev/null
-source /usr/share/doc/find-the-command/ftc.zsh 2>/dev/null
-source $HOME/dotfiles/shells/zsh/plugins/mvn/mvn.plugin.zsh 2>/dev/null
-# source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 2>/dev/null
 
+# Update PATH variables
+export PATH=$HOME/.local/bin:$HOME/.local/bin/customscripts:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
 export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
+[[ -d "$HOME/.pyenv" ]] && eval "$(pyenv init -)"
 
-# eval "$(pyenv virtualenv-init -)"
 # SDKMAN must be in the rc files (does not properly load if placed in .profile)
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/veyga/.sdkman"
-[[ -s "/home/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/home/veyga/.sdkman/bin/sdkman-init.sh"
-
-
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-

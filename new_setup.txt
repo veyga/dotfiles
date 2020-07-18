@@ -17,6 +17,7 @@ ln -sf $HOME/dotfiles/editors/vim/.vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/editors/nvim $HOME/.config/nvim
 sudo ln -sf $HOME/dotfiles/editors/nvim/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
 ln -sf $HOME/dotfiles/wms/i3/config $HOME/.config/i3/config
+ln -sf $HOME/dotfiles/customscripts $HOME/.local/bin/customscripts
 ln -sf $HOME/dotfiles/X11/.xinitrc $HOME/.xinitrc
 ln -sf $HOME/dotfiles/X11/.Xresources $HOME/.Xresources
 

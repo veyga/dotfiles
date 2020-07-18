@@ -1,0 +1,14 @@
+#!/bin/bash
+
+declare -i STATE
+STATE=`xinput list-props "SYNA2393:00 06CB:7A13 Touchpad" |grep 'Device Enabled'|awk '{print $4}'`
+if [ $STATE -eq 1 ]
+then
+    xinput disable "SYNA2393:00 06CB:7A13 Touchpad"
+    # echo "Touchpad disabled."
+    # notify-send -a 'Touchpad' 'Disabled' -i /usr/share/icons/Adwaita/48x48/devices/input-touchpad.png
+else
+   xinput enable "SYNA2393:00 06CB:7A13 Touchpad"
+    # echo "Touchpad enabled."
+   #  notify-send -a 'Touchpad' 'Enabled' -i /usr/share/icons/Adwaita/48x48/devices/input-touchpad.png
+fi

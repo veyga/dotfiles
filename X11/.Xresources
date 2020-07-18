@@ -6,7 +6,8 @@ XTerm*faceName: DejaVuSans Mono Nerd Font
 XTerm*faceSize: 10
 XTerm*renderFont: true
 XTerm*selectToClipboard: true
-! enables Alt key
+! enables Alt key (period should be * i think)
+! should be XTerm*metaSendsEscape: true ??
 XTerm.vt100.metaSendsEscape: true
  
 XTerm*VT100.translations: #override \n\
@@ -14,23 +15,9 @@ XTerm*VT100.translations: #override \n\
   Ctrl <Key>+: larger-vt-font() \n\
   Ctrl Shift <Key>c: copy-selection(CLIPBOARD) \n\
   Ctrl Shift <Key>v: insert-selection(CLIPBOARD)
- 
-XTerm*background: #000000
-XTerm*foreground: #dcdccc
-XTerm*cursorColor: #808080
-XTerm*color0: #3f3f3f
-XTerm*color1: #705050
-XTerm*color2: #60b48a
-XTerm*color3: #dfaf8f
-XTerm*color4: #506070
-XTerm*color5: #dc8cc3
-XTerm*color6: #8cd0d3
-XTerm*color7: #dcdccc
-XTerm*color8: #709080
-XTerm*color9: #dca3a3
-XTerm*color10: #c3bf9f
-XTerm*color11: #f0dfaf
-XTerm*color12: #94bff3
-XTerm*color13: #ec93d3
-XTerm*color14: #93e0e3
-XTerm*color15: #ffffff
+
+! special
+XTerm*foreground:   #e0e2e4
+XTerm*background:   #000000
+XTerm*cursorColor:  #606060
+
