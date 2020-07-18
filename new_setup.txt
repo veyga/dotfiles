@@ -4,6 +4,7 @@
 git clone https://github.com/veyga/dotfiles
 
 # symlinks  (profile files will only be loaded if starting X from .xinitrc directly)
+ln -sf $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 ln -sf $HOME/dotfiles/shells/.profile $HOME/.profile
 ln -sf $HOME/dotfiles/shells/bash/.bash_profile $HOME/.bash_profile
 ln -sf $HOME/dotfiles/shells/bash/.bashrc $HOME/.bashrc
