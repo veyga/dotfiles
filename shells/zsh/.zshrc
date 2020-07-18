@@ -77,7 +77,7 @@ bindkey '^e' edit-command-line
 
 
 # Update PATH variables
-export PATH=$HOME/.local/bin:$HOME/.local/bin/customscripts:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/scripts:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH=$PATH:/home/veyga/Android/Sdk/platform-tools
 export PYENV_ROOT="$HOME/.pyenv"
