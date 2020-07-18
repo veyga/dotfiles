@@ -49,7 +49,7 @@ if [[ "$targetsystem" == "Arch" ]]; then
   xrandr -s 2560x1440  # resolution
   redshift &
   exec i3
-else [[ "$targetsystem" == "Kali" ]]; then
+elif [[ "$targetsystem" == "Kali" ]]; then
   echo "starting Kali with xfce4"
   setxkbmap -option caps:swapescape # switch control and caps
   exec startxfce4
