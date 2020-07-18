@@ -33,32 +33,35 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-##### Settings for Arch Host (login and enter "startx") ########
-## power savings
-## sudo tlp start &
-## sudo powertop --auto-tune &
+# swap caps and escape
+if command -v setxkbmap &> /dev/null
+then
+  setxkbmap -option caps:swapescape
+fi
 
-## switch control and caps
-#setxkbmap -option caps:swapescape
+# enable touchpad (needed for i3)
+if command -v xinput &> /dev/null
+then
+  xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
+  xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
+fi
 
-##enable touchpad click
-#xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Tapping Enabled" 1
-#xinput set-prop "SYNA2393:00 06CB:7A13 Touchpad" "libinput Click Method Enabled" 0 1
+# default resolution for host
+if command -v xrandr &> /dev/null
+then
+  xrandr -s 2560x1440
+fi
 
-## resolution
-#xrandr -s 2560x1440
-#redshift &
-#exec i3
+# time based coloring
+if command -v redshift &> /dev/null
+then
+  redshift &
+fi
 
-
-###### Settings for Kali Linux VM  #######
-###### start with "xinit (i3|xfce)"  or 'startx ~/.xinitrc "i3"'  #######
-
-## switch control and caps  (host machine swaps it. swap it back here)
-setxkbmap -option caps:swapescape
-
+# Run i3 for Arch host/ xfce for Kali VM
+# xinit "i3" | xinit "xfce"
 # Here Xfce is kept as default
-session=${1:-xfce}
+session=${1:-i3}
 
 case $session in
     i3|i3wm           ) exec i3;;
