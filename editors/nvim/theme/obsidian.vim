@@ -10,6 +10,10 @@ if exists('syntax_on')
   syntax reset
 endif
 
+if has("termguicolors")
+  set termguicolors
+endif
+
 let g:colors_name = 'obsidian'
 let g:obsidian_theme_style = get(g:, 'obsidian_theme_style', 'default')
 let g:obsidian_terminal_italics = get(g:, 'obsidian_terminal_italics', 0)
