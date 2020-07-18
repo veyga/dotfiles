@@ -47,10 +47,10 @@ then
 fi
 
 # default resolution for host
-if command -v xrandr &> /dev/null
-then
-  xrandr -s 2560x1440
-fi
+# if command -v xrandr &> /dev/null
+# then
+#   xrandr -s 2560x1440
+# fi
 
 # time based coloring
 if command -v redshift &> /dev/null
@@ -59,13 +59,15 @@ then
 fi
 
 # Run i3 for Arch host/ xfce for Kali VM
-# xinit "i3" | xinit "xfce"
-# Here Xfce is kept as default
+# see "startarch" and "startkali" scripts
 session=${1:-i3}
 
 case $session in
-    i3|i3wm           ) exec i3;;
-    xfce|xfce4        ) exec startxfce4;;
+    i3) 
+      xrandr -s 2560x1440 # resolution for host machine
+      exec i3;;
+    xfce4) 
+      exec startxfce4;;
     # No known session, try to run it as command
-    *                 ) exec $1;;
+    *) exec $1;;
 esac
