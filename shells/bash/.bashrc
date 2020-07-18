@@ -13,7 +13,7 @@ source $HOME/dotfiles/shells/.aliasrc
 # Load Bash plugins
 loadbashplugins() {
 
-  local findcomman=/usr/share/doc/find-the-command/ftc.bash
+  local findcommand=/usr/share/doc/find-the-command/ftc.bash
   [[ -e "$findcommand" ]] && source $findcommand 2>/dev/null
 
 }
