@@ -4,8 +4,10 @@
   "rust-analyzer.trace.server": "messages",
   "python.jediEnabled": false,
   "python.linting.mypyEnabled": true,
-  "python.linting.enabled": true
+  "python.linting.mypyPath": "/home/veyga/.pyenv/shims/mypy",
+  "python.linting.enabled": true,
+  "python.formatting.autopep8Path": "/home/veyga/.pyenv/shims/autopep8"
 }
-
+// default linter=pylint
 // This can conflict with pytest?
 // "python.linting.mypyEnabled": true,
