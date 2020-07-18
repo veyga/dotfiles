@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # autoload doesn't work in bash?
 # autoload -U colors && colors
 export CLICOLOR=TRUE

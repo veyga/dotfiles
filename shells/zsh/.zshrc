@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 autoload -U colors && colors
 export CLICOLOR=TRUE
 source $HOME/dotfiles/shells/.aliasrc
