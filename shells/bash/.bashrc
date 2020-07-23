@@ -21,3 +21,6 @@ loadbashplugins() {
 
 }
 loadbashplugins
+
+
+set -o vi
