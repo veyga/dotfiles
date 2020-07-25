@@ -8,7 +8,6 @@ export CLICOLOR=TRUE
 # History in cache directory:
 HISTSIZE=1000
 SAVEHIST=1000
-HISTFILE=~/.cache/bash/history
 
 export PS2=".. "
 source $HOME/dotfiles/shells/.aliasrc
