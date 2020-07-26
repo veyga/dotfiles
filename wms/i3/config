@@ -241,4 +241,5 @@ bindsym Print exec "scrot '/home/veyga/Pictures/screenshots/%s_%H%M_%d.%m.%Y_$wx
 #
 
 # start a terminal on i3 initialization
-exec --no-startup-id xterm
+# exec --no-startup-id xterm
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/veyga/dotfiles/wms/i3/default-layout.json'"
