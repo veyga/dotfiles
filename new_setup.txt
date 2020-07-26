@@ -46,3 +46,10 @@ coc-marketplace
 coc-python
 coc-snippets
 ...etc  (see CocList marketplace)
+
+## Install font
+ln -sf $HOME/dotfiles/fonts/ $HOME/.local/share/fonts
+either copy font to /usr/share/fonts/TTF/ or add ~/.local/share/fonts/ to font path
+
+(not needed if font stored in dotfiles)
+curl -fLo "DejaVu Sans Mono Nerd Font Complete.ttf" https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/DejaVuSansMono/Regular/complete/DejaVu%20Sans%20Mono%20Nerd%20Font%20Complete.ttf

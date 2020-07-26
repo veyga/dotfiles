@@ -2,7 +2,7 @@ Xft.dpi: 140
 
 ! reload with xrdb -merge ~/.Xresources
 XTerm*termName: xterm-256color
-XTerm*faceName: DejaVuSans Mono Nerd Font
+XTerm*faceName: DejaVuSansMono Nerd Font
 XTerm*faceSize: 10
 XTerm*renderFont: true
 XTerm*selectToClipboard: true

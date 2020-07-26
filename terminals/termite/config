@@ -8,7 +8,7 @@
 #dynamic_title = true
 
 # font = SauceCodePro Nerd Font 9.5
-font = Monospace 10
+font = monospace 10
 
 #powerlevel9k theme overrides this?
 #fullscreen = true
