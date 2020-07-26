@@ -13,7 +13,7 @@ Plug 'markonm/traces.vim'
 " display buffers under statusline
 Plug 'bling/vim-bufferline'
 
-" show ctags in side bar
+" show ctags in side bar (requires ctags to be installed)
 Plug 'majutsushi/tagbar'
 
 " conquer of completion (LSP client)
@@ -60,32 +60,31 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " highlights color values 
 Plug 'chrisbra/colorizer'
 
-"cpp syntax highligthing
-Plug 'octol/vim-cpp-enhanced-highlight'
-
 " highlight yanked text
 Plug 'machakann/vim-highlightedyank'
-
-" enhanced syntax for python
-Plug 'vim-python/python-syntax'
 
 " dotted-line indent guide
 Plug 'Yggdroot/indentLine'
 
+"cpp syntax highligthing
+"Plug 'octol/vim-cpp-enhanced-highlight'
+
+" enhanced syntax for python
+Plug 'vim-python/python-syntax'
+
 " rainbow parens
-Plug 'luochen1990/rainbow'
-Plug 'wlangstroth/vim-racket'
+"Plug 'luochen1990/rainbow'
+"Plug 'wlangstroth/vim-racket'
 
 " typescript syntax highlighting
 Plug 'herringtondarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
-
 " yats is better?
 " Plug 'leafgarland/typescript-vim'
 
 " rust lang support
-Plug 'rust-lang/rust.vim' 
-Plug 'arzg/vim-rust-syntax-ext'
+"Plug 'rust-lang/rust.vim'
+"Plug 'arzg/vim-rust-syntax-ext'
 
 call plug#end()
 
