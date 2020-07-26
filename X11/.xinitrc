@@ -47,10 +47,10 @@ then
 fi
 
 # default resolution for host
-# if command -v xrandr &> /dev/null
-# then
-#   xrandr -s 2560x1440
-# fi
+if command -v xrandr &> /dev/null
+then
+  xrandr -s 2560x1440
+fi
 
 # time based coloring
 if command -v redshift &> /dev/null
@@ -64,7 +64,7 @@ session=${1:-i3}
 
 case $session in
     i3) 
-      xrandr -s 2560x1440 # resolution for host machine
+      # xrandr -s 2560x1440 # resolution for host machine
       exec i3;;
     xfce4) 
       exec startxfce4;;
