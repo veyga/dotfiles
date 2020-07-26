@@ -29,6 +29,7 @@ pyenv (from a browser link, not package manager)
 pip   (in debian this is python3-virtualenv ??)
 i3-wm i3status dmenu
 neovim
+pynvim (from pip)
 tmux
 ripgrep
 fzf 
@@ -46,7 +47,5 @@ coc-python
 coc-snippets
 ...etc  (see CocList marketplace)
 
-## Install font
+## Install font (nerd font needed for vim dev icons)
 sudo install -Dm0644 $HOME/dotfiles/fonts/DejaVu-Sans-Mono-Nerd-Font-Complete.ttf /usr/share/fonts/TTF
-## OR link locally and set up xorg to search for fonts locally 
-ln -sf $HOME/dotfiles/fonts/ $HOME/.local/share/fonts
