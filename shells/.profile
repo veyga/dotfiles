@@ -10,8 +10,8 @@ export BROWSER="firefox"
 export NVIM_HOME="$HOME/dotfiles/editors/nvim"
 export VIM_HOME="$HOME/dotfiles/editors/vim"
 export SHELLS_HOME="$HOME/dotfiles/shells"
-export CC=/usr/bin/clang
-export CXX=/usr/bin/clang++
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
 
 # for colored man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'

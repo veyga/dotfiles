@@ -186,6 +186,7 @@ call s:SetHighlight('Structure', s:cyan, '', '')
 call s:SetHighlight('Special', s:violet, '', '')
 call s:SetHighlight('Underlined', s:blue, '', '')
 call s:SetHighlight('Error', s:fg, s:red, '')
+" hi Error guifg=#FF0000 guibg=#ff0000
 hi Error guifg=#000000 guibg=#ff0000
 " call s:SetHighlight('Todo', s:yellow, s:yellow, 'italic')
 hi Todo guifg=#ffffff guibg=#555555 gui=italic
@@ -412,8 +413,8 @@ hi rsDelimiter guifg=#d2a679
 hi rsFuncDef guifg=#d7d1a6 gui=bold
 hi rsLibraryMacro guifg=#e0e2e4 gui=italic
 hi rsUserMacro guifg=#e0e2e4 gui=bold
-hi rsMatch guifg=#93c673
-hi rsUse guifg=#93c673
+hi rsMatch guifg=#93c763
+hi rsUse guifg=#93c763
 hi rsDocComment guifg=#606060
 hi rsUserMethod guifg=#e0e2e4
 hi rsUserFunc guifg=#e0e2e4
@@ -434,22 +435,27 @@ hi rsForeignFunc guifg=#e0e2e4
 " RUST
 
 " C/C++
-hi cStatement guifg=#93c673
-hi cType guifg=#93c673
+hi cStatement guifg=#93c763
+hi cType guifg=#93c763
+" hi cType guifg=#678cb1
+hi cConstant guifg=#93c763
 hi cPreprocessorLine guifg=#a082bd
-hi cAnsiFunction guifg=#e0e2e4
+hi cAnsiFunction guifg=#e0e2e4 gui=italic
 hi cCustomFunc guifg=#e0e2e4
 hi cParen guifg=#d2a679
 hi cCustomParen guifg=#d2a679
-hi cStorageClass guifg=#93c673
-hi cConditional guifg=#93c673
+hi cStorageClass guifg=#93c763
+hi cConditional guifg=#93c763
 hi cBraceL guifg=#d2a679
 hi cBraceR guifg=#d2a679
 hi cParenL guifg=#d2a679
 hi cParenR guifg=#d2a679
-hi cBracket guifg=#d2a679
+" hi cBracket guifg=#d2a679
+hi cBracketL guifg=#d2a679
+hi cBracketR guifg=#d2a679
 hi cColon guifg=#d2a679
 hi cSemicolon guifg=#d2a679
+hi cComma guifg=#d2a679
 hi cEq guifg=#89ddff
 hi cPlus guifg=#89ddff
 hi cMinus guifg=#89ddff
@@ -459,12 +465,23 @@ hi cAnd guifg=#89ddff
 hi cPipe guifg=#89ddff
 hi cPipeL guifg=#89ddff
 hi cPipeR guifg=#89ddff
+hi cRepeat guifg=#93c763
+hi cStructure guifg=#93c763
+hi cCustomScope guifg=#d2a679
+
+hi cCustomFunc guifg=#e0e2e4
+hi cCustomParen guifg=#d2a679
+hi cParen guifg=#d2a679
+hi cPeriod guifg=#d2a679
+" hi cCustomDot guifg=#d2a679
 
 hi cppPreprocessorLine guifg=#a082bd
-hi cppAccess guifg=#93c673
+hi cppConstant guifg=#93c763
+hi cppAccess guifg=#93c763
 hi cppSTLconstant guifg=#e0e2e4
-hi cppSTLnamespace guifg=#e0e2e4
+hi cppSTLnamespace guifg=#678cb1
 hi cppSTLfunction guifg=#e0e2e4
+hi cppBoolean guifg=#93c763
 hi cppBraceL guifg=#d2a679
 hi cppBraceR guifg=#d2a679
 hi cppParenL guifg=#d2a679
@@ -476,12 +493,22 @@ hi cppEq guifg=#89ddff
 hi cppPlus guifg=#89ddff
 hi cppMinus guifg=#89ddff
 hi cppDivide guifg=#89ddff
+hi cppTernary guifg=#89ddff
 hi cppStar guifg=#89ddff
 hi cppAnd guifg=#89ddff
 hi cppPipe guifg=#89ddff
 hi cppPipeL guifg=#89ddff
 hi cppPipeR guifg=#89ddff
 hi cppSTLios guifg=#e0e2e4
+hi cppStatement guifg=#93c763
+hi cppModifier guifg=#93c763
+hi cppType guifg=#93c763
+" hi cppType guifg=#678cb1
+hi cppStructure guifg=#93c763
+hi cppCapitalWord guifg=#678cb1
+hi cppConstantValue guifg=#e0e2e4 gui=italic
+"hi cppPointerType guifg=#678cb1
+"hi cppReferenceType guifg=#678cb1
 
 
 " Racket/rkt
@@ -646,3 +673,5 @@ if has('nvim')
 endif
 
 
+" something overwrites this red, leave on bottom
+" hi Error guifg=#FF0000 guibg=#ff0000

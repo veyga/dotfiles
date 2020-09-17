@@ -55,7 +55,7 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mhinz/vim-startify'
 
 " absolute line num for current line, relative for rest
-Plug 'jeffkreeftmeijer/vim-numbertoggle'
+" Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " highlights color values 
 Plug 'chrisbra/colorizer'
@@ -67,7 +67,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
 
 "cpp syntax highligthing
-"Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 " enhanced syntax for python
 Plug 'vim-python/python-syntax'
@@ -86,6 +86,9 @@ Plug 'pangloss/vim-javascript'
 "Plug 'rust-lang/rust.vim'
 "Plug 'arzg/vim-rust-syntax-ext'
 
+Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+
+
 call plug#end()
 
 source $NVIM_HOME/plugins/configs/colorizer.vim
@@ -99,3 +102,5 @@ source $NVIM_HOME/plugins/configs/vim-commentary.vim
 source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
 source $NVIM_HOME/plugins/configs/vim-startify.vim
+source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
+

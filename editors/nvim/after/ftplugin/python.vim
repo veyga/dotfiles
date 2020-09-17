@@ -1,5 +1,7 @@
-setlocal colorcolumn=80
-setlocal textwidth=80
+setlocal colorcolumn=100
+setlocal textwidth=100
+" setlocal colorcolumn=80
+" setlocal textwidth=80
 setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal softtabstop=4

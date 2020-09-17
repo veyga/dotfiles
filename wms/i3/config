@@ -215,7 +215,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 # lock screen
 bindsym $mod+Shift+x exec "i3lock --clock -c 130623"
 
-bindsym F7 exec --no-startup-id touchpad_toggle
+#conflicts with some ide's
+# bindsym F7 exec --no-startup-id touchpad_toggle
 focus_follows_mouse no
 
 # exec sudo powertop --auto-tune
