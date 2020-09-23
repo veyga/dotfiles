@@ -132,7 +132,6 @@ call s:SetHighlight('FoldColumn', s:line_numbers, s:bg, '')
 call s:SetHighlight('Folded', s:brown, s:bg, 'bold')
 " call s:SetHighlight('LineNr', s:line_numbers, '', '')
 " call s:SetHighlight('MatchParen', s:cyan, s:purple, 'bold')
-hi MatchParen guifg=#89ddff guibg=#de1fcf gui=bold
 " call s:SetHighlight('MatchParen', s:comments, s:cyan, 'bold')
 call s:SetHighlight('ModeMsg', s:fg, '', '')
 call s:SetHighlight('MoreMsg', s:white, '', '')
@@ -186,6 +185,9 @@ call s:SetHighlight('Structure', s:cyan, '', '')
 call s:SetHighlight('Special', s:violet, '', '')
 call s:SetHighlight('Underlined', s:blue, '', '')
 call s:SetHighlight('Error', s:fg, s:red, '')
+
+hi MatchParen guifg=#89ddff guibg=#de1fcf gui=bold
+" hi MatchParen guifg=#f5bcf1 guibg=#4d0454 gui=bold
 " hi Error guifg=#FF0000 guibg=#ff0000
 hi Error guifg=#000000 guibg=#ff0000
 " call s:SetHighlight('Todo', s:yellow, s:yellow, 'italic')
@@ -473,11 +475,14 @@ hi cCustomFunc guifg=#e0e2e4
 hi cCustomParen guifg=#d2a679
 hi cParen guifg=#d2a679
 hi cPeriod guifg=#d2a679
+hi cLabel guifg=#93c763
 " hi cCustomDot guifg=#d2a679
 
 hi cppPreprocessorLine guifg=#a082bd
 hi cppConstant guifg=#93c763
 hi cppAccess guifg=#93c763
+hi cppStorageClass guifg=#93c763
+hi cppExceptions guifg=#93c763
 hi cppSTLconstant guifg=#e0e2e4
 hi cppSTLnamespace guifg=#678cb1
 hi cppSTLfunction guifg=#e0e2e4
@@ -506,6 +511,7 @@ hi cppType guifg=#93c763
 " hi cppType guifg=#678cb1
 hi cppStructure guifg=#93c763
 hi cppCapitalWord guifg=#678cb1
+hi cppResolvedTemplate guifg=#678cb1
 hi cppConstantValue guifg=#e0e2e4 gui=italic
 "hi cppPointerType guifg=#678cb1
 "hi cppReferenceType guifg=#678cb1
@@ -528,7 +534,7 @@ hi pythonExClass guifg=#678cb1
 hi pythonConditional guifg=#93c763
 hi pythonRepeat guifg=#93c763
 hi pythonOperator guifg=#93c763
-hi pythonFunction guifg=#d7d1a6 gui=bold
+hi pythonFunction guifg=#d7d1a6
 hi pythonBuiltinFunc guifg=#e0e2e4 gui=italic
 hi pythonBuiltinType guifg=#678cb1
 hi pythonBuiltinObj guifg=#e0e2e4

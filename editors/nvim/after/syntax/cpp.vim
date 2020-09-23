@@ -1,3 +1,5 @@
+syn match cppCapitalWord /\u[A-Za-z0-9]*/
+syn match cppConsCall /\s\u[A-Za-z0-9]*{/me=e-1
 syn match cppBraceL /{/
 syn match cppBraceR /}/
 syn match cppParenL /(/
@@ -16,7 +18,8 @@ syn match cppPipe /|/
 syn match cppPipeL /</
 syn match cppPipeR />/
 syn match cppPreprocessorLine '\#.*\n'
-syn match cppCapitalWord /\s\u[A-Za-z0-9]*\s/
+" syn match cppCapitalWord /\s\u[A-Za-z0-9]*\s/
+" syn match cppCapitalWord /\s\u[a-z0-9]*\s/
 " syn match cppConstantValue /\u[A-Z_]*/
 syn match cppMainFunc /main/
 

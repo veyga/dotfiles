@@ -50,7 +50,7 @@ set colorcolumn=100
 set textwidth=100
 set wrap
 set noswapfile
-set autochdir
+set noautochdir
 
 
 "********************************************************
@@ -89,8 +89,10 @@ nnoremap <A-l> <C-w>l
 " resizing windows
 nnoremap <C-k> :resize -2<CR>
 nnoremap <C-j> :resize +2<CR>
-nnoremap <C-h> :vertical resize -2<CR>
-nnoremap <C-l> :vertical resize +2<CR>
+" nnoremap <C-h> :vertical resize -2<CR>
+" nnoremap <C-l> :vertical resize +2<CR>
+nmap <C-h> :vertical resize -2<CR>
+nmap <C-l> :vertical resize +2<CR>
 
 " close buffer without closing window (prompt for save)
 nnoremap <M-w> :bp<cr>:bd #<cr>

@@ -45,6 +45,7 @@ coc-json
 coc-marketplace
 coc-python
 coc-snippets
+coc-pairs
 ...etc  (see CocList marketplace)
 
 ## Install font (nerd font needed for vim dev icons)

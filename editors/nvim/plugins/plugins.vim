@@ -5,7 +5,7 @@ call plug#begin()
 Plug 'preservim/nerdtree'
 
 "surround terms
-Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python']}}
+Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python', 'cpp']}}
 
 "regex helper: highlights regions as you type in regex searches
 Plug 'markonm/traces.vim'
@@ -33,7 +33,7 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 "automatch parens
-Plug 'jiangmiao/auto-pairs'
+"Plug 'jiangmiao/auto-pairs'
 
 " git marks
 Plug 'airblade/vim-gitgutter'
@@ -79,14 +79,18 @@ Plug 'vim-python/python-syntax'
 " typescript syntax highlighting
 Plug 'herringtondarkholme/yats.vim'
 Plug 'pangloss/vim-javascript'
-" yats is better?
-" Plug 'leafgarland/typescript-vim'
+
 
 " rust lang support
 "Plug 'rust-lang/rust.vim'
 "Plug 'arzg/vim-rust-syntax-ext'
 
-Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+"Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
+
+Plug 'puremourning/vimspector'
+
+Plug 'liuchengxu/vim-which-key'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 
 call plug#end()
@@ -102,5 +106,8 @@ source $NVIM_HOME/plugins/configs/vim-commentary.vim
 source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
 source $NVIM_HOME/plugins/configs/vim-startify.vim
+source $NVIM_HOME/plugins/configs/vim-which-key.vim
 source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
+source $NVIM_HOME/plugins/configs/nvim-gdb.vim
+source $NVIM_HOME/plugins/configs/vimspector.vim
 
