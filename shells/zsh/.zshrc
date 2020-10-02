@@ -76,6 +76,8 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 
+source <(kubectl completion zsh)
+
 # Update PATH variables
 export PATH=$HOME/.local/bin:$HOME/.local/scripts:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
