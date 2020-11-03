@@ -1,4 +1,4 @@
-"Vim Color File
+ 
 " Name: obsidian.vim
 " Maintainer: andrew stefanich
 " === Configuration ===
@@ -201,16 +201,31 @@ hi SignColumn guibg=#000000
 hi scalaKeyWord guifg=#93c763
 hi scala3Keyword guifg=#93c763
 hi scalaKeywordModifier guifg=#93c763
-hi scalaEquals guifg=#d2a679
+hi scalaEquals guifg=#89ddff
 hi scalaAnnotation guifg=#a082bd gui=bold
 hi scalaNameDefinition guifg=#678cb1
 hi scalaExternal guifg=#93c763
 hi scalaCapitalWord guifg=#678cb1
-hi scalaOperator guifg=#d2a679 
+hi scalaPlus guifg=#89ddff
+hi scalaEqual guifg=#89ddff
+hi scalaMinus guifg=#89ddff
+hi scalaModulus guifg=#89ddff
+hi scalaDivide guifg=#89ddff
+hi scalaMultiply guifg=#89ddff
+hi scalaOperator guifg=#89ddff 
+hi scalaNegation guifg=#89ddff 
+hi scalaColon guifg=#d2a679
+hi scalaPostNameDefinition guifg=#d2a679
+hi scalaSemicolon guifg=#d2a679
+hi scalaComma guifg=#d2a679
+hi scalaUnderscore guifg=#d2a679
+hi scalaPeriod guifg=#d2a679
+hi scalaTodo guifg=#89ddff
 "#e8e2b7
 hi scalaSpecial guifg=#93c763
 hi scalaTypeDeclaration guifg=#678cb1
-hi scalaNameDefinition guifg=#e8e2b7
+" hi scalaNameDefinition guifg=#e8e2b7
+hi scalaNameDefinition guifg=#e0e2e4
 hi scalaTypeTypePostDeclaration guifg=#678cb1
 hi scalaTypeTypeDeclaration guifg=#678cb1
 hi scalaTypeAnnotation guifg=#e0e2e4
@@ -230,11 +245,14 @@ hi scalaMultilineComment guifg=#404040 gui=italic
 hi scalaCommentCodeBlock guifg=#606060 gui=italic
 hi scalaParamAnnotationValue guifg=#404040 gui=bold
 hi scalaTrailingComment guifg=#606060
+hi scalaFInterpolation guifg=#89ddff
 " hi scalaMultilineComment guifg=#464b5d
 " hi scalaTrailingComment guifg=#464b5d
 hi scalaIter guifg=#89ddff
 hi scalaMapArrow guifg=#89ddff
 hi scalaArrow guifg=#89ddff
+hi scalaCaretL guifg=#89ddff
+hi scalaCaretR guifg=#89ddff
 hi scalaUnimplemented guifg=#ffffff guibg=#555555
 hi scalaParameterAnnotation guifg=#808080
 hi scalaCommentAnnotation guifg=#808080
@@ -245,8 +263,10 @@ hi scalaBrackL guifg=#d2a679
 hi scalaParenR guifg=#d2a679
 hi scalaParenL guifg=#d2a679
 hi scalaSquareBrackets guifg=#d2a679
+hi scalaRoundBrackets guifg=#d2a679
 hi scalaSquareBracketsBrackets guifg=#d2a679
 hi scalaInterpolationBrackets guifg=#e97600
+hi scalaInterpolation guifg=#89ddff
 hi scalaMethodCall guifg=#678cb1
 hi scalaOPP guifg=#678cb1
 hi scalaDollar guifg=#89ddff
@@ -254,6 +274,7 @@ hi scalaInterpolationBoundary guifg=#89ddff
 hi scalaEscapedChar guifg=#f5bcf1
 hi scalaAt guifg=#a082bd gui=bold
 " hi scalaMethod guifg=#e0e2e4
+hi scalatestShouldDSLB guifg=#e0e2e4
 
 hi javaExternal guifg=#93c763
 hi javaScopeDecl guifg=#93c763
@@ -596,6 +617,11 @@ hi xmlAttrib guifg=#89ddff
 hi cssBraces guifg=#e8e2b7
 " hi cssBraces guifg=#d2a679
 
+hi yamlBlockMappingKey guifg=#678cb1
+hi yamlPlainScalar guifg=#e97600
+hi yamlKeyValueDelimiter guifg=#d2a679
+hi yamlBlockCollectionItemStart guifg=#d2a679
+hi yamlNodeTag guifg=#a082bd
 
 " hi jsxRegion guifg=#ff0000
 " Git Commit Messages
@@ -679,5 +705,8 @@ if has('nvim')
 endif
 
 
+hi jsonBraces guifg=#d2a679
+hi jsonFold guifg=#d2a679
+hi jsonNoise guifg=#d2a679
 " something overwrites this red, leave on bottom
 " hi Error guifg=#FF0000 guibg=#ff0000

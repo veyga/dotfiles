@@ -10,8 +10,8 @@ export PS1="
  ╰─%b "
 export PS2=".. "
 
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=100
+SAVEHIST=100
 # HISTFILE=~/.cache/zsh/history
 
 # Load ZSH plugins
@@ -90,6 +90,9 @@ eval "$(pyenv virtualenv-init -)"
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+complete -C '/usr/bin/aws_completer' aws
+autoload bashcompinit && bashcompinit
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

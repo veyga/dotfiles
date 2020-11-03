@@ -6,8 +6,20 @@
   "python.linting.mypyEnabled": true,
   "python.linting.mypyPath": "/home/veyga/.pyenv/shims/mypy",
   "python.linting.enabled": true,
-  "python.formatting.autopep8Path": "/home/veyga/.pyenv/shims/autopep8"
+  "python.formatting.autopep8Path": "/home/veyga/.pyenv/shims/autopep8",
+  "yaml.validate": false,
+  "yaml.customTags": [
+    "!Ref",
+    "!Select",
+    "!Sub",
+    "!GetAtt",
+    "!Join",
+    "!GetAZs"
+  ]
 }
+//  "yaml.schemas": {
+//    "$NVIM_HOME/plugins/configs/coc/extensions/yamlschemas/cloudformation.json": ["cloudformation.yaml"]
+//  }
 // default linter=pylint
 // This can conflict with pytest?
 // "python.linting.mypyEnabled": true,

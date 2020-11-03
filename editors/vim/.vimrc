@@ -8,7 +8,7 @@ set hidden
 set autoread
 set clipboard+=unnamedplus
 "unnamed  = one line deletes/yanks will cycle through registers
-set termguicolors
+"set termguicolors
 set splitright
 set nohlsearch
 set splitbelow

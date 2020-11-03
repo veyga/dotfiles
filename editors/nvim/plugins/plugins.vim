@@ -92,6 +92,7 @@ Plug 'puremourning/vimspector'
 Plug 'liuchengxu/vim-which-key'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
+Plug 'cespare/vim-toml'
 
 call plug#end()
 
