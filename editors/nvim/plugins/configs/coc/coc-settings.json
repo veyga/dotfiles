@@ -1,6 +1,6 @@
 {
   "coc.preferences.formatOnType": false,
-  "codeLens.enable": true,
+  "codeLens.enable": false,
   "rust-analyzer.trace.server": "messages",
   "python.jediEnabled": false,
   "python.linting.mypyEnabled": true,

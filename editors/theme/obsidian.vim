@@ -609,10 +609,6 @@ hi pyLogicalOr guifg=#89ddff
 hi pyXor guifg=#89ddff
 
 
-hi xmlTag guifg=#567ba1
-hi xmlTagName guifg=#567ba1
-hi xmlEndTag guifg=#567ba1
-hi xmlAttrib guifg=#89ddff
 
 hi cssBraces guifg=#e8e2b7
 " hi cssBraces guifg=#d2a679
@@ -710,3 +706,9 @@ hi jsonFold guifg=#d2a679
 hi jsonNoise guifg=#d2a679
 " something overwrites this red, leave on bottom
 " hi Error guifg=#FF0000 guibg=#ff0000
+
+hi xmlTagName guifg=#93c673
+hi xmlEndTag guifg=#93c673
+hi xmlAttrib guifg=#678cb1
+hi xmlTag guifg=#ffffff
+hi xmlProcessingDelim guifg=#ffffff
