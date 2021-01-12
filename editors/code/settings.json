@@ -135,7 +135,8 @@
         "debugToolBar.background": "#0b0c0f",
         "walkThrough.embeddedEditorBackground": "#1b1c25",
         "breadcrumbPicker.background": "#232530"
-    }
+    },
+    "vim.smartRelativeLine": true
 }
 // "gitDecoration.addedResourceForeground": "#27D797B3",
 // "gitDecoration.addedResourceForeground": "#00ff00",
