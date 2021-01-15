@@ -151,5 +151,6 @@
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "workbench.editor.showTabs": true,
+    "workbench.activityBar.visible": true,
+    "window.menuBarVisibility": "default",
 }
