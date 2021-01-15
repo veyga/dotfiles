@@ -56,8 +56,8 @@
         "tab.activeBorder": "#E95378",
         "tab.inactiveBackground": "#0b0c0f",
         "editor.background": "#0b0c0f",
-        "editorLineNumber.foreground": "#D5D8DA1A",
-        "editorLineNumber.activeForeground": "#D5D8DA80",
+        "editorLineNumber.foreground": "#D5D8DA30",
+        "editorLineNumber.activeForeground": "#D5D8DA90",
         "editorCursor.background": "#0b0c0f",
         "editorCursor.foreground": "#E95378",
         "editor.selectionBackground": "#2E303EB3",
@@ -134,13 +134,22 @@
         "terminalCursor.foreground": "#6C6F9380",
         "debugToolBar.background": "#0b0c0f",
         "walkThrough.embeddedEditorBackground": "#1b1c25",
-        "breadcrumbPicker.background": "#232530"
+        "breadcrumbPicker.background": "#232530",
+        "gitDecoration.addedResourceForeground": "#27D797B3",
+        "gitDecoration.modifiedResourceForeground": "#E07267",
+        "gitDecoration.deletedResourceForeground": "#F43E5C",
+        "gitDecoration.untrackedResourceForeground": "#27D797",
+        "gitDecoration.ignoredResourceForeground": "#D5D8DA4D",
     },
-    "vim.smartRelativeLine": true
+    "vim.smartRelativeLine": true,
+    "explorer.confirmDelete": false,
+    "editor.rulers": [
+        100
+    ],
+    "editor.minimap.enabled": false,
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.editor.showTabs": true,
 }
-// "gitDecoration.addedResourceForeground": "#27D797B3",
-// "gitDecoration.addedResourceForeground": "#00ff00",
-// "gitDecoration.modifiedResourceForeground": "#E07267",
-// "gitDecoration.deletedResourceForeground": "#F43E5C",
-// "gitDecoration.untrackedResourceForeground": "#27D797",
-// "gitDecoration.ignoredResourceForeground": "#D5D8DA4D",

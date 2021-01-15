@@ -27,6 +27,7 @@ loadzshplugins() {
   [[ -e "$findcommand" ]] && source $findcommand 2>/dev/null
 
   source $HOME/dotfiles/shells/zsh/plugins/mvn/mvn.plugin.zsh 2>/dev/null
+  source $HOME/dotfiles/shells/zsh/plugins/npm/zsh-better-npm-completion.plugin.zsh 2>/dev/null
 }
 loadzshplugins
 
