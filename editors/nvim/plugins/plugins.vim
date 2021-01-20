@@ -4,8 +4,10 @@ call plug#begin()
 "filesystem navigation
 Plug 'preservim/nerdtree'
 
+Plug 'tpope/vim-fugitive'
+
 "surround terms
-Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python', 'cpp']}}
+Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python', 'cpp', 'javascript']}}
 
 "regex helper: highlights regions as you type in regex searches
 Plug 'markonm/traces.vim'
