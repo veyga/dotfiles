@@ -1,25 +1,25 @@
 {
-  "coc.preferences.formatOnType": false,
-  "codeLens.enable": false,
-  "rust-analyzer.trace.server": "messages",
-  "python.jediEnabled": false,
-  "python.linting.mypyEnabled": true,
-  "python.linting.mypyPath": "/home/veyga/.pyenv/shims/mypy",
-  "python.linting.enabled": true,
-  "python.formatting.autopep8Path": "/home/veyga/.pyenv/shims/autopep8",
-  "yaml.validate": false,
-  "yaml.customTags": [
-    "!Ref",
-    "!Select",
-    "!Sub",
-    "!GetAtt",
-    "!Join",
-    "!GetAZs"
-  ]
+    "coc.preferences.formatOnType": false,
+    "codeLens.enable": false,
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.mypyEnabled": true,
+    "python.linting.pep8Path": "/Users/andrew.stefanich/.pyenv/shims/pep8",
+    "python.linting.pylintArgs": [
+        "--load-plugins=pylint_django",
+        "--errors-only"
+    ],
+    "python.linting.prospectorEnabled": true,
+    "python.formatting.provider": "autopep8",
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.stubPath": "typings",
+    "python.venvPath": "/Users/andrew.stefanich/Library/Caches/pypoetry/virtualenvs",
+    "python.linting.prospectorPath": "/Users/andrew.stefanich/.pyenv/shims/prospector",
+    "python.linting.pylintPath": "/Users/andrew.stefanich/.pyenv/shims/pylint",
+    "python.linting.mypyPath": "/Users/andrew.stefanich/.pyenv/shims/mypy",
+    "python.formatting.autopep8Path": "/Users/andrew.stefanich/.pyenv/shims/autopep8",
+    "python.formatting.blackPath": "/Users/andrew.stefanich/.pyenv/shims/black"
 }
-//  "yaml.schemas": {
-//    "$NVIM_HOME/plugins/configs/coc/extensions/yamlschemas/cloudformation.json": ["cloudformation.yaml"]
-//  }
-// default linter=pylint
-// This can conflict with pytest?
-// "python.linting.mypyEnabled": true,
+//"python.linting.pep8Path": "/Users/andrew.stefanich/.local/bin/pep8",
+//"python.pythonPath": "/Users/andrew.stefanich/.pyenv/shims/python",

@@ -154,5 +154,5 @@ source $NVIM_HOME/plugins/configs/coc/extensions/coc-terminal.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-tslint-plugin.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-tsserver.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-xml.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-python.vim
+source $NVIM_HOME/plugins/configs/coc/extensions/coc-pyright.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-yank.vim

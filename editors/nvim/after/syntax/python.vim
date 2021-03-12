@@ -1,4 +1,3 @@
-syn match pyClassName /[A-Z][A-Za-z0-9]*/
 syn match pyDocString /""".*"""/
 syn match pyDocString /'''.*'''/
 syn match pyDocString /"""\_.\{-}"""/
@@ -34,6 +33,7 @@ syn keyword pythonStatement    False None True
 syn keyword pythonStatement    as assert break continue del exec global raise
 syn keyword pythonStatement    lambda nonlocal pass return with yield
 syn keyword pythonStatement    def nextgroup=pythonFunction skipwhite
+syn keyword pythonImplicitArg  self cls
 
 " Now make seperate syntax groups for the class.
 syn keyword pythonClassStmt class nextgroup=pythonClass skipwhite
@@ -41,3 +41,11 @@ syn match   pythonClass "\h\w*" display contained
 
 " Highlight the class statement and the class name.
 hi def link pythonClassStmt Statement
+" syn match pyClassName /[^|\s+][A-Z][A-Za-z0-9]*/
+syn match pyClassName /[A-Z][A-Za-z0-9]*/
+syn match pyAssertion /assert[A-Za-z0-9]*/
+
+"syn match pyTypeStr "str"
+"syn match pyTypeList "list"
+"syn match pyTypeBool "bool"
+"syn match pyTypeInt "[^pr]int"
