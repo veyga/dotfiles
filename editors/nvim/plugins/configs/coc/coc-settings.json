@@ -1,9 +1,10 @@
 {
     "coc.preferences.formatOnType": false,
-    "codeLens.enable": false,
+    "codeLens.enable": true,
+    "python.pythonPath": "/Users/andrew.stefanich/.pyenv/shims/python",
     "python.linting.enabled": true,
-    "python.linting.pylintEnabled": false,
-    "python.linting.pep8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pep8Enabled": false,
     "python.linting.mypyEnabled": true,
     "python.linting.pep8Path": "/Users/andrew.stefanich/.pyenv/shims/pep8",
     "python.linting.pylintArgs": [
@@ -19,7 +20,26 @@
     "python.linting.pylintPath": "/Users/andrew.stefanich/.pyenv/shims/pylint",
     "python.linting.mypyPath": "/Users/andrew.stefanich/.pyenv/shims/mypy",
     "python.formatting.autopep8Path": "/Users/andrew.stefanich/.pyenv/shims/autopep8",
-    "python.formatting.blackPath": "/Users/andrew.stefanich/.pyenv/shims/black"
+    "python.formatting.blackPath": "/Users/andrew.stefanich/.pyenv/shims/black",
+    "pyright.organizeimports.provider": "pyright",
+    "tsserver.enableJavascript": true,
+    "tsserver.trace.server": "verbose",
+    "tsserver.log": "normal",
+    "javascript.referencesCodeLens.enable": false,
+    "javascript.showUnused": true,
+    "javascript.suggest.autoImports": true,
+    "javascript.suggest.enabled": true,
+    "javascript.suggestionActions.enabled": true,
+    "typescript.referencesCodeLens.enable": false,
+    "typescript.format.enabled": true,
+    "eslint.format.enable" : false,
+    "eslint.run": "onSave",
+    "eslint.codeAction.showDocumentation": {
+        "enable": true
+    },
+    "prettier.semi": false,
+    "prettier.tabWidth": 2,
+    "jest.watch": false,
+    "jest.terminalPosition": "right"
 }
 //"python.linting.pep8Path": "/Users/andrew.stefanich/.local/bin/pep8",
-//"python.pythonPath": "/Users/andrew.stefanich/.pyenv/shims/python",

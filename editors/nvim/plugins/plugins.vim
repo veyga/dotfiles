@@ -119,8 +119,8 @@ source $NVIM_HOME/plugins/configs/indentline.vim
 source $NVIM_HOME/plugins/configs/nerdtree.vim
 source $NVIM_HOME/plugins/configs/rainbow.vim
 source $NVIM_HOME/plugins/configs/tagbar.vim
-"source $NVIM_HOME/plugins/configs/vim-bufferline.vim
-source $NVIM_HOME/plugins/configs/vim-buftabs.vim
+source $NVIM_HOME/plugins/configs/vim-bufferline.vim
+" source $NVIM_HOME/plugins/configs/vim-buftabs.vim
 source $NVIM_HOME/plugins/configs/vim-commentary.vim
 source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
