@@ -96,6 +96,9 @@ Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 Plug 'cespare/vim-toml'
 
+" buffers as tabs. need v0.5+
+" Plug 'romgrk/barbar.nvim'
+
 call plug#end()
 
 source $NVIM_HOME/plugins/configs/colorizer.vim

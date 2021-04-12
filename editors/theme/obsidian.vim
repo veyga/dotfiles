@@ -567,7 +567,7 @@ hi pythonSingleton guifg=#ffffff guibg=#555555 gui=italic
 hi pythonTodo guifg=#ffffff guibg=#555555 gui=italic
 " hi pythonStrInterpRegion guifg=#bb80b3
 " hi pythonStrFormat guifg=#bb80b3
-hi pythonStrInterpRegion guifg=#c17e70
+" hi pythonStrInterpRegion guifg=#c17e70
 hi pythonStrFormat guifg=#bb80b3
 hi pythonUniEscape guifg=#de1fcf
 hi pythonBytesEscape guifg=#de1fcf
@@ -607,6 +607,8 @@ hi pyRightAngleBracket guifg=#89ddff
 hi pyLogicalAnd guifg=#89ddff
 hi pyLogicalOr guifg=#89ddff
 hi pyXor guifg=#89ddff
+hi pythonStrInterpRegion guifg=#89ddff
+hi pythonFString guifg=#89ddff
 
 
 
