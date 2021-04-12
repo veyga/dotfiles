@@ -183,4 +183,11 @@
   "python.testing.pytestEnabled": true,
   "editor.fontSize": 14,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "docker.showStartPage": false,
 }

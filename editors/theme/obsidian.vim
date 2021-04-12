@@ -380,6 +380,7 @@ hi tsSemicolon guifg=#d2a679
 hi tsPeriod guifg=#d2a679
 hi tsQuestion guifg=#d2a679
 hi tsEquals guifg=#d2a679
+hi typescriptLineComment guifg=#ff0000
 
 
 " javascript
@@ -420,6 +421,8 @@ hi jsIfElseBraces guifg=#d2a679
 hi jsConditional guifg=#93c763
 hi jsComment guifg=#404040
 hi jsOperator guifg=#89ddff
+hi jsUndefined guifg=#93c763
+hi jsSwitchBraces guifg=#d2a679
 
 " RUST
 hi rsSelfType guifg=#678cb1

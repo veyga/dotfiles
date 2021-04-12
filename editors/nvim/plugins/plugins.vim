@@ -16,6 +16,8 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript
 "regex helper: highlights regions as you type in regex searches
 Plug 'markonm/traces.vim'
 
+" find and replace
+Plug 'brooth/far.vim'
 
 " show ctags in side bar (requires ctags to be installed)
 Plug 'majutsushi/tagbar'
@@ -84,7 +86,10 @@ Plug 'vim-python/python-syntax'
 "Plug 'wlangstroth/vim-racket'
 
 " typescript syntax highlighting
-Plug 'herringtondarkholme/yats.vim'
+" Plug 'herringtondarkholme/yats.vim'
+"Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+
 Plug 'pangloss/vim-javascript'
 
 
@@ -117,7 +122,8 @@ source $NVIM_HOME/plugins/configs/colorizer.vim
 source $NVIM_HOME/plugins/configs/fzf.vim
 source $NVIM_HOME/plugins/configs/indentline.vim
 source $NVIM_HOME/plugins/configs/nerdtree.vim
-source $NVIM_HOME/plugins/configs/rainbow.vim
+" source $NVIM_HOME/plugins/configs/rainbow.vim
+source $NVIM_HOME/plugins/configs/far.vim
 source $NVIM_HOME/plugins/configs/tagbar.vim
 source $NVIM_HOME/plugins/configs/vim-bufferline.vim
 " source $NVIM_HOME/plugins/configs/vim-buftabs.vim
@@ -130,3 +136,4 @@ source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
 source $NVIM_HOME/plugins/configs/nvim-gdb.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
+source $NVIM_HOME/plugins/configs/vim-gitgutter.vim
