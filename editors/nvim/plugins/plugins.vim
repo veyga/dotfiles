@@ -17,7 +17,7 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript
 Plug 'markonm/traces.vim'
 
 " find and replace
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 
 " show ctags in side bar (requires ctags to be installed)
 Plug 'majutsushi/tagbar'
