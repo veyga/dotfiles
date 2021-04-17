@@ -75,7 +75,7 @@ case "$(uname -s)" in
      ;;
    Linux)
      export POETRY_VENV_HOME="$HOME/.cache/pypoetry/virtualenvs"
-     souorce '/usr/share/nvm/init-nvm.sh'
+     source '/usr/share/nvm/init-nvm.sh'
      ;;
    *)
      echo 'Failed to set NVM and Poetry VENV Home' 
