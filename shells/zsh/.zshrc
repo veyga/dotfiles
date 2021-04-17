@@ -72,26 +72,29 @@ case "$(uname -s)" in
     export POETRY_VENV_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
     [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+    source /usr/local/share/antigen/antigen.zsh
+    antigen bundle zsh-users/zsh-autosuggestions
+    antigen bundle zsh-users/zsh-completions
+    antigen bundle greymd/docker-zsh-completion
+    antigen apply
      ;;
    Linux)
-     export POETRY_VENV_HOME="$HOME/.cache/pypoetry/virtualenvs"
-     source '/usr/share/nvm/init-nvm.sh'
+    export POETRY_VENV_HOME="$HOME/.cache/pypoetry/virtualenvs"
+    source '/usr/share/nvm/init-nvm.sh'
+    source antigen /usr/share/zsh/share/antigen.zsh
+    antigen bundle zsh-users/zsh-autosuggestions
+    antigen bundle zsh-users/zsh-completions
+    antigen bundle greymd/docker-zsh-completion
+    antigen apply
      ;;
    *)
-     echo 'Failed to set NVM and Poetry VENV Home' 
+     echo 'RIP' 
      ;;
 esac
 
 # upgrade the nvm package will destroy installed versions?
 export NVM_DIR="$HOME/.nvm"
 # export PATH=/usr/local/opt/node@14/bin:$PATH
-
-source /usr/local/share/antigen/antigen.zsh
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle zsh-users/zsh-completions
-antigen bundle greymd/docker-zsh-completion
-antigen apply
-
 
 # export ZPLUG_HOME=/usr/local/opt/zplug
 # source $ZPLUG_HOME/init.zsh
