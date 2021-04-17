@@ -1,0 +1,41 @@
+{
+  "adapters": {
+    "python-remote": {
+      "port": "5678",
+      "launch": {
+        "remote": {
+          "container": "debug",
+          "launchCommmand": [
+            "python",
+            "-m",
+            "debugpy",
+            "--listen",
+            "0.0.0.0:5678",
+            "%CMD%"
+          ]
+        }
+      }
+    }
+  },
+  "configurations": {
+    "remote-attach": {
+      "adapter": "python-remote",
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "Y"
+        }
+      },
+      "remote-request": "attach",
+      "configuration": {
+        "request": "attach",
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "/TODO"
+          }
+        ]
+      }
+    }
+  }
+}
