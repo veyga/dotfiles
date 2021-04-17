@@ -1,0 +1,4 @@
+limelight -m config width 3
+limelight -m config active_color 0xFFDE1FCF
+
+echo "limelight config loaded"

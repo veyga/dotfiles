@@ -29,6 +29,7 @@ source $NVIM_HOME/plugins/plugins.vim
 "**************   GENERAL SETTINGS **********************
 "********************************************************
 set number relativenumber
+set nuw=4
 set hidden
 set autoread
 set clipboard+=unnamedplus
@@ -51,7 +52,8 @@ set textwidth=100
 set wrap
 set noswapfile
 set noautochdir
-
+"set list
+" set listchars=tab:▸-,eol:↩︎,trail:-↩
 
 "********************************************************
 "****************  GENERAL COMMANDS *********************
@@ -97,7 +99,9 @@ nmap <C-l> :vertical resize +2<CR>
 " close buffer without closing window (prompt for save)
 nnoremap <M-w> :bp<cr>:bd #<cr>
 " close buffer without closing window (no prompt - useful for exiting terminal)
-nnoremap <M-W> :bp<cr>:bd! #<cr>
+"nnoremap <M-W> :bp<cr>:bd! #<cr>
+" close window
+nnoremap <M-W> :close<cr>
 
 " display syntax group of selected item in bufferline
 nmap <leader>sp :call <SID>SynStack()<CR>

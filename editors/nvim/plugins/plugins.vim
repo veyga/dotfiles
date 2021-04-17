@@ -1,5 +1,9 @@
 " defaults to .plugged
-call plug#begin()
+call plug#begin('~/dotfiles/editors/nvim/plugged')
+
+" display buffers under statusline
+Plug 'bling/vim-bufferline'
+"Plug 'b4b4r07/vim-buftabs'
 
 "filesystem navigation
 Plug 'preservim/nerdtree'
@@ -12,8 +16,8 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript
 "regex helper: highlights regions as you type in regex searches
 Plug 'markonm/traces.vim'
 
-" display buffers under statusline
-Plug 'bling/vim-bufferline'
+" find and replace
+" Plug 'brooth/far.vim'
 
 " show ctags in side bar (requires ctags to be installed)
 Plug 'majutsushi/tagbar'
@@ -35,10 +39,13 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 "automatch parens
-"Plug 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'
 
 " git marks
 Plug 'airblade/vim-gitgutter'
+
+" show git status in nerdtree
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " show marks labels in the gutter
 Plug 'kshenoy/vim-signature'
@@ -69,7 +76,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
 
 "cpp syntax highligthing
-Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'octol/vim-cpp-enhanced-highlight'
 
 " enhanced syntax for python
 Plug 'vim-python/python-syntax'
@@ -79,7 +86,10 @@ Plug 'vim-python/python-syntax'
 "Plug 'wlangstroth/vim-racket'
 
 " typescript syntax highlighting
-Plug 'herringtondarkholme/yats.vim'
+" Plug 'herringtondarkholme/yats.vim'
+"Plug 'maxmellon/vim-jsx-pretty'
+Plug 'leafgarland/typescript-vim'
+
 Plug 'pangloss/vim-javascript'
 
 
@@ -98,6 +108,15 @@ Plug 'cespare/vim-toml'
 
 " buffers as tabs. need v0.5+
 " Plug 'romgrk/barbar.nvim'
+Plug 'szw/vim-maximizer'
+
+Plug 'tjdevries/coc-zsh'
+
+Plug 'neoclide/coc-prettier'
+
+Plug 'mxw/vim-jsx'
+
+Plug 'martinda/Jenkinsfile-vim-syntax'
 
 call plug#end()
 
@@ -105,9 +124,11 @@ source $NVIM_HOME/plugins/configs/colorizer.vim
 source $NVIM_HOME/plugins/configs/fzf.vim
 source $NVIM_HOME/plugins/configs/indentline.vim
 source $NVIM_HOME/plugins/configs/nerdtree.vim
-source $NVIM_HOME/plugins/configs/rainbow.vim
+" source $NVIM_HOME/plugins/configs/rainbow.vim
+source $NVIM_HOME/plugins/configs/far.vim
 source $NVIM_HOME/plugins/configs/tagbar.vim
 source $NVIM_HOME/plugins/configs/vim-bufferline.vim
+" source $NVIM_HOME/plugins/configs/vim-buftabs.vim
 source $NVIM_HOME/plugins/configs/vim-commentary.vim
 source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
@@ -116,4 +137,5 @@ source $NVIM_HOME/plugins/configs/vim-which-key.vim
 source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
 source $NVIM_HOME/plugins/configs/nvim-gdb.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
-
+source $NVIM_HOME/plugins/configs/vim-maximizer.vim
+source $NVIM_HOME/plugins/configs/vim-gitgutter.vim

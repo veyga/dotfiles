@@ -6,11 +6,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+k",
-        "command": "-extension.vim_ctrl+k",
-        "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
-    },
-    {
         "key": "alt+right",
         "command": "workbench.action.nextEditor"
     },
@@ -23,32 +18,8 @@
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
-        "key": "alt+insert",
-        "command": "explorer.newFile"
-    },
-    {
         "key": "alt+1",
         "command": "-workbench.action.openEditorAtIndex1"
-    },
-    {
-        "key": "alt+w",
-        "command": "-toggleSearchEditorWholeWord",
-        "when": "inSearchEditor && searchInputBoxFocus"
-    },
-    {
-        "key": "alt+w",
-        "command": "-workbench.action.terminal.toggleFindWholeWord",
-        "when": "terminalFindFocused && terminalProcessSupported || terminalFocus && terminalProcessSupported"
-    },
-    {
-        "key": "alt+w",
-        "command": "-toggleFindWholeWord",
-        "when": "editorFocus"
-    },
-    {
-        "key": "alt+w",
-        "command": "-toggleSearchWholeWord",
-        "when": "searchViewletFocus"
     },
     {
         "key": "ctrl+w",
@@ -75,10 +46,6 @@
     {
         "key": "shift+alt+right",
         "command": "workbench.action.moveEditorRightInGroup"
-    },
-    {
-        "key": "shift+alt+insert",
-        "command": "explorer.newFolder"
     },
     {
         "key": "alt+`",
@@ -111,9 +78,5 @@
     {
         "key": "shift+alt+tab",
         "command": "workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
-    },
-    {
-        "key": "ctrl+shift+t",
-        "command": "workbench.action.tasks.test"
     }
 ]

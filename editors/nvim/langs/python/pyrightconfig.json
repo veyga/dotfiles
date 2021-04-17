@@ -1,0 +1,21 @@
+{
+  "venvPath": "$POETRY_VENV_HOME",
+  "venv": "copy-and-change-per-project",
+  "reportMissingImports": true,
+  "reportGeneralTypeIssues": false,
+  "reportMissingTypeStubs": false,
+  "stubPath": "typings",
+  "reportWildcardImportFromLibrary": true,
+  "reportOptionalMemberAccess": "none",
+  "reportFunctionMemberAccess": "none",
+  "reportDuplicateImport": true,
+  "reportUnusedImport": "warning",
+  "reportUnusedClass": "warning",
+  "reportUnusedFunction": "warning",
+  "reportUnusedVariable": "warning",
+  "reportUnboundVariable": "error",
+  "reportUndefinedVariable": "error",
+  "reportMissingModuleSource": "warning",
+  "reportSelfClsParameterName": "warning",
+  "useLibraryCodeForTypes": true
+}

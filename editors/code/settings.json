@@ -174,12 +174,12 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.venvPath": "~/.cache/pypoetry/virtualenvs",
+  "python.venvPath": "$POETRY_VENV_HOME",
   "python.linting.flake8Enabled": true,
   "python.linting.flake8Args": ["--max-line-length=100"],
   "python.linting.pylintEnabled": false,
   "python.linting.mypyEnabled": true,
   "python.linting.enabled": true,
   "python.formatting.provider": "black",
-  "python.testing.pytestEnabled": true,
+  "python.testing.pytestEnabled": true
 }

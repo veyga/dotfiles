@@ -30,6 +30,7 @@ pip   (in debian this is python3-virtualenv ??)
 i3-wm i3status dmenu
 neovim
 pynvim (from pip)
+  edit python path in coc-python, run :checkhealth
 tmux
 ripgrep
 fzf 

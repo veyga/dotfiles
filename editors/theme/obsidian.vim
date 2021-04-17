@@ -380,6 +380,7 @@ hi tsSemicolon guifg=#d2a679
 hi tsPeriod guifg=#d2a679
 hi tsQuestion guifg=#d2a679
 hi tsEquals guifg=#d2a679
+hi typescriptLineComment guifg=#ff0000
 
 
 " javascript
@@ -419,6 +420,9 @@ hi jsTemplateBraces guifg=#89ddff
 hi jsIfElseBraces guifg=#d2a679
 hi jsConditional guifg=#93c763
 hi jsComment guifg=#404040
+hi jsOperator guifg=#89ddff
+hi jsUndefined guifg=#93c763
+hi jsSwitchBraces guifg=#d2a679
 
 " RUST
 hi rsSelfType guifg=#678cb1
@@ -578,6 +582,7 @@ hi pythonBytesEscape guifg=#de1fcf
 hi pythonNone guifg=#678cb1
 hi pythonDecorator guifg=#a082bd gui=bold
 hi pythonDottedName guifg=#a082bd gui=bold
+hi pythonImplicitArg guifg=#f5bcf1
 
 " hi pyDocStringDoubleQuotes guifg=#606060
 " hi pyDocStringSingleQuotes guifg=#606060
@@ -609,6 +614,11 @@ hi pyLogicalOr guifg=#89ddff
 hi pyXor guifg=#89ddff
 hi pythonStrInterpRegion guifg=#89ddff
 hi pythonFString guifg=#89ddff
+hi pyAssertion guifg=#e0e2e4
+hi pyTypeStr guifg=#678cb1
+hi pyTypeList guifg=#678cb1
+hi pyTypeInt guifg=#678cb1
+hi pyTypeBool guifg=#678cb1
 
 
 
@@ -704,13 +714,18 @@ endif
 
 
 hi jsonBraces guifg=#d2a679
+hi jsonQuote guifg=#d2a679
 hi jsonFold guifg=#d2a679
 hi jsonNoise guifg=#d2a679
+hi jsonBoolean guifg=#93c673
 " something overwrites this red, leave on bottom
 " hi Error guifg=#FF0000 guibg=#ff0000
 
-hi xmlTagName guifg=#93c673
-hi xmlEndTag guifg=#93c673
-hi xmlAttrib guifg=#678cb1
-hi xmlTag guifg=#ffffff
+hi xmlTagName guifg=#678cb1
+hi xmlEndTag guifg=#678cb1
+hi xmlAttrib guifg=#89ddff
+hi xmlTag guifg=#d2a678
 hi xmlProcessingDelim guifg=#ffffff
+
+" hi groovyParenT guifg=#d2a679
+" hi groovyParen guifg=#d2a679

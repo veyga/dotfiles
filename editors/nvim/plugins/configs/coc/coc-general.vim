@@ -43,12 +43,12 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gt <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Used to expand decorations in worksheets
-nmap <Leader>ws <Plug>(coc-metals-expand-decoration)
+" nmap <Leader>ws <Plug>(coc-metals-expand-decoration)
 
 " Use K to either doHover or show documentation in preview window
 nnoremap <silent> K :call <SID>show_documentation()<CR>
@@ -70,7 +70,8 @@ nmap <leader>rn <Plug>(coc-rename)
 " OVERIDDEN: <leader>f mapped to FZF's :Files command
 " Remap for format selected region
 " xmap <leader>f  <Plug>(coc-format-selected)
-" nmap <leader>f  <Plug>(coc-format-selected)
+vmap <leader>t  <Plug>(coc-format-selected)
+nmap <leader>t  <Plug>(coc-format-selected)
 nmap <leader>F  <Plug>(coc-format)
 
 
@@ -116,7 +117,7 @@ nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document
 nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
 " Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
 " Do default action for next item.
 nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 " Do default action for previous item.
@@ -154,5 +155,5 @@ source $NVIM_HOME/plugins/configs/coc/extensions/coc-terminal.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-tslint-plugin.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-tsserver.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-xml.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-python.vim
+source $NVIM_HOME/plugins/configs/coc/extensions/coc-pyright.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-yank.vim
