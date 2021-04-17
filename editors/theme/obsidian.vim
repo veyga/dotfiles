@@ -400,7 +400,7 @@ hi jsClassProperty guifg=#d7d1a6
 hi jsArrowFunction guifg=#89ddff
 hi jsOperator guifg=#d2a679
 hi jsOperatorKeyword guifg=#93c763
-hi jsGlobalObjects guifg=#e0e2e4 gui=italic
+hi jsGlobalObjects guifg=#e8e2b7 gui=italic
 hi jsStorageClass guifg=#93c763
 hi jsExport guifg=#a082bd
 hi jsExportDefault guifg=#a082bd
@@ -423,6 +423,8 @@ hi jsComment guifg=#404040
 hi jsOperator guifg=#89ddff
 hi jsUndefined guifg=#93c763
 hi jsSwitchBraces guifg=#d2a679
+" #e8e2b7
+hi jsGlobalNodeObjects guifg=#e8e2b7
 
 " RUST
 hi rsSelfType guifg=#678cb1
