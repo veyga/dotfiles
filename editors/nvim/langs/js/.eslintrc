@@ -1,0 +1,9 @@
+{
+  "extends": "react-app",
+  "rules": {
+    "no-use-before-define": "off",
+    "radix": "off",
+    "no-extend-native": "off",
+    "no-useless-escape": "off"
+  }
+}
