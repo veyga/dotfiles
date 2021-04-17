@@ -1,6 +1,6 @@
 {
-  "venvPath": "/Users/andrew.stefanich/Library/Caches/pypoetry/virtualenvs",
-  "venv": "buoy-api-jx3G90qZ-py3.6",
+  "venvPath": "$POETRY_VENV_HOME",
+  "venv": "copy-and-change-per-project",
   "reportMissingImports": true,
   "reportGeneralTypeIssues": false,
   "reportMissingTypeStubs": false,
