@@ -81,7 +81,7 @@ case "$(uname -s)" in
    Linux)
     export POETRY_VENV_HOME="$HOME/.cache/pypoetry/virtualenvs"
     source '/usr/share/nvm/init-nvm.sh'
-    source antigen /usr/share/zsh/share/antigen.zsh
+    source /usr/share/zsh/share/antigen.zsh
     antigen bundle zsh-users/zsh-autosuggestions
     antigen bundle zsh-users/zsh-completions
     antigen bundle greymd/docker-zsh-completion
