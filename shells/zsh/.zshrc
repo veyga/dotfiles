@@ -85,6 +85,7 @@ case "$(uname -s)" in
     antigen bundle zsh-users/zsh-autosuggestions
     antigen bundle zsh-users/zsh-completions
     antigen bundle greymd/docker-zsh-completion
+    antigen bundle lukechilds/zsh-better-npm-completion
     antigen apply
      ;;
    *)
