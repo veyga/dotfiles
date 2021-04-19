@@ -1,0 +1,14 @@
+{
+  "configurations": {
+    "run-node": {
+      "adapter": "vscode-node",
+      "configuration": {
+        "request": "launch",
+        "protocol": "auto",
+        "stopOnEntry": false,
+        "cwd": "${workspaceRoot}/",
+        "program": "${workspaceFolder}/src/index.js"
+      }
+    }
+  }
+}
