@@ -8,7 +8,7 @@ Plug 'bling/vim-bufferline'
 "filesystem navigation
 Plug 'preservim/nerdtree'
 
-Plug 'tpope/vim-fugitive'
+" Plug 'tpope/vim-fugitive'
 
 "surround terms
 Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python', 'cpp', 'javascript']}}
@@ -110,14 +110,33 @@ Plug 'cespare/vim-toml'
 " Plug 'romgrk/barbar.nvim'
 Plug 'szw/vim-maximizer'
 
-Plug 'tjdevries/coc-zsh'
-
-Plug 'neoclide/coc-prettier'
-
 Plug 'mxw/vim-jsx'
 
 Plug 'martinda/Jenkinsfile-vim-syntax'
 
+Plug 'vim-test/vim-test'
+
+" coc plugins (install via CocInstall)
+Plug 'tjdevries/coc-zsh'
+" Plug 'iamcco/coc-vimlsp'
+" Plug 'iamcco/coc-actions'
+" Plug 'neoclide/coc-prettier'
+" Plug 'neoclide/coc-tsserver'
+" Plug 'neoclide/coc-jest'
+" Plug 'neoclide/coc-yaml'
+" Plug 'neoclide/coc-json'
+" Plug 'neoclide/coc-html'
+" Plug 'neoclide/coc-eslint'
+" Plug 'neoclide/coc-tslint-plugin'
+" Plug 'neoclide/coc-css'
+" Plug 'fannheyward/coc-pyright'
+" Plug 'fannheyward/coc-marketplace'
+" Plug 'fannheyward/coc-xml'
+" Plug 'fannheyward/coc-deno'
+" Plug 'fannheyward/coc-rust-analyzer'
+" Plug 'clangd/coc-clangd'
+" Plug 'voldikss/coc-cmake'
+" Plug 'scalameta/coc-metals'
 call plug#end()
 
 source $NVIM_HOME/plugins/configs/colorizer.vim
@@ -135,7 +154,8 @@ source $NVIM_HOME/plugins/configs/coc/coc-general.vim
 source $NVIM_HOME/plugins/configs/vim-startify.vim
 source $NVIM_HOME/plugins/configs/vim-which-key.vim
 source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
-source $NVIM_HOME/plugins/configs/nvim-gdb.vim
+source $NVIM_HOME/plugins/configs/vim-test.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
 source $NVIM_HOME/plugins/configs/vim-gitgutter.vim
+

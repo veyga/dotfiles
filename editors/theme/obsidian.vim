@@ -312,6 +312,8 @@ hi javaAnd guifg=#d2a679
 hi javaOr guifg=#d2a679
 hi javaFnArrow guifg=#89ddff
 
+hi typescriptStatement guifg=#93c763
+hi typescriptStorageClass guifg=#93c763
 hi typescriptStatementKeyword guifg=#93c763
 hi typescriptNull guifg=#93c763
 hi typescriptCastKeyword guifg=#93c763
@@ -320,8 +322,9 @@ hi typescriptBraces guifg=#d2a679
 hi typescriptParens guifg=#d2a679
 hi typescriptVariable guifg=#93c763
 hi typescriptTemplateSB guifg=#89ddff
-hi typescriptGlobal guifg=#e0e2e4 gui=italic
-hi typescriptGlobal guifg=#e0e2e4 gui=italic
+" hi typescriptGlobal guifg=#e0e2e4 gui=italic
+hi typescriptGlobal guifg=#e8e2b7
+hi typescriptGlobalObjects guifg=#e8e2b7
 hi typescriptConditional guifg=#93c763
 hi typescriptConditionalElse guifg=#93c763
 hi typescriptBinaryOp guifg=#89ddff
@@ -371,16 +374,21 @@ hi typescriptEndColons guifg=#d2a679
 hi typescriptBinaryOp guifg=#89ddff
 hi typescriptUnaryOp guifg=#89ddff
 hi tsThis guifg=#93c763
+hi tsReturn guifg=#93c763
 hi tsCast guifg=#93c763
 hi typescriptCastKeyword guifg=#93c763
 hi tsCapitalWord guifg=#678cb1
-hi tsAnd guifg=#d2a679
-hi tsOr guifg=#d2a679
+hi tsAnd guifg=#89ddff
+hi tsOr guifg=#89ddff
 hi tsSemicolon guifg=#d2a679
+hi tsComma guifg=#d2a679
+hi tsColon guifg=#d2a679
 hi tsPeriod guifg=#d2a679
-hi tsQuestion guifg=#d2a679
-hi tsEquals guifg=#d2a679
-hi typescriptLineComment guifg=#ff0000
+hi tsQuestion guifg=#89ddff
+hi tsEquals guifg=#89ddff
+hi tsLessThan guifg=#89ddff
+hi tsGreaterThan guifg=#89ddff
+hi typescriptLineComment guifg=#404040
 
 
 " javascript
@@ -392,6 +400,7 @@ hi jsBrackets guifg=#d2a679
 hi jsRepeatBraces guifg=#d2a679
 hi jsFuncBraces guifg=#d2a679
 hi jsFuncParens guifg=#d2a679
+hi jsComma guifg=#d2a679
 hi jsNoise guifg=#d2a679
 hi jsFunction guifg=#93c763
 hi jsFuncCall guifg=#e0e2e4
@@ -423,6 +432,8 @@ hi jsComment guifg=#404040
 hi jsOperator guifg=#89ddff
 hi jsUndefined guifg=#93c763
 hi jsSwitchBraces guifg=#d2a679
+hi jsException guifg=#93c763
+hi jsExceptions guifg=#e0e2e4
 " #e8e2b7
 hi jsGlobalNodeObjects guifg=#e8e2b7
 

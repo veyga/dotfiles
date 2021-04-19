@@ -1,6 +1,7 @@
 [user]
 	email = andrewstefanich@gmail.com
 	name = Andrew Stefanich
+
 [alias]
 	hist = log --all --graph --decorate --oneline
 	lga = log --pretty=fmt --date=short --graph --all
@@ -8,7 +9,21 @@
 	la = log --pretty=fmt --date=short --all
 	ll = log --pretty=fmt --date=short
 	lf = log --pretty=fuller --stat
-[core]
-	pager = less -F -X
+
 [pretty]
 	fmt = %C(auto)%h %C(magenta)%ad %C(cyan)%an%C(auto)%d %s
+
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    features = side-by-side line-numbers decorations
+    whitespace-error-style = 22 reverse
+
+[delta "decorations"]
+    commit-decoration-style = bold yellow box ul
+    file-style = bold yellow ul
+    file-decoration-style = none

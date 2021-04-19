@@ -39,7 +39,5 @@
         "enable": true
     },
     "prettier.semi": false,
-    "prettier.tabWidth": 2,
-    "jest.watch": false,
-    "jest.terminalPosition": "right"
+    "prettier.tabWidth": 2
 }
