@@ -7,7 +7,7 @@ nnoremap <leader>tv :TestVisit<CR>
 " let test#neovim#term_position = "vertical"
 
 " https://github.com/David-Kunz/vim/blob/master/init.vim
-nnoremap <leader>db :TestNearest -strategy=jest<CR>
+nnoremap <leader>dt :TestNearest -strategy=jest<CR>
 function! JestStrategy(cmd)
   let testName = matchlist(a:cmd, '\v -t ''(.*)''')[1]
   " wrap dict keys in quotes
