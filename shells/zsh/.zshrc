@@ -2,6 +2,23 @@ autoload -U colors && colors
 export CLICOLOR=TRUE
 source $HOME/.aliasrc
 
+export EDITOR="nvim"
+export LANG="en_US.UTF-8"
+export PAGER="less"
+export BROWSER="firefox"
+
+export VIM_HOME="~/dotfiles/editors/vim"
+export NVIM_HOME="~/dotfiles/editors/nvim"
+
+# for colored man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
 export PS1="
  %B%{$fg[magenta]%}╭─ [%n@%M] %~
  ╰─%b "
@@ -57,7 +74,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-export PATH=$HOME/.local/scripts:$PATH
+export PATH=$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/private_scripts:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
