@@ -115,6 +115,7 @@ Plug 'mxw/vim-jsx'
 Plug 'martinda/Jenkinsfile-vim-syntax'
 
 Plug 'vim-test/vim-test'
+Plug 'voldikss/vim-floaterm'
 
 " coc plugins (install via CocInstall)
 Plug 'tjdevries/coc-zsh'
@@ -158,4 +159,7 @@ source $NVIM_HOME/plugins/configs/vim-test.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
 source $NVIM_HOME/plugins/configs/vim-gitgutter.vim
+source $NVIM_HOME/plugins/configs/vim-floaterm.vim
+
+source $NVIM_HOME/plugins/configs/local_config.vim
 
