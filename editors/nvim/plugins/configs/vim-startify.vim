@@ -8,3 +8,14 @@ let g:startify_bookmarks = [
             \ { 'x': '~/.Xresources' },
             \ { 'c': '~/.config/i3/config' },
             \ ]
+
+
+" start startify and nerdtree on open
+autocmd VimEnter *
+            \   if !argc()
+            \ |   Startify
+            \ |   NERDTree
+            \ |   wincmd w
+            \ | endif
+
+let g:startify_change_to_dir = 0

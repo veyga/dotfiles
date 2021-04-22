@@ -50,6 +50,7 @@ set mouse=nv
 set colorcolumn=100
 set textwidth=100
 set wrap
+set columns=100
 set noswapfile
 set noautochdir
 "set list
