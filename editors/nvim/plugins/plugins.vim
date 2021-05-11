@@ -17,7 +17,7 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript
 Plug 'markonm/traces.vim'
 
 " find and replace
-" Plug 'brooth/far.vim'
+Plug 'brooth/far.vim'
 
 " show ctags in side bar (requires ctags to be installed)
 Plug 'majutsushi/tagbar'
@@ -117,6 +117,8 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-test/vim-test'
 Plug 'voldikss/vim-floaterm'
 
+Plug 'tpope/vim-dadbod'
+
 " coc plugins (install via CocInstall)
 Plug 'tjdevries/coc-zsh'
 " Plug 'iamcco/coc-vimlsp'
@@ -160,6 +162,7 @@ source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
 source $NVIM_HOME/plugins/configs/vim-gitgutter.vim
 source $NVIM_HOME/plugins/configs/vim-floaterm.vim
+source $NVIM_HOME/plugins/configs/vim-dadbod.vim
 
 source $NVIM_HOME/plugins/configs/local_config.vim
 
