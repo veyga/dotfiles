@@ -75,9 +75,6 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
 export PATH=$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/private_scripts:$PATH
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
 
 # if ["$(uname)" == "Darwin"]; then
 #   export POETRY_VENV_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
@@ -114,6 +111,7 @@ esac
 # upgrade the nvm package will destroy installed versions?
 export NVM_DIR="$HOME/.nvm"
 # export PATH=/usr/local/opt/node@14/bin:$PATH
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVIM_DIR/nvm.sh"
 
 # export ZPLUG_HOME=/usr/local/opt/zplug
 # source $ZPLUG_HOME/init.zsh
@@ -121,3 +119,13 @@ export NVM_DIR="$HOME/.nvm"
 # zplug "zsh-users/zsh-completions"
 # # zplug "woefe/git-prompt.zsh", use:"{git-prompt.zsh,examples/multiline.zsh}"
 # zplug load
+export PATH="/usr/local/opt/helm@2/bin:$PATH"
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/andrew.stefanich/.sdkman"
+[[ -s "/Users/andrew.stefanich/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andrew.stefanich/.sdkman/bin/sdkman-init.sh"
+export JAVA_HOME=~/.sdkman/candidates/java/current

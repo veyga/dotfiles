@@ -182,10 +182,7 @@
   "python.linting.enabled": true,
   "python.formatting.provider": "black",
   "python.testing.pytestEnabled": true,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ]
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  }
 }

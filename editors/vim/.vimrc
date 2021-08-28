@@ -21,8 +21,8 @@ set ignorecase
 set smartcase
 set nobackup
 set mouse=nv
-set colorcolumn=100
-set textwidth=100
+" set colorcolumn=100
+" set textwidth=100
 set wrap
 set noswapfile
 set autochdir

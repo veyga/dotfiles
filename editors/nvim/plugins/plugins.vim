@@ -42,7 +42,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 
 " git marks
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'
+
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 
 " show git status in nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -81,15 +84,16 @@ Plug 'Yggdroot/indentLine'
 " enhanced syntax for python
 Plug 'vim-python/python-syntax'
 
+" lang highlighting
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/playground'
+
 " rainbow parens
 "Plug 'luochen1990/rainbow'
 "Plug 'wlangstroth/vim-racket'
 
 " typescript syntax highlighting
-" Plug 'herringtondarkholme/yats.vim'
-"Plug 'maxmellon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-
 Plug 'pangloss/vim-javascript'
 
 
@@ -100,6 +104,7 @@ Plug 'pangloss/vim-javascript'
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 
 Plug 'puremourning/vimspector'
+" Plug 'sagi-z/vimspectorpy', { 'do': { -> vimspectorpy#update() } }
 
 Plug 'liuchengxu/vim-which-key'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
@@ -117,7 +122,13 @@ Plug 'martinda/Jenkinsfile-vim-syntax'
 Plug 'vim-test/vim-test'
 Plug 'voldikss/vim-floaterm'
 
-Plug 'tpope/vim-dadbod'
+" Plug 'tpope/vim-dadbod'
+
+Plug 'alvan/vim-closetag'
+
+Plug 'JamshedVesuna/vim-markdown-preview'
+
+" Plug 'jparise/vim-graphql'
 
 " coc plugins (install via CocInstall)
 Plug 'tjdevries/coc-zsh'
@@ -147,7 +158,7 @@ source $NVIM_HOME/plugins/configs/fzf.vim
 source $NVIM_HOME/plugins/configs/indentline.vim
 source $NVIM_HOME/plugins/configs/nerdtree.vim
 " source $NVIM_HOME/plugins/configs/rainbow.vim
-source $NVIM_HOME/plugins/configs/far.vim
+" source $NVIM_HOME/plugins/configs/far.vim
 source $NVIM_HOME/plugins/configs/tagbar.vim
 source $NVIM_HOME/plugins/configs/vim-bufferline.vim
 " source $NVIM_HOME/plugins/configs/vim-buftabs.vim
@@ -156,13 +167,25 @@ source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
 source $NVIM_HOME/plugins/configs/vim-startify.vim
 source $NVIM_HOME/plugins/configs/vim-which-key.vim
-source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
+" source $NVIM_HOME/plugins/configs/vim-cpp-enhanced-highlight.vim
 source $NVIM_HOME/plugins/configs/vim-test.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
-source $NVIM_HOME/plugins/configs/vim-gitgutter.vim
+" source $NVIM_HOME/plugins/configs/vim-gitgutter.vim
 source $NVIM_HOME/plugins/configs/vim-floaterm.vim
-source $NVIM_HOME/plugins/configs/vim-dadbod.vim
+" source $NVIM_HOME/plugins/configs/vim-dadbod.vim
+source $NVIM_HOME/plugins/configs/vim-closetag.vim
+source $NVIM_HOME/plugins/configs/vim-markdown-preview.vim
+source $NVIM_HOME/plugins/configs/vim-jsx.vim
+source $NVIM_HOME/plugins/configs/gitsigns.lua
+" source $NVIM_HOME/plugins/configs/treesitter/treesitter.lua
 
 source $NVIM_HOME/plugins/configs/local_config.vim
+
+" lua require('nvim-treesitter.configs').setup({
+" highlight = {
+"   enable = true
+"   }
+" })
+
 

@@ -140,6 +140,7 @@ augroup mygroup
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
 
+nnoremap <A-4> :CocOutline<CR>
 
 " Not all of these have custom configs, but config changes should be made to these files
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-actions.vim

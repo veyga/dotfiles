@@ -401,6 +401,7 @@ hi jsRepeatBraces guifg=#d2a679
 hi jsFuncBraces guifg=#d2a679
 hi jsFuncParens guifg=#d2a679
 hi jsComma guifg=#d2a679
+hi jsObjectSeparator guifg=#d2a679
 hi jsNoise guifg=#d2a679
 hi jsFunction guifg=#93c763
 hi jsFuncCall guifg=#e0e2e4
@@ -435,7 +436,8 @@ hi jsSwitchBraces guifg=#d2a679
 hi jsException guifg=#93c763
 hi jsExceptions guifg=#e0e2e4
 " #e8e2b7
-hi jsGlobalNodeObjects guifg=#e8e2b7
+" hi jsGlobalNodeObjects guifg=#e8e2b7
+hi jsGlobalNodeObjects guifg=#a082bd
 
 " RUST
 hi rsSelfType guifg=#678cb1
@@ -546,6 +548,7 @@ hi cppSTLios guifg=#e0e2e4
 hi cppStatement guifg=#93c763
 hi cppModifier guifg=#93c763
 hi cppType guifg=#93c763
+hi cppMainFunc guifg=#d7d1a6
 " hi cppType guifg=#678cb1
 hi cppStructure guifg=#93c763
 hi cppCapitalWord guifg=#678cb1
@@ -626,7 +629,7 @@ hi pyLogicalAnd guifg=#89ddff
 hi pyLogicalOr guifg=#89ddff
 hi pyXor guifg=#89ddff
 hi pythonStrInterpRegion guifg=#89ddff
-hi pythonFString guifg=#89ddff
+hi pythonFString guifg=#e97600
 hi pyAssertion guifg=#e0e2e4
 hi pyTypeStr guifg=#678cb1
 hi pyTypeList guifg=#678cb1
@@ -643,6 +646,47 @@ hi yamlPlainScalar guifg=#e97600
 hi yamlKeyValueDelimiter guifg=#d2a679
 hi yamlBlockCollectionItemStart guifg=#d2a679
 hi yamlNodeTag guifg=#a082bd
+
+hi groovyString guifg=#e97600
+hi groovyELExpr guifg=#c17e70
+hi groovyDocComment guifg=#505050
+hi groovyCommentTitle guifg=#505050
+hi groovyDocTags guifg=#505050 gui=bold
+hi groovyDocParam guifg=#505050 gui=italic
+hi groovyJDKMethods guifg=#d7d1a6
+" hi groovyJDKBuiltin guifg=#93c763
+hi grooyExternal guifg=#a082bd
+hi grvyImport guifg=#a082bd
+hi grvyClassName guifg=#678cb1
+hi groovyParen guifg=#d2a679
+hi groovyConditional guifg=#93c673
+hi grvyStatement guifg=#93c673
+" hi groovyOperator guifg=#93c673
+hi groovyTypedef guifg=#93c673
+hi grvyBang guifg=#89ddff
+hi grvyDollar guifg=#89ddff
+hi grvyEqual guifg=#89ddff
+hi grvyQuestion guifg=#89ddff
+hi grvyComma guifg=#d2a679
+hi grvyPeriod guifg=#d2a679
+hi grvyColon guifg=#d2a679
+hi grvyBraceL guifg=#d2a679
+hi grvyBraceR guifg=#d2a679
+hi grvyParenL guifg=#d2a679
+hi grvyParenR guifg=#d2a679
+hi grvyBracketL guifg=#d2a679
+hi grvyBracketR guifg=#d2a679
+hi grvyAnd guifg=#89ddff
+hi grvyOr guifg=#89ddff
+" hi grvyAnnotation guifg=#a082bd gui=bold
+hi grvyPlus guifg=#89ddff
+hi grvyMinus guifg=#89ddff
+hi grvyModulus guifg=#89ddff
+" hi grvyDivide guifg=#89ddff
+" hi grvyMultiply guifg=#89ddff
+hi grvyLeftAngleBracket guifg=#89ddff
+hi grvyRightAngleBracket guifg=#89ddff
+hi grvyXor guifg=#89ddff
 
 " hi jsxRegion guifg=#ff0000
 " Git Commit Messages

@@ -12,7 +12,7 @@ syn match pyColon /:/
 syn match pyComma /,/
 syn match pyEqual /=/
 syn match pyNotEqual /!=/
-syn match pyEqual /+/
+syn match pyPlus /+/
 syn match pyMinus /-/
 syn match pyModulus /%/
 syn match pyDivide /\//

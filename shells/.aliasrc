@@ -19,3 +19,5 @@ case "$(uname -s)" in
      echo 'Failed to set aliases' 
      ;;
 esac
+
+alias k="kubectl"

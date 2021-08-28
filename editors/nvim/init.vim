@@ -10,13 +10,10 @@ set statusline+=\ %y
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
 set statusline+=%#CursorColumn#
+" set statusline+=%{FugitiveStatusline()}
 set statusline+=\ 
 
 
-"********************************************************
-"***************   INITIALIZE THEME *********************
-"********************************************************
-source $HOME/dotfiles/editors/theme/obsidian.vim
 
 
 "********************************************************
@@ -47,10 +44,13 @@ set ignorecase
 set smartcase
 set nobackup
 set mouse=nv
-set colorcolumn=100
-set textwidth=100
 set wrap
-set columns=100
+" set colorcolumn=100
+" set textwidth=100
+" set columns=110
+set colorcolumn=89
+set textwidth=89
+set columns=95
 set noswapfile
 set noautochdir
 "set list
@@ -112,3 +112,8 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+"********************************************************
+"***************   INITIALIZE THEME *********************
+"********************************************************
+source $HOME/dotfiles/editors/theme/obsidian.vim
