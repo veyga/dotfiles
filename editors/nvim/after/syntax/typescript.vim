@@ -9,9 +9,14 @@ syn match tsReturn /return/
 syn match tsCast /\sas/
 syn match tsAnd /&/
 syn match tsOr /|/
+" syn match tsCapitalWord /[^a-z"'][A-Z][A-Za-z0-9]*/
+syn match jsCapitalWord /\<[A-Z][A-Za-z0-9]*\>/
 syn match tsLessThan /</
 syn match tsGreaterThan />/
-syn match tsCapitalWord /[^a-z"'][A-Z][A-Za-z0-9]*/
+syn match tsBracketR /{/
+syn match tsBracketL /}/
+syn match tsParenR /(/
+syn match tsParenL /)/
 " syn match tsCapitalWord /[A-Z][A-Za-z0-9]*/
 " syn keyword typescriptKeywords break case catch class const continue debugger 
 " syn keyword typescriptKeywords default delete do else enum export extends false 

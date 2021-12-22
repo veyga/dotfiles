@@ -5,8 +5,7 @@
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django",
-        "--errors-only"
+        "--load-plugins=pylint_django"
     ],
     "python.linting.prospectorEnabled": false,
     "python.analysis.diagnosticMode": "openFilesOnly",
@@ -36,7 +35,7 @@
         "enable": true
     },
     "prettier.tabWidth": 2,
-    "prettier.singleQuote": true,
+    "prettier.singleQuote": false,
     "prettier.trailingComma": "es5",
     "prettier.semi": true,
     "python.linting.mypyEnabled": true,

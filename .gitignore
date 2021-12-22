@@ -1,4 +1,5 @@
 plugged/
 *netrwhist
 private_scripts/
+.private_aliasrc
 local_config.vim

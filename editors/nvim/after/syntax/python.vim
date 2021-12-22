@@ -30,7 +30,7 @@ syn clear pythonStatement
 
 " Set it to what's in the Python file, minus the class.
 syn keyword pythonStatement    False None True
-syn keyword pythonStatement    as assert break continue del exec global raise
+syn keyword pythonStatement    as assert break continue del exec global raise async
 syn keyword pythonStatement    lambda nonlocal pass return with yield
 syn keyword pythonStatement    def nextgroup=pythonFunction skipwhite
 syn keyword pythonImplicitArg  self cls

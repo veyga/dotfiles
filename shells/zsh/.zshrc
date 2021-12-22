@@ -5,7 +5,16 @@ source $HOME/.aliasrc
 export EDITOR="nvim"
 export LANG="en_US.UTF-8"
 export PAGER="less"
-export BROWSER="firefox"
+case "$(uname -s)" in
+   Darwin)
+      export BROWSER="chrome"
+     ;;
+   Linux)
+      export BROWSER="firefox"
+     ;;
+   *)
+esac
+
 
 export VIM_HOME="~/dotfiles/editors/vim"
 export NVIM_HOME="~/dotfiles/editors/nvim"

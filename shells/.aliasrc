@@ -21,3 +21,5 @@ case "$(uname -s)" in
 esac
 
 alias k="kubectl"
+
+source $HOME/dotfiles/shells/zsh/.private_aliasrc

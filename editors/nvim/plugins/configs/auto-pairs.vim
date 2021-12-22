@@ -1,1 +1,1 @@
-# let g:AutoPairsShortcutToggle = <M-6>
+" let g:AutoPairsShortcutToggle = <M-6>

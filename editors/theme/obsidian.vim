@@ -400,7 +400,6 @@ hi jsBrackets guifg=#d2a679
 hi jsRepeatBraces guifg=#d2a679
 hi jsFuncBraces guifg=#d2a679
 hi jsFuncParens guifg=#d2a679
-hi jsComma guifg=#d2a679
 hi jsObjectSeparator guifg=#d2a679
 hi jsNoise guifg=#d2a679
 hi jsFunction guifg=#93c763
@@ -419,7 +418,7 @@ hi jsFrom guifg=#a082bd
 hi jsModuleAs guifg=#93c763
 hi jsClassDefinition guifg=#678cb1
 hi jsClassBraces guifg=#d2a679
-hi jsCapitalWord guifg=#678cb1
+hi javascriptCapitalWord guifg=#678cb1
 hi jsThis guifg=#93c763
 hi jsSuper guifg=#93c763
 hi jsRepeat guifg=#93c763
@@ -438,6 +437,13 @@ hi jsExceptions guifg=#e0e2e4
 " #e8e2b7
 " hi jsGlobalNodeObjects guifg=#e8e2b7
 hi jsGlobalNodeObjects guifg=#a082bd
+hi javascriptBracketL guifg=#d2a679
+hi javascriptBracketR guifg=#d2a679
+hi javascriptParenL guifg=#d2a679
+hi javascriptParenR guifg=#d2a679
+hi javascriptComma guifg=#d2a679
+hi javascriptSemicolon guifg=#d2a679
+hi javascriptPeriod guifg=#d2a679
 
 " RUST
 hi rsSelfType guifg=#678cb1
@@ -783,6 +789,9 @@ hi xmlEndTag guifg=#678cb1
 hi xmlAttrib guifg=#89ddff
 hi xmlTag guifg=#d2a678
 hi xmlProcessingDelim guifg=#ffffff
+
+" hi htmlCaretL guifg=#89ddff
+" hi htmlCaretR guifg=#89ddff
 
 " hi groovyParenT guifg=#d2a679
 " hi groovyParen guifg=#d2a679

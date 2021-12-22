@@ -54,8 +54,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'kshenoy/vim-signature'
 
 " enhanced register view
-Plug 'junegunn/vim-peekaboo'
-let g:peekaboo_window = "botright 30new"
+" Plug 'junegunn/vim-peekaboo'
+" let g:peekaboo_window = "botright 30new"
 
 " filetype icons
 Plug 'ryanoasis/vim-devicons'
@@ -85,7 +85,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'vim-python/python-syntax'
 
 " lang highlighting
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-treesitter/playground'
 
 " rainbow parens
@@ -128,6 +128,7 @@ Plug 'alvan/vim-closetag'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
 
+Plug 'xavierchow/vim-swagger-preview'
 " Plug 'jparise/vim-graphql'
 
 " coc plugins (install via CocInstall)

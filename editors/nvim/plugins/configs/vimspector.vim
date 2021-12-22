@@ -13,6 +13,7 @@
 let g:vimspector_enable_mappings = 'HUMAN'
 "F6 vimspector#Pause()
 nmap <leader>dd :call vimspector#Launch()<CR>
+nmap <leader>dc :call vimspector#ClearBreakpoints()<CR>
 nmap <leader>ds :call vimspector#Stop()<CR>
 nmap <leader>dl :call vimspector#ListBreakpoints()<CR>
 nmap <leader>dx :VimspectorReset<CR>

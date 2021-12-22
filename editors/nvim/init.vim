@@ -15,6 +15,7 @@ set statusline+=\
 
 
 
+let g:netrw_bufsettings = 'nu'
 
 "********************************************************
 "**************   INITIALIZE PLUGINS ********************
@@ -89,20 +90,46 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
+" navigation between windows
+" tnoremap <C-h> <C-\><C-N><C-w>h
+" tnoremap <C-j> <C-\><C-N><C-w>j
+" tnoremap <C-k> <C-\><C-N><C-w>k
+" tnoremap <C-l> <C-\><C-N><C-w>l
+" nnoremap <C-h> <C-w>h
+" nnoremap <C-j> <C-w>j
+" nnoremap <C-k> <C-w>k
+" nnoremap <C-l> <C-w>l
+
 " resizing windows
-nnoremap <C-k> :resize -2<CR>
-nnoremap <C-j> :resize +2<CR>
-" nnoremap <C-h> :vertical resize -2<CR>
-" nnoremap <C-l> :vertical resize +2<CR>
-nmap <C-h> :vertical resize -2<CR>
-nmap <C-l> :vertical resize +2<CR>
+" this doesn't resize, but navigates instead
+" nnoremap <C-S-k> :resize -2<CR>
+" nnoremap <C-S-j> :resize +2<CR>
+" these override the exising nav commands (i.e. Ctrl+k resizes instead of navigating up)
+nnoremap <C-K> :resize -2<CR>
+nnoremap <C-J> :resize +2<CR>
+"
+" nnoremap <C-S-k> :echo "ctrl-K"<CR>
+" nnoremap <C-S-j> :echo "ctrl-J"<CR>
+" " nnoremap <C-h> :vertical resize -2<CR>
+" " nnoremap <C-l> :vertical resize +2<CR>
+" nmap <C-h> :vertical resize -2<CR>
+" nmap <C-l> :vertical resize +2<CR>
+" nnoremap <C-K> :resize -2<CR>
+" nnoremap <C-J> :resize +2<CR>
+" nmap <C-H> :vertical resize -2<CR>
+" nmap <C-L> :vertical resize +2<CR>
+" map <ESC>[65;5u   :echo "ctrl-shift-a received"<CR>
+" map <C-a>         :echo "ctrl-a received"<CR>
+
 
 " close buffer without closing window (prompt for save)
 nnoremap <M-w> :bp<cr>:bd #<cr>
+" nnoremap <C-w> :bp<cr>:bd #<cr>
 " close buffer without closing window (no prompt - useful for exiting terminal)
 "nnoremap <M-W> :bp<cr>:bd! #<cr>
 " close window
 nnoremap <M-W> :close<cr>
+" nnoremap <C-W> :close<cr>
 
 " display syntax group of selected item in bufferline
 nmap <leader>sp :call <SID>SynStack()<CR>
