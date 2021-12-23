@@ -1,1 +1,1 @@
-let g:python_highlight_builtin_types = 1
+" let g:python_highlight_builtin_types = 1

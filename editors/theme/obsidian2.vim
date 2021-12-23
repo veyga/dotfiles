@@ -164,9 +164,9 @@ call s:SetHighlight('NERDTree', '', s:black, '') " -- nerdtree
 "  SpecialComment	special things inside a comment
 "  Debug		debugging statements
 " **************************************************
-call s:SetHighlight('Comment', s:lightgray, '', 'italic') " -- covered by TSComment
+call s:SetHighlight('Comment', s:midgray, '', 'italic') " -- covered by TSComment
 call s:SetHighlight('Conceal', s:brown, s:black, '')
-call s:SetHighlight('String', s:orange, '', '')
+" call s:SetHighlight('String', s:orange, '', '')
 call s:SetHighlight('Character', s:red, '', '')
 call s:SetHighlight('Identifier', s:offwhite, '', '')
 " call s:SetHighlight('Function', s:, '', '')
@@ -205,9 +205,10 @@ call s:SetHighlight('TSPunctBracket', s:tan, '', '')
 call s:SetHighlight('TSPunctSpecial', s:cyan, '', '')
 call s:SetHighlight('TSPunctDelimiter', s:tan, '', '')
 call s:SetHighlight('TSTagDelimiter', s:tan, '', '')
-call s:SetHighlight('TSVariableBuiltin', s:yellow, '', '')
-call s:SetHighlight('TSFuncBuiltin', s:yellow, '', '')
-call s:SetHighlight('TSConstBuiltin', s:yellow, '', '')
+call s:SetHighlight('TSFuncMacro', s:purple, '', '')
+call s:SetHighlight('TSVariableBuiltin', s:pink, '', '')
+call s:SetHighlight('TSFuncBuiltin', s:pink, '', '')
+call s:SetHighlight('TSConstBuiltin', s:pink, '', '')
 call s:SetHighlight('TSString', s:orange, '', '')
 call s:SetHighlight('TSFloat', s:yellow, '', '')
 call s:SetHighlight('TSTag', s:blue, '', '')
@@ -220,5 +221,27 @@ call s:SetHighlight('TSConstant', s:offwhite, '', '')
 " **************************************************
 " ************** Lang Override *********************
 " **************************************************
+" ####### Python ######
+" can't override explicitly set things from TreeSitter (the below doesn't work)
 " hi pythonDecoratorName guifg=#d2a679
-" hi pythonDecorator guifg=#ff0000 gui=bold
+hi pythonDecorator guifg=#ff0000 gui=bold
+call s:SetHighlight('pyDocString', s:midgray, '', '')
+" hi pyDocString guifg=#404040
+" hi pyDocString guifg=red guibg=red ctermfg=9 ctermbg=NONE gui=NONE cterm=NONE
+hi pyDocString guifg=#00ff00 guibg=None
+" call s:SetHighlight('pythonDecoratorName', s:purple, '', '')
+
+" ####### Markdown ######   (no treesitter parser as of 12/22/21)
+call s:SetHighlight('markdownBold', s:yellow, '', 'bold')
+call s:SetHighlight('markdownCode', s:cyan, '', '')
+call s:SetHighlight('markdownCodeBlock', s:cyan, '', '')
+call s:SetHighlight('markdownCodeDelimiter', s:cyan, '', '')
+call s:SetHighlight('markdownHeadingDelimiter', s:green, '', '')
+call s:SetHighlight('markdownHeadingRule', s:midgray, '', '')
+call s:SetHighlight('markdownId', s:purple, '', '')
+call s:SetHighlight('markdownItalic', s:blue, '', 'italic')
+call s:SetHighlight('markdownListMarker', s:orange, '', '')
+call s:SetHighlight('markdownOrderedListMarker', s:orange, '', '')
+call s:SetHighlight('markdownRule', s:midgray, '', '')
+call s:SetHighlight('markdownUrl', s:purple, '', '')
+call s:SetHighlight('markdownUrlTitleDelimiter', s:green, '', '')

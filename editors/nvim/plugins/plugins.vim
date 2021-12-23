@@ -68,7 +68,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'Yggdroot/indentLine'
 
 " " enhanced syntax for python
-Plug 'vim-python/python-syntax'
+" Plug 'vim-python/python-syntax'
 
 " lang highlighting
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

@@ -2,7 +2,7 @@ let g:startify_bookmarks = [
             \ { 'd': '~/dotfiles' },
             \ { 'i': '~/.config/nvim/init.vim' },
             \ { 'p': '~/.config/nvim/plugins/plugins.vim' },
-            \ { 'o': '~/dotfiles/editors/theme/obsidian.vim' },
+            \ { 'o': '~/dotfiles/editors/theme/obsidian2.vim' },
             \ { 'z': '~/.zshrc' },
             \ { 'b': '~/.bashrc' },
             \ { 'x': '~/.Xresources' },

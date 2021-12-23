@@ -1,7 +1,7 @@
-"syn match pyDocString /""".*"""/
-"syn match pyDocString /'''.*'''/
-"syn match pyDocString /"""\_.\{-}"""/
-"syn match pyDocString /'''\_.\{-}'''/
+syn match pyDocString /""".*"""/
+syn match pyDocString /'''.*'''/
+syn match pyDocString /"""\_.\{-}"""/
+syn match pyDocString /'''\_.\{-}'''/
 "syn match pyBraceL /{/
 "syn match pyBraceR /}/
 "syn match pyBracketL /\[/
@@ -22,7 +22,7 @@
 "syn match pyLogicalAnd "&"
 "syn match pyLogicalOr "|"
 "syn match pyXor /\^/ 
-
+" syn match pySup /assert_new_model_counts/
 
 "" **All this so the class name can be highlighted?
 "" Clear default
