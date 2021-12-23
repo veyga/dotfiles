@@ -1,2 +1,2 @@
-syn match rktLangLine '\#lang.*\n'
-syn match rktArrow '->'
+" syn match rktLangLine '\#lang.*\n'
+" syn match rktArrow '->'

@@ -2,7 +2,6 @@
   "keyboard.dispatch": "keyCode",
   "window.zoomLevel": -1,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Default High Contrast",
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
   "vim.hlsearch": true,

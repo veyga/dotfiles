@@ -1,22 +1,22 @@
-syn match cBraceL /{/
-syn match cBraceR /}/
-syn match cParenL /(/
-syn match cParenR /)/
-" syn match cBracket /\[\]/
-syn match cBracketL /\[/
-syn match cBracketR /\]/
-syn match cColon /:/
-syn match cPeriod /\./
-syn match cSemicolon /;/
-syn match cComma /,/
-syn match cEq /=/
-syn match cPlus /+/
-syn match cMinus /-/
-syn match cDivide /\\/
-syn match cStar /*/
-syn match cAnd /&/
-syn match cPipe /|/
-syn match cPipeL /</
-syn match cPipeR />/
-syn match cPreprocessorLine '\#.*\n'
-syn match cMainFunc /main/
+" syn match cBraceL /{/
+" syn match cBraceR /}/
+" syn match cParenL /(/
+" syn match cParenR /)/
+" " syn match cBracket /\[\]/
+" syn match cBracketL /\[/
+" syn match cBracketR /\]/
+" syn match cColon /:/
+" syn match cPeriod /\./
+" syn match cSemicolon /;/
+" syn match cComma /,/
+" syn match cEq /=/
+" syn match cPlus /+/
+" syn match cMinus /-/
+" syn match cDivide /\\/
+" syn match cStar /*/
+" syn match cAnd /&/
+" syn match cPipe /|/
+" syn match cPipeL /</
+" syn match cPipeR />/
+" syn match cPreprocessorLine '\#.*\n'
+" syn match cMainFunc /main/

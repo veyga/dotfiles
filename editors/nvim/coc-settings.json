@@ -29,22 +29,21 @@
     "typescript.referencesCodeLens.enable": false,
     "typescript.format.enabled": true,
     "typescript.suggestionActions.enabled": true,
+    "eslint.enable": true,
     "eslint.format.enable" : false,
     "eslint.run": "onSave",
     "eslint.codeAction.showDocumentation": {
         "enable": true
     },
-    "prettier.tabWidth": 2,
-    "prettier.singleQuote": false,
     "prettier.trailingComma": "es5",
-    "prettier.semi": true,
+    "prettier.semi": false,
+    "prettier.proseWrap":"always",
     "python.linting.mypyEnabled": true,
     "python.linting.mypyPath": "~/.pyenv/shims/mypy",
     "python.formatting.blackPath": "~/.pyenv/shims/black",
     "python.formatting.provider": "black",
     "coc.preferences.formatOnSaveFiletypes": [],
     "yaml.schemas": {
-        "kubernetes": "*.yaml",
-        "Kubernetes": "*.yaml"
+        "kubernetes": "*.yaml"
     }
 }
