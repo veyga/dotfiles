@@ -107,6 +107,10 @@ nnoremap <A-l> <C-w>l
 " these override the exising nav commands (i.e. Ctrl+k resizes instead of navigating up)
 nnoremap <C-K> :resize -2<CR>
 nnoremap <C-J> :resize +2<CR>
+" ctrl cannnot differential upper and lowercase (use meta/alt)
+nnoremap <C-Right> :vertical resize +2<CR>
+nnoremap <C-Left> :vertical resize -2<CR>
+
 "
 " nnoremap <C-S-k> :echo "ctrl-K"<CR>
 " nnoremap <C-S-j> :echo "ctrl-J"<CR>
@@ -132,7 +136,7 @@ nnoremap <M-W> :close<cr>
 " nnoremap <C-W> :close<cr>
 
 " display syntax group of selected item in bufferline
-nmap <leader>sp :call <SID>SynStack()<CR>
+nmap <leader>so :call <SID>SynStack()<CR>
 function! <SID>SynStack()
   if !exists("*synstack")
     return
@@ -140,7 +144,35 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+
 "********************************************************
 "***************   INITIALIZE THEME *********************
 "********************************************************
-source $HOME/dotfiles/editors/theme/obsidian.vim
+
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
+  ensure_installed = "maintained",
+
+  -- Install languages synchronously (only applied to `ensure_installed`)
+  sync_install = false,
+
+  -- List of parsers to ignore installing
+  ignore_install = { },
+
+  highlight = {
+    -- `false` will disable the whole extension
+    enable = true,
+
+    -- list of language that will be disabled
+    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+    -- Using this option may slow down your editor, and you may see some duplcate highlights.
+    -- Instead of true it can also be a list of languages
+    additional_vim_regex_highlighting = true,
+  },
+}
+EOF
+
+source $HOME/dotfiles/editors/theme/obsidian2.vim
+" colorscheme obsidian
