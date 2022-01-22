@@ -90,15 +90,9 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-" navigation between windows
-" tnoremap <C-h> <C-\><C-N><C-w>h
-" tnoremap <C-j> <C-\><C-N><C-w>j
-" tnoremap <C-k> <C-\><C-N><C-w>k
-" tnoremap <C-l> <C-\><C-N><C-w>l
-" nnoremap <C-h> <C-w>h
-" nnoremap <C-j> <C-w>j
-" nnoremap <C-k> <C-w>k
-" nnoremap <C-l> <C-w>l
+" move lines up/down
+vnoremap <A-Down> :m '>+1<CR>gv=gv
+vnoremap <A-Up> :m '<-2<CR>gv=gv
 
 " resizing windows
 " this doesn't resize, but navigates instead
@@ -149,10 +143,31 @@ endfunc
 "***************   INITIALIZE THEME *********************
 "********************************************************
 
+" source $HOME/dotfiles/editors/theme/obsidian.vim
+source $HOME/dotfiles/editors/theme/meeahmi.vim
+
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = "maintained",
+  ensure_installed = { 
+    "bash",
+    "css",
+    "dockerfile",
+    "html",
+    "javascript",
+    "json",
+    "json5",
+    "jsonc",
+    "jsonc",
+    "lua",
+    "markdown",
+    "python",
+    "scss",
+    "toml",
+    "tsx",
+    "vim",
+    "yaml",
+    },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = false,
@@ -160,6 +175,45 @@ require'nvim-treesitter.configs'.setup {
   -- List of parsers to ignore installing
   ignore_install = { },
 
+  textobjects = {
+      select = {
+        enable = true,
+
+        -- Automatically jump forward to textobj, similar to targets.vim
+        lookahead = true,
+        swap = {
+          enable = true,
+          swap_next = {
+            ["<leader>e"] = "@parameter.inner",
+          },
+          swap_previous = {
+            ["<leader>E"] = "@parameter.inner",
+          },
+        },
+
+        keymaps = {
+          -- You can use the capture groups defined in textobjects.scm
+          ["if"] = "@function.inner",
+          ["af"] = "@function.outer",
+          ["il"] = "@loop.inner",
+          ["al"] = "@loop.outer",
+          ["ic"] = "@conditional.inner",
+          ["ac"] = "@conditional.outer",
+
+          -- Or you can define your own textobjects like this
+         --  ["iF"] = {
+         --    python = "(function_definition) @function",
+         --    cpp = "(function_definition) @function",
+         --    c = "(function_definition) @function",
+         --    java = "(method_declaration) @function",
+         --  },
+        },
+      },
+    },
+
+  -- custom_captures = {
+  --   ["decorator"] = "Annotation"
+  -- },
   highlight = {
     -- `false` will disable the whole extension
     enable = true,
@@ -171,8 +225,8 @@ require'nvim-treesitter.configs'.setup {
     -- Instead of true it can also be a list of languages
     additional_vim_regex_highlighting = true,
   },
+  indent = {
+    enable = true
+  }
 }
 EOF
-
-source $HOME/dotfiles/editors/theme/obsidian2.vim
-" colorscheme obsidian

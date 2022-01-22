@@ -15,7 +15,7 @@ Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript
 Plug 'markonm/traces.vim'
 
 " find and replace
-Plug 'brooth/far.vim'
+" Plug 'brooth/far.vim'
 
 " show ctags in side bar (requires ctags to be installed)
 Plug 'majutsushi/tagbar'
@@ -70,9 +70,10 @@ Plug 'Yggdroot/indentLine'
 " " enhanced syntax for python
 " Plug 'vim-python/python-syntax'
 
-" lang highlighting
+" additional lang support
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " typescript syntax highlighting
 " Plug 'leafgarland/typescript-vim'
@@ -105,8 +106,11 @@ Plug 'voldikss/vim-floaterm'
 Plug 'alvan/vim-closetag'
 
 Plug 'JamshedVesuna/vim-markdown-preview'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 Plug 'xavierchow/vim-swagger-preview'
+
+Plug 'dstein64/nvim-scrollview'
 
 call plug#end()
 

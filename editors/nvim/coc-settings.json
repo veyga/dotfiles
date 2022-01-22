@@ -1,49 +1,85 @@
 {
-    "coc.preferences.formatOnType": false,
-    "codeLens.enable": true,
-    "python.pythonPath": "~/.pyenv/shims/python",
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.pylintArgs": [
-        "--load-plugins=pylint_django"
-    ],
-    "python.linting.prospectorEnabled": false,
-    "python.analysis.diagnosticMode": "openFilesOnly",
-    "python.analysis.stubPath": "typings",
-    "python.linting.flake8Enabled": false,
-    "python.linting.flake8Path": "~/.pyenv/shims/flake8",
-    "python.venvPath": "$POETRY_VENV_HOME",
-    "python.linting.prospectorPath": "~/.pyenv/shims/prospector",
-    "python.linting.pylintPath": "~/.pyenv/shims/pylint",
-    "python.formatting.autopep8Path": "~/.pyenv/shims/autopep8",
-    "pyright.organizeimports.provider": "pyright",
-    "tsserver.enableJavascript": true,
-    "tsserver.trace.server": "verbose",
-    "tsserver.log": "normal",
-    "tsserver.reportStyleChecksAsWarnings": true,
-    "javascript.referencesCodeLens.enable": false,
-    "javascript.showUnused": false,
-    "javascript.suggest.autoImports": true,
-    "javascript.suggest.enabled": true,
-    "javascript.suggestionActions.enabled": true,
-    "typescript.referencesCodeLens.enable": false,
-    "typescript.format.enabled": true,
-    "typescript.suggestionActions.enabled": true,
-    "eslint.enable": true,
-    "eslint.format.enable" : false,
-    "eslint.run": "onSave",
-    "eslint.codeAction.showDocumentation": {
-        "enable": true
-    },
-    "prettier.trailingComma": "es5",
-    "prettier.semi": false,
-    "prettier.proseWrap":"always",
-    "python.linting.mypyEnabled": true,
-    "python.linting.mypyPath": "~/.pyenv/shims/mypy",
-    "python.formatting.blackPath": "~/.pyenv/shims/black",
-    "python.formatting.provider": "black",
-    "coc.preferences.formatOnSaveFiletypes": [],
-    "yaml.schemas": {
-        "kubernetes": "*.yaml"
+  "coc.preferences.formatOnType": false,
+  "codeLens.enable": false,
+  "python.pythonPath": "~/.pyenv/shims/python",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintPath": "~/.pyenv/shims/pylint",
+  "python.linting.pylintArgs": ["--load-plugins=pylint_django"],
+  "python.linting.prospectorEnabled": false,
+  "python.analysis.diagnosticMode": "openFilesOnly",
+  "python.analysis.stubPath": "typings",
+  "python.linting.flake8Enabled": false,
+  "python.linting.flake8Path": "~/.pyenv/shims/flake8",
+  "python.venvPath": "$POETRY_VENV_HOME",
+  "python.linting.prospectorPath": "~/.pyenv/shims/prospector",
+  "python.formatting.autopep8Path": "~/.pyenv/shims/autopep8",
+  "pyright.organizeimports.provider": "pyright",
+  "tsserver.enableJavascript": true,
+  "tsserver.trace.server": "verbose",
+  "tsserver.log": "normal",
+  "tsserver.reportStyleChecksAsWarnings": true,
+  "javascript.referencesCodeLens.enable": false,
+  "javascript.showUnused": false,
+  "javascript.suggest.autoImports": true,
+  "javascript.suggest.enabled": true,
+  "javascript.suggestionActions.enabled": true,
+  "typescript.referencesCodeLens.enable": false,
+  "typescript.format.enabled": true,
+  "typescript.suggestionActions.enabled": true,
+  "eslint.format.enable": false,
+  "eslint.run": "onSave",
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "prettier.trailingComma": "es5",
+  "prettier.semi": false,
+  "prettier.proseWrap": "always",
+  "prettier.printWidth": 100,
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "~/.pyenv/shims/mypy",
+  "python.formatting.blackPath": "~/.pyenv/shims/black",
+  "python.formatting.provider": "black",
+  "coc.preferences.formatOnSaveFiletypes": [],
+  "yaml.schemas": {
+    "kubernetes": "*.yaml"
+  },
+  "json.schemaDownload.enable": {
+    "type": "boolean",
+    "default": true,
+    "description": "When enabled, JSON schemas can be fetched from http and https locations.",
+    "tags": ["usesOnlineServices"]
+  },
+  "json.schemas": {
+    "type": "array",
+    "scope": "resource",
+    "description": "Schemas associations for json files",
+    "default": [],
+    "items": {
+      "type": "object",
+      "default": {
+        "fileMatch": ["/my-file"],
+        "url": "schemaURL"
+      },
+      "properties": {
+        "url": {
+          "type": "string",
+          "default": "/user.schema.json"
+        },
+        "fileMatch": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "default": "MyFile.json"
+          },
+          "minItems": 1,
+          "description": "File pattern to match."
+        },
+        "schema": {
+          "$ref": "http://json-schema.org/draft-07/schema#",
+          "description": "Url of json schema, support file/url protocol."
+        }
+      }
     }
+  }
 }

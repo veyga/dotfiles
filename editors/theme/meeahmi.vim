@@ -16,8 +16,10 @@ let g:colors_name = 'obsidian'
 let s:white =  '#ffffff'
 let s:offwhite =  '#e0e2e4'
 let s:black = '#000000'
-let s:offblack = '#222222'
+let s:offblack = '#111111'
 let s:red = '#ff5370'
+" let s:darkred = '#400000'
+let s:darkred = '#380015'
 let s:orange = '#e97600'
 let s:yellow = '#ffcd22'
 let s:green = '#93c763'
@@ -33,7 +35,7 @@ let s:lightgray = '#808080'
 let s:midgray= '#606060'
 let s:darkgray = '#404040'
 let s:tan = '#d2a679'
-let s:beige = '#bfb991'
+let s:beige = '#ead2a8'
 
 let s:bold = 'bold'
 let s:italic = 'italic'
@@ -70,43 +72,65 @@ endfun
 " **************************************************
 " **************** General Editor ******************
 " **************************************************
-call s:SetHighlight('ColorColumn', '', s:black, '')
-call s:SetHighlight('Cursor', s:black, s:red, '')
+call s:SetHighlight('ColorColumn', '', s:offblack, '')
+call s:SetHighlight('Cursor', s:black, s:brightpink, '')
 call s:SetHighlight('CursorColumn', '', s:offblack, '')
 call s:SetHighlight('CursorLine', '', s:offblack, '')
 call s:SetHighlight('CursorLineNr', s:midgray, '' , s:bold)
-call s:SetHighlight('LineNr', s:midgray, '', '')
-call s:SetHighlight('ErrorMsg', s:white, s:red, s:bold)
+call s:SetHighlight('ErrorMsg', s:white, s:darkred, s:bold)
 call s:SetHighlight('FoldColumn', s:lightgray, s:black, '')
 call s:SetHighlight('Folded', s:brown, s:black, s:bold)
-call s:SetHighlight('ModeMsg', s:offwhite, '', '')
-call s:SetHighlight('MoreMsg', s:white, '', '')
+call s:SetHighlight('IncSearch', s:white, s:lightgray, '')
+call s:SetHighlight('LineNr', s:midgray, '', '')
+call s:SetHighlight('ModeMsg', s:yellow, '', '')
+call s:SetHighlight('MoreMsg', s:yellow, '', '')
+call s:SetHighlight('MsgArea', s:yellow, '', '')
 call s:SetHighlight('NonText', s:lightgray, '', '')
 call s:SetHighlight('Normal', s:offwhite, s:black, '')
 call s:SetHighlight('Pmenu', s:white, s:darkpurple, '')
-call s:SetHighlight('PmenuSel', s:black, s:cyan, '')
+call s:SetHighlight('PmenuSel', s:black, s:yellow, s:bold)
 call s:SetHighlight('PmenuSbar', '', s:darkgray, '')
 call s:SetHighlight('PmenuThumb', '', s:lightgray, '')
 call s:SetHighlight('Question', s:blue, '', '')
-call s:SetHighlight('IncSearch', s:white, s:lightgray, '')
 call s:SetHighlight('Search', s:white, s:lightgray, '')
 call s:SetHighlight('SignColumn', '', s:black, '')
 call s:SetHighlight('SpecialKey', s:lightgray, '', '')
 call s:SetHighlight('SpellCap', s:blue, '', s:undercurl)
-call s:SetHighlight('SpellBad', s:red, '', s:undercurl)
+call s:SetHighlight('SpellBad', s:darkred, '', s:undercurl)
 call s:SetHighlight('StatusLine', s:pink, s:darkpurple, '')
 call s:SetHighlight('StatusLineNC', s:brightpink, s:darkpurple, '')
-call s:SetHighlight('TabLine', s:red, s:black, '')
 call s:SetHighlight('TabLineFill', s:pink, s:black, '')
 call s:SetHighlight('TabLineSel', s:black, s:darkgray, '')
 call s:SetHighlight('Title', s:pink, '', '') 
+call s:SetHighlight('Todo', s:white, s:darkgray, s:italic)
 call s:SetHighlight('VertSplit', s:darkpurple, '', '')
-" visual contols the visual select mode colors and the gutter error colors
-call s:SetHighlight('Visual', s:red, s:darkgray, '')
+call s:SetHighlight('Visual', s:brightpink, s:darkgray, '')
 call s:SetHighlight('WarningMsg', s:red, '', '')
 call s:SetHighlight('WildMenu', s:black, s:cyan, '')
-call s:SetHighlight('Todo', s:white, s:darkgray, s:italic)
 
+
+" **************************************************
+" ******************** Syntax *********************
+" **************************************************
+call s:SetHighlight('Character', s:red, '', '')
+call s:SetHighlight('Comment', s:midgray, '', s:italic) 
+call s:SetHighlight('Conceal', s:brown, s:black, '')
+call s:SetHighlight('Error', '', s:darkred, '')
+call s:SetHighlight('Function', '', '', '')
+call s:SetHighlight('Identifier', s:offwhite, '', '')
+call s:SetHighlight('Include', s:blue, '', '')
+call s:SetHighlight('Keyword', s:green, '', '')
+call s:SetHighlight('Statement', s:blue, '', '')
+call s:SetHighlight('Operator', s:cyan, '', '')
+call s:SetHighlight('PreProc', s:cyan, '', '')
+call s:SetHighlight('Define', s:purple, '', '')
+call s:SetHighlight('Macro', s:purple, '', '')
+call s:SetHighlight('Number', s:yellow, '', '')
+call s:SetHighlight('String', s:orange, '', '')
+call s:SetHighlight('Structure', s:cyan, '', '')
+call s:SetHighlight('Special', s:brightpink, '', '')
+call s:SetHighlight('Type', s:blue, '', '')
+call s:SetHighlight('Underlined', s:blue, '', '')
 
 " **************************************************
 " ******************** Plugins *********************
@@ -121,117 +145,61 @@ call s:SetHighlight('Directory', s:pink, '', '') " -- nerdtree
 call s:SetHighlight('NerdTreeFile', s:purple, '', '') " -- nerdtree
 call s:SetHighlight('NERDTree', '', s:black, '') " -- nerdtree
 
-
-
-
-" **************************************************
-" ******************** Syntax *********************
-" *Comment	any comment
-
-" *Constant	any constant
-"  String		a string constant: "this is a string"
-"  Character	a character constant: 'c', '\n'
-"  Number		a number constant: 234, 0xff
-"  Boolean	a boolean constant: TRUE, false
-"  Float		a floating point constant: 2.3e10
-
-" *Identifier	any variable name
-"  Function	function name (also: methods for classes)
-
-" *Statement	any statement
-"  Conditional	if, then, else, endif, switch, etc.
-"  Repeat		for, do, while, etc.
-"  Label		case, default, etc.
-"  Operator	"sizeof", "+", "*", etc.
-"  Keyword	any other keyword
-"  Exception	try, catch, throw
-
-" *PreProc	generic Preprocessor
-"  Include	preprocessor #include
-"  Define		preprocessor #define
-"  Macro		same as Define
-"  PreCondit	preprocessor #if, #else, #endif, etc.
-
-" *Type		int, long, char, etc.
-"  StorageClass	static, register, volatile, etc.
-"  Structure	struct, union, enum, etc.
-"  Typedef	A typedef
-
-" *Special	any special symbol
-"  SpecialChar	special character in a constant
-"  Tag		you can use CTRL-] on this
-"  Delimiter	character that needs attention
-"  SpecialComment	special things inside a comment
-"  Debug		debugging statements
-" **************************************************
-call s:SetHighlight('Comment', s:midgray, '', 'italic') " -- covered by TSComment
-call s:SetHighlight('Conceal', s:brown, s:black, '')
-" call s:SetHighlight('String', s:orange, '', '')
-call s:SetHighlight('Character', s:red, '', '')
-call s:SetHighlight('Identifier', s:offwhite, '', '')
-" call s:SetHighlight('Function', s:, '', '')
-call s:SetHighlight('Keyword', s:green, '', '')
-call s:SetHighlight('Statement', s:blue, '', '')
-call s:SetHighlight('Operator', s:cyan, '', '')
-call s:SetHighlight('PreProc', s:cyan, '', '')
-call s:SetHighlight('Include', s:blue, '', '')
-call s:SetHighlight('Define', s:purple, '', '')
-call s:SetHighlight('Macro', s:purple, '', '')
-call s:SetHighlight('Number', s:yellow, '', '')
-call s:SetHighlight('Type', s:blue, '', '')
-call s:SetHighlight('Structure', s:cyan, '', '')
-call s:SetHighlight('Special', s:offwhite, '', '')
-call s:SetHighlight('Underlined', s:blue, '', '')
-call s:SetHighlight('Error', s:white, s:red, '')
-call s:SetHighlight('ModeMsg', s:yellow, '', s:bold)
-call s:SetHighlight('MsgArea', s:yellow, '', '')
-
 " **************************************************
 " ***************** TreeSitter *********************
 " **************************************************
-call s:SetHighlight('TSKeyword', s:green, '', '')
+call s:SetHighlight('TSAnnotation', s:purple, '', s:bold)
 call s:SetHighlight('TSBoolean', s:green, '', '')
-call s:SetHighlight('TSKeywordOperator', s:green, '', '')
-call s:SetHighlight('TSKeywordFunction', s:green, '', '')
-call s:SetHighlight('TSConditional', s:green, '', '')
-call s:SetHighlight('TSOperator', s:cyan, '', '')
+call s:SetHighlight('TSCharacter', s:orange, '', '')
 call s:SetHighlight('TSComment', s:midgray, '', '')
-call s:SetHighlight('TSInclude', s:purple, '', '')
-call s:SetHighlight('TSRepeat', s:green, '', '')
-call s:SetHighlight('TSMethod', s:white, '', '')
-call s:SetHighlight('TSProperty', s:white, '', '')
-call s:SetHighlight('TSType', s:blue, '', '')
-call s:SetHighlight('TSPunctBracket', s:tan, '', '')
-call s:SetHighlight('TSPunctSpecial', s:cyan, '', '')
-call s:SetHighlight('TSPunctDelimiter', s:tan, '', '')
-call s:SetHighlight('TSTagDelimiter', s:tan, '', '')
-call s:SetHighlight('TSFuncMacro', s:purple, '', '')
-call s:SetHighlight('TSVariableBuiltin', s:pink, '', '')
-call s:SetHighlight('TSFuncBuiltin', s:pink, '', '')
-call s:SetHighlight('TSConstBuiltin', s:pink, '', '')
-call s:SetHighlight('TSString', s:orange, '', '')
+call s:SetHighlight('TSConditional', s:green, '', '')
+call s:SetHighlight('TSConstBuiltin', s:green, '', '')
+call s:SetHighlight('TSConstMacro', s:purple, '', '')
+call s:SetHighlight('TSConstant', s:offwhite, '', '')
+call s:SetHighlight('TSConstructor', s:blue, '', '')
+call s:SetHighlight('TSException', s:green, '', '')
+call s:SetHighlight('TSError', '', s:darkred, '')
 call s:SetHighlight('TSFloat', s:yellow, '', '')
+call s:SetHighlight('TSKeywordFunction', s:green, '', '')
+call s:SetHighlight('TSKeywordOperator', s:green, '', '')
+call s:SetHighlight('TSInclude', s:purple, '', '')
+" call s:SetHighlight('TSLiteral', s:beige, '', s:bold)
+" call s:SetHighlight('TSLiteral', s:pink, '', '') -- pydoc string are literals?
+call s:SetHighlight('TSKeyword', s:green, '', '')
+call s:SetHighlight('TSMethod', s:white, '', '')
+call s:SetHighlight('TSFuncBuiltin', s:beige, '', '')
+call s:SetHighlight('TSFuncMacro', s:purple, '', '')
+call s:SetHighlight('TSOperator', s:cyan, '', '')
+call s:SetHighlight('TSParameter', s:offwhite, '', '')
+call s:SetHighlight('TSProperty', s:white, '', '')
+call s:SetHighlight('TSPunctBracket', s:tan, '', '')
+call s:SetHighlight('TSPunctDelimiter', s:tan, '', '')
+call s:SetHighlight('TSPunctSpecial', s:cyan, '', '')
+call s:SetHighlight('TSRepeat', s:green, '', '')
+call s:SetHighlight('TSString', s:orange, '', '')
+call s:SetHighlight('TSStringEscape', s:brown, '', '')
 call s:SetHighlight('TSTag', s:blue, '', '')
 call s:SetHighlight('TSTagAttribute', s:paleblue, '', '')
-call s:SetHighlight('TSParameter', s:offwhite, '', '')
+call s:SetHighlight('TSTagDelimiter', s:tan, '', '')
+call s:SetHighlight('TSTextReference', s:yellow, '', '')
+call s:SetHighlight('TSTitle', s:pink, '', '')
+call s:SetHighlight('TSType', s:blue, '', '')
+call s:SetHighlight('TSTypeBuiltin', s:blue, '', '')
+call s:SetHighlight('TSURI', s:brown, '', '')
 call s:SetHighlight('TSVariable', s:offwhite, '', '')
-call s:SetHighlight('TSConstant', s:offwhite, '', '')
+call s:SetHighlight('TSVariableBuiltin', s:beige, '', '')
 
 
 " **************************************************
 " ************** Lang Override *********************
 " **************************************************
 " ####### Python ######
-" can't override explicitly set things from TreeSitter (the below doesn't work)
-" hi pythonDecoratorName guifg=#d2a679
+" can't override explicitly set things from TreeSitter
 hi pythonDecorator guifg=#ff0000 gui=bold
 call s:SetHighlight('pyDocString', s:midgray, '', '')
-" hi pyDocString guifg=#404040
-" hi pyDocString guifg=red guibg=red ctermfg=9 ctermbg=NONE gui=NONE cterm=NONE
 hi pyDocString guifg=#00ff00 guibg=None
-" call s:SetHighlight('pythonDecoratorName', s:purple, '', '')
 
-" ####### Markdown ######   (no treesitter parser as of 12/22/21)
+" ####### Markdown ######   (no treesitter parser as of 12/22/21)?
 call s:SetHighlight('markdownBold', s:yellow, '', 'bold')
 call s:SetHighlight('markdownCode', s:cyan, '', '')
 call s:SetHighlight('markdownCodeBlock', s:cyan, '', '')
@@ -245,3 +213,8 @@ call s:SetHighlight('markdownOrderedListMarker', s:orange, '', '')
 call s:SetHighlight('markdownRule', s:midgray, '', '')
 call s:SetHighlight('markdownUrl', s:purple, '', '')
 call s:SetHighlight('markdownUrlTitleDelimiter', s:green, '', '')
+
+call s:SetHighlight('typescriptUnaryOp', s:cyan, '', '')
+call s:SetHighlight("jsonFold", '', '', '')
+call s:SetHighlight("jsonCommentError", s:darkgray, '', '')
+call s:SetHighlight("jsonBoolean", s:green, '', '')

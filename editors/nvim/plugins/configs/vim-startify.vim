@@ -1,12 +1,13 @@
 let g:startify_bookmarks = [
+            \ { 'b': '~/.bashrc' },
+            \ { 'c': '~/.config/i3/config' },
             \ { 'd': '~/dotfiles' },
             \ { 'i': '~/.config/nvim/init.vim' },
+            \ { 'm': '~/dotfiles/editors/theme/meeahmi.vim' },
+            \ { 'o': '~/dotfiles/editors/nvim/coc-settings.json' },
             \ { 'p': '~/.config/nvim/plugins/plugins.vim' },
-            \ { 'o': '~/dotfiles/editors/theme/obsidian2.vim' },
-            \ { 'z': '~/.zshrc' },
-            \ { 'b': '~/.bashrc' },
             \ { 'x': '~/.Xresources' },
-            \ { 'c': '~/.config/i3/config' },
+            \ { 'z': '~/.zshrc' },
             \ ]
 
 

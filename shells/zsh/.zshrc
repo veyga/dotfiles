@@ -8,6 +8,8 @@ export PAGER="less"
 case "$(uname -s)" in
    Darwin)
       export BROWSER="chrome"
+      export LDFLAGS="-L/usr/local/opt/openssl/lib"
+      export CPPFLAGS="-I/usr/local/opt/openssl/include"
      ;;
    Linux)
       export BROWSER="firefox"
@@ -134,7 +136,11 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/andrew.stefanich/.sdkman"
 [[ -s "/Users/andrew.stefanich/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andrew.stefanich/.sdkman/bin/sdkman-init.sh"
 export JAVA_HOME=~/.sdkman/candidates/java/current
+
+# for Bit
+export PATH=$HOME/bin:$PATH

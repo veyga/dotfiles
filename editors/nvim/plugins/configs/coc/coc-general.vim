@@ -44,7 +44,7 @@ nmap <silent> ]g <Plug>(coc-diagnostic-next)
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gt <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Used to expand decorations in worksheets
@@ -96,8 +96,14 @@ nmap <leader>F  <Plug>(coc-format)
 
 " Remap for do codeAction of current line
 " nmap <leader>a  <Plug>(coc-codeaction)
-nmap <leader>ca  <Plug>(coc-codeaction)
+" nmap <leader>ca  <Plug>(coc-codeaction)
+" nmap <leader> ca <Plug>(coc-codeaction-line)
+" xmap <leader> ca <Plug>(coc-codeaction-selected)
+" nmap <leader> cA <Plug>(coc-codeaction)
 
+nmap <silent> ga <Plug>(coc-codeaction-line)
+xmap <silent> ga <Plug>(coc-codeaction-selected)
+nmap <silent> gA <Plug>(coc-codeaction)
 " Fix autofix problem of current line
 nmap <leader>qf  <Plug>(coc-fix-current)
 
@@ -146,18 +152,18 @@ nnoremap <A-4> :CocOutline<CR>
 
 " Not all of these have custom configs, but config changes should be made to these files
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-actions.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-clangd.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-clangd.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-css.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-go.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-go.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-html.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-json.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-marketplace.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-metals.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-rust-analyzer.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-snippets.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-terminal.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-marketplace.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-metals.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-rust-analyzer.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-snippets.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-terminal.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-tslint-plugin.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-tsserver.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-xml.vim
 source $NVIM_HOME/plugins/configs/coc/extensions/coc-pyright.vim
-source $NVIM_HOME/plugins/configs/coc/extensions/coc-yank.vim
+" source $NVIM_HOME/plugins/configs/coc/extensions/coc-yank.vim
