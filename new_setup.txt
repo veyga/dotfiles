@@ -18,9 +18,11 @@ ln -sf $HOME/dotfiles/editors/vim/.vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/editors/nvim $HOME/.config/nvim
 sudo ln -sf $HOME/dotfiles/editors/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
 ln -sf $HOME/dotfiles/wms/i3/config $HOME/.config/i3/config
+ln -sf $HOME/dotfiles/wms/i3/.i3status.conf $HOME/.i3status.conf
 ln -sf $HOME/dotfiles/scripts $HOME/.local/scripts
 ln -sf $HOME/dotfiles/X11/.xinitrc $HOME/.xinitrc
 ln -sf $HOME/dotfiles/X11/.Xresources $HOME/.Xresources
+ln -sf $HOME/dotfiles/gtk-3.0 $HOME/.config/gtk-3.0
 
 
 ## Install system packages:

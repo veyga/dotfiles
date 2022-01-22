@@ -42,7 +42,8 @@ SAVEHIST=100
 
 fpath+=~/.zfunc
 
-autoload -U compinit
+autoload -Uz compinit
+compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
 # compinit -u # prompts every time to confirm on mac

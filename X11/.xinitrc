@@ -47,11 +47,11 @@ then
 fi
 
 # default resolution for host
-if command -v xrandr &> /dev/null
-then
-  xrandr -s 2560x1440
-fi
-
+# if command -v xrandr &> /dev/null
+# then
+#   xrandr -s 2560x1440
+# fi
+# 
 # time based coloring
 if command -v redshift &> /dev/null
 then
@@ -68,6 +68,8 @@ case $session in
       exec i3;;
     xfce4) 
       exec startxfce4;;
+    gnome) 
+      exec gnome-session;;
     # No known session, try to run it as command
     *) exec $1;;
 esac
