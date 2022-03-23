@@ -145,3 +145,6 @@ export JAVA_HOME=~/.sdkman/candidates/java/current
 
 # for Bit
 export PATH=$HOME/bin:$PATH
+# tabs -4
+
+export PYDEVD_WARN_EVALUATION_TIMEOUT=10.0

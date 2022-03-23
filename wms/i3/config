@@ -83,8 +83,8 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-# floating_minimum_size 400 x 300
-# floating_maximum_size 800 x 600
+floating_minimum_size 400 x 300
+floating_maximum_size 800 x 600
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -205,8 +205,6 @@ for_window [title="File Transfer*"] floating enable
 for_window [class="^[fF]irefox" title="^Save As$"] floating enable, resize set 1600 1200 move position center
 for_window [class="emulator64-cras"] floating enable
 
-#floating_minimum_size 75x50
-#floating_maximum_size 75x50
 
 # sound/brightness
 bindsym XF86MonBrightnessUp exec "sudo light -A 5"
