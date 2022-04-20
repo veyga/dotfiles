@@ -13,6 +13,10 @@ case "$(uname -s)" in
      ;;
    Linux)
       export BROWSER="firefox"
+      # source "/home/veyga/.sdkman/bin/sdkman-init.sh"
+      # export SDKMAN_DIR="/Users/veyga/.sdkman"
+      # [[ -s "/Users/veyga/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/veyga/.sdkman/bin/sdkman-init.sh"
+      # export JAVA_HOME=~/.sdkman/candidates/java/current
      ;;
    *)
 esac
@@ -139,12 +143,13 @@ eval "$(pyenv init --path)"
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/andrew.stefanich/.sdkman"
-[[ -s "/Users/andrew.stefanich/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/andrew.stefanich/.sdkman/bin/sdkman-init.sh"
-export JAVA_HOME=~/.sdkman/candidates/java/current
 
 # for Bit
 export PATH=$HOME/bin:$PATH
 # tabs -4
 
 export PYDEVD_WARN_EVALUATION_TIMEOUT=10.0
+
+##THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+#export SDKMAN_DIR="$HOME/.sdkman"
+#[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

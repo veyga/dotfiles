@@ -2,8 +2,8 @@
 call plug#begin('~/dotfiles/editors/nvim/plugged')
 
 " display buffers under statusline
-Plug 'bling/vim-bufferline'
-"Plug 'b4b4r07/vim-buftabs'
+" Plug 'bling/vim-bufferline'
+Plug 'b4b4r07/vim-buftabs'
 
 "filesystem navigation
 Plug 'preservim/nerdtree'
@@ -112,6 +112,11 @@ Plug 'xavierchow/vim-swagger-preview'
 
 Plug 'dstein64/nvim-scrollview'
 
+" Plug 'jez/vim-better-sml'
+" Plug 'w0rp/ale'
+" Plug 'benmills/vimux'
+" Plug 'sbdchd/neoformat'
+
 call plug#end()
 
 source $NVIM_HOME/plugins/configs/colorizer.vim
@@ -140,5 +145,8 @@ source $NVIM_HOME/plugins/configs/gitsigns.lua
 source $NVIM_HOME/plugins/configs/treesitter/playground.vim
 
 source $NVIM_HOME/plugins/configs/local_config.vim
+
+" source $NVIM_HOME/plugins/configs/vim-better-sml.vim
+" source $NVIM_HOME/plugins/configs/neoformat.vim
 
 

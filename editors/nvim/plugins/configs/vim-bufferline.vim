@@ -1,5 +1,5 @@
 " TODO command to toggle this on/off
-let g:bufferline_echo = 1
+let g:bufferline_echo = 0
 
 " nmap <leader>B :call <SID>ToggleBufferline()<CR>
 " nmap <leader>Y :call <SID>MyBufferlineRefresh()<CR>

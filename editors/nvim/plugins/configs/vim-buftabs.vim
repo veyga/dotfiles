@@ -1,6 +1,6 @@
 let g:buftabs_enabled = 1
 let g:buftabs_in_statusline = 1
-let g:buftabs_in_cmdline = 1
+let g:buftabs_in_cmdline = 0
 let g:buftabs_only_basename = 1
 let g:buftabs_active_highlight_group = "Visual"
 let g:buftabs_inactive_highlight_group = ""
