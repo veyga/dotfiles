@@ -19,6 +19,7 @@
   "python.formatting.blackArgs": ["--target-version", "py310"],
   "python.venvPath": "$POETRY_VENV_HOME",
   "pyright.trace.server": "verbose",
+  "pyright.disableProgressNotifications": true,
   "pyright.organizeimports.provider": "pyright",
   "tsserver.enableJavascript": true,
   "tsserver.trace.server": "verbose",

@@ -150,6 +150,9 @@ source $HOME/dotfiles/editors/theme/meeahmi.vim
 
 lua <<EOF
 require'nvim-treesitter.configs'.setup {
+  -- List of parsers to ignore installing
+  ignore_install = { "all" },
+
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = { 
     "bash",
@@ -157,6 +160,7 @@ require'nvim-treesitter.configs'.setup {
     "dockerfile",
     "html",
     "javascript",
+    "jsdoc",
     "json",
     "json5",
     "jsonc",
@@ -166,15 +170,13 @@ require'nvim-treesitter.configs'.setup {
     "scss",
     "toml",
     "tsx",
+    "typescript",
     "vim",
     "yaml",
     },
 
   -- Install languages synchronously (only applied to `ensure_installed`)
-  sync_install = false,
-
-  -- List of parsers to ignore installing
-  ignore_install = { },
+  sync_install = true,
 
   textobjects = {
       select = {
