@@ -21,6 +21,7 @@
   "pyright.trace.server": "verbose",
   "pyright.disableProgressNotifications": true,
   "pyright.organizeimports.provider": "pyright",
+  "pyright.inlayHints.enable": false,
   "tsserver.enableJavascript": true,
   "tsserver.trace.server": "verbose",
   "tsserver.log": "normal",
