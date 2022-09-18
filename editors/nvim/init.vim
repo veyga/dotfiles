@@ -83,8 +83,6 @@ nnoremap <TAB> :bnext<CR>
 nnoremap <S-TAB> :bprevious<CR>
 
 " navigation between windows
-tnoremap <A-h> <C-\><C-N><C-w>h
-tnoremap <A-j> <C-\><C-N><C-w>j
 tnoremap <A-k> <C-\><C-N><C-w>k
 tnoremap <A-l> <C-\><C-N><C-w>l
 nnoremap <A-h> <C-w>h
@@ -131,6 +129,9 @@ nnoremap <M-w> :bp<cr>:bd #<cr>
 nnoremap <M-W> :close<cr>
 " nnoremap <C-W> :close<cr>
 
+" nnoremap <silent> <leader>2 :set columns=200<cr>
+nnoremap <leader>2 :set columns=200<cr>
+
 " display syntax group of selected item in bufferline
 nmap <leader>so :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -158,6 +159,7 @@ require'nvim-treesitter.configs'.setup {
     "bash",
     "css",
     "dockerfile",
+    "go",
     "html",
     "javascript",
     "jsdoc",

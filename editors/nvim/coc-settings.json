@@ -1,6 +1,7 @@
 {
   "coc.preferences.formatOnType": false,
   "codeLens.enable": false,
+  "clangd.inlayHints.enable": false,
   "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.stubPath": "typings",
   "python.pythonPath": "~/.pyenv/shims/python",

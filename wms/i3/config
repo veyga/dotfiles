@@ -83,8 +83,8 @@ bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
-floating_minimum_size 400 x 300
-floating_maximum_size 800 x 600
+floating_minimum_size 800 x 600
+floating_maximum_size 1600 x 1200
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle

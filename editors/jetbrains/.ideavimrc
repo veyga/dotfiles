@@ -1,3 +1,4 @@
 let g:mapleader = "\<Space>"
 set relativenumber
 set number
+set ideajoin
