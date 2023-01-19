@@ -9,7 +9,7 @@ Plug 'b4b4r07/vim-buftabs'
 Plug 'preservim/nerdtree'
 
 "surround terms
-Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python', 'cpp', 'javascript']}}
+Plug 'tpope/vim-surround', {'autoload': {'filetypes': ['text','rust','typescript','scala','java','python', 'cpp', 'javascript', 'hcl']}}
 
 "regex helper: highlights regions as you type in regex searches
 Plug 'markonm/traces.vim'
@@ -73,7 +73,7 @@ Plug 'Yggdroot/indentLine'
 " additional lang support
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " typescript syntax highlighting
 " Plug 'leafgarland/typescript-vim'

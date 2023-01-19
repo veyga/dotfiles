@@ -22,7 +22,7 @@
   "pyright.trace.server": "verbose",
   "pyright.disableProgressNotifications": true,
   "pyright.organizeimports.provider": "pyright",
-  "pyright.inlayHints.enable": false,
+  "inlayHint.enable": false,
   "tsserver.enableJavascript": true,
   "tsserver.trace.server": "verbose",
   "tsserver.log": "normal",
@@ -84,6 +84,15 @@
           "description": "Url of json schema, support file/url protocol."
         }
       }
+    }
+  },
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": ["terraform", "tf", "hcl"],
+      "initializationOptions": {},
+      "settings": {}
     }
   }
 }

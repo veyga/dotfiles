@@ -1,0 +1,1 @@
+fd --hidden -t f -x rnr -f $1 $2

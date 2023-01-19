@@ -22,5 +22,7 @@ case "$(uname -s)" in
 esac
 
 alias k="kubectl"
+alias tf="terraform"
+alias tg="terragrunt"
 
 source $HOME/dotfiles/shells/zsh/.private_aliasrc

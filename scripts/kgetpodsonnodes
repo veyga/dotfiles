@@ -1,0 +1,8 @@
+nodes=($(kubectl get nodes | tail -n +2 | awk '{print $1}'))
+
+for node in ${nodes[@]}; do
+  echo "NODE: $node"
+  kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=$node
+  echo "\n\n"
+done
+

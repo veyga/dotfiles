@@ -141,6 +141,8 @@ function! <SID>SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
+au BufReadPost *.tfvars set filetype=terraform
+au BufReadPost terraform.tfstate set filetype=json
 
 "********************************************************
 "***************   INITIALIZE THEME *********************
@@ -160,6 +162,7 @@ require'nvim-treesitter.configs'.setup {
     "css",
     "dockerfile",
     "go",
+    "hcl",
     "html",
     "javascript",
     "jsdoc",
@@ -172,6 +175,7 @@ require'nvim-treesitter.configs'.setup {
     "scss",
     "toml",
     "tsx",
+    "terraform",
     "typescript",
     "vim",
     "yaml",
@@ -180,41 +184,41 @@ require'nvim-treesitter.configs'.setup {
   -- Install languages synchronously (only applied to `ensure_installed`)
   sync_install = true,
 
-  textobjects = {
-      select = {
-        enable = true,
+  -- textobjects = {
+  --     select = {
+  --       enable = true,
 
-        -- Automatically jump forward to textobj, similar to targets.vim
-        lookahead = true,
-        swap = {
-          enable = true,
-          swap_next = {
-            ["<leader>e"] = "@parameter.inner",
-          },
-          swap_previous = {
-            ["<leader>E"] = "@parameter.inner",
-          },
-        },
+  --       -- Automatically jump forward to textobj, similar to targets.vim
+  --       lookahead = true,
+  --       swap = {
+  --         enable = true,
+  --         swap_next = {
+  --           ["<leader>e"] = "@parameter.inner",
+  --         },
+  --         swap_previous = {
+  --           ["<leader>E"] = "@parameter.inner",
+  --         },
+  --       },
 
-        keymaps = {
-          -- You can use the capture groups defined in textobjects.scm
-          ["if"] = "@function.inner",
-          ["af"] = "@function.outer",
-          ["il"] = "@loop.inner",
-          ["al"] = "@loop.outer",
-          ["ic"] = "@conditional.inner",
-          ["ac"] = "@conditional.outer",
+  --       keymaps = {
+  --         -- You can use the capture groups defined in textobjects.scm
+  --         ["if"] = "@function.inner",
+  --         ["af"] = "@function.outer",
+  --         ["il"] = "@loop.inner",
+  --         ["al"] = "@loop.outer",
+  --         ["ic"] = "@conditional.inner",
+  --         ["ac"] = "@conditional.outer",
 
-          -- Or you can define your own textobjects like this
-         --  ["iF"] = {
-         --    python = "(function_definition) @function",
-         --    cpp = "(function_definition) @function",
-         --    c = "(function_definition) @function",
-         --    java = "(method_declaration) @function",
-         --  },
-        },
-      },
-    },
+  --         -- Or you can define your own textobjects like this
+  --        --  ["iF"] = {
+  --        --    python = "(function_definition) @function",
+  --        --    cpp = "(function_definition) @function",
+  --        --    c = "(function_definition) @function",
+  --        --    java = "(method_declaration) @function",
+  --        --  },
+  --       },
+  --     },
+  --   },
 
   -- custom_captures = {
   --   ["decorator"] = "Annotation"

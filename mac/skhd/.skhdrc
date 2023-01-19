@@ -82,15 +82,18 @@
 # Note that this only works when the active window does *not* already belong to a stack
 shift + cmd - h : yabai -m window west --stack $(yabai -m query --windows --window | jq -r '.id')
 shift + cmd - j : yabai -m window south --stack $(yabai -m query --windows --window | jq -r '.id')
+# shift + cmd - j : yabai -m window --layer above
 shift + cmd - k : yabai -m window north --stack $(yabai -m query --windows --window | jq -r '.id')
+# shift + cmd - k : yabai -m window --layer below
 shift + cmd - l : yabai -m window east --stack $(yabai -m query --windows --window | jq -r '.id')
+# shift + cmd - u : yabai -m window west --warp $(yabai -m query --windows --window | jq -r '.id')
 cmd - h : yabai -m window --focus west
 cmd - j : yabai -m window --focus stack.next
 cmd - k : yabai -m window --focus stack.prev
 cmd - l : yabai -m window --focus east
 
 #disable cmd d
-shift + cmd - f : yabai -m window --toggle sticky
+# shift + cmd - u : yabai -m window --toggle sticky
 shift + cmd - s : yabai -m window --stack next
 # cmd - enter : osascript -e 'tell application "terminal" to do script ""'
 # shift + cmd - h : yabai -m window --warp west
