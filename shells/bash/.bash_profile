@@ -6,3 +6,6 @@ if [ -f ~/.profile ]; then
 fi
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+complete -C /usr/local/bin/terraform terraform
+

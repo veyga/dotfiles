@@ -108,14 +108,16 @@ Plug 'alvan/vim-closetag'
 Plug 'JamshedVesuna/vim-markdown-preview'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-Plug 'xavierchow/vim-swagger-preview'
-
-Plug 'dstein64/nvim-scrollview'
+" Plug 'xavierchow/vim-swagger-preview'
+"
+" Plug 'dstein64/nvim-scrollview'
 
 " Plug 'jez/vim-better-sml'
 " Plug 'w0rp/ale'
 " Plug 'benmills/vimux'
 " Plug 'sbdchd/neoformat'
+
+Plug 'github/copilot.vim'
 
 call plug#end()
 
