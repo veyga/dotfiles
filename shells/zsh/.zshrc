@@ -38,7 +38,7 @@ export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 
 export PS1="
- %B%{$fg[magenta]%}╭─ [%n@%M] %~
+ %B%{$fg[red]%}╭─ [%n@%M] %~
  ╰─%b "
 export PS2=".. "
 
@@ -105,12 +105,13 @@ case "$(uname -s)" in
     export POETRY_VENV_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
     [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
     [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
-    source /usr/local/share/antigen/antigen.zsh
-    antigen bundle zsh-users/zsh-autosuggestions
-    antigen bundle zsh-users/zsh-completions
-    antigen bundle greymd/docker-zsh-completion
-    antigen bundle nnao45/zsh-kubectl-completion
-    antigen apply
+    # source /usr/local/share/antigen/antigen.zsh
+    # antigen bundle zsh-users/zsh-autosuggestions
+    # antigen bundle zsh-users/zsh-completions
+    # antigen bundle greymd/docker-zsh-completion
+    # antigen bundle nnao45/zsh-kubectl-completion
+    # antigen bundle lukechilds/zsh-better-npm-completion
+    # antigen apply
      ;;
    Linux)
     export POETRY_VENV_HOME="$HOME/.cache/pypoetry/virtualenvs"

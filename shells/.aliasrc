@@ -1,12 +1,10 @@
 case "$(uname -s)" in
    Darwin)
-      alias take='function _take(){mkdir $1; cd $1; };_take'
       alias la="ls -A"
       alias ll="ls -l"
       alias lal="ls -Alh"
      ;;
    Linux)
-      alias take='function _take(){mkdir $1; cd $1; };_take'
       alias exal="exa -al"
       alias la="ls -A --color=auto"
       alias ls="ls --color=auto"
@@ -21,8 +19,9 @@ case "$(uname -s)" in
      ;;
 esac
 
+alias take='function _take(){mkdir $1; cd $1; };_take'
 alias k="kubectl"
 alias tf="terraform"
 alias tg="terragrunt"
 
-source $HOME/dotfiles/shells/zsh/.private_aliasrc
+source $HOME/dotfiles/shells/.private_aliasrc

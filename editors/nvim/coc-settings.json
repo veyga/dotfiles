@@ -1,6 +1,9 @@
 {
   "coc.preferences.formatOnType": false,
   "codeLens.enable": false,
+  "bashIde.formatting.provider": "shfmt",
+  "bashIde.formatting.shfmtArgs": ["-w"],
+  "sh.formatting.provider": "shfmt",
   "clangd.inlayHints.enable": false,
   "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.stubPath": "typings",
@@ -85,6 +88,10 @@
         }
       }
     }
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    // format `sh` (includes `bash`) files using formatter defined below
+    "sh": "shfmt"
   },
   "languageserver": {
     "terraform": {
