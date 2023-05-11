@@ -2,7 +2,6 @@
 # aliases can not be exported from one instance of bash/zsh to another (see ".aliases")
 # echo "LOADING PROFILE"
 export BASH_SILENCE_DEPRECATION_WARNING=1
-export SHELL="/usr/local/bin/bash"
 export EDITOR="nvim"
 # leave this commented as it conflicts with tmux
 # export TERM="xterm-256color"
@@ -12,11 +11,13 @@ export PAGER="less"
 case "$(uname -s)" in
    Darwin)
       export BROWSER="chrome"
+      export SHELL="/usr/local/bin/bash"
      ;;
    Linux)
       export BROWSER="firefox"
       export GDK_SCALE=2
       export GDK_DPI_SCALE=0.5
+      export SHELL="/usr/bin/bash"
      ;;
    *)
 esac
