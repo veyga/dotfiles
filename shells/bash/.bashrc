@@ -5,6 +5,8 @@ fi
 
 source "$HOME"/.aliasrc
 
+export VISUAL="nvim"
+
 export CLICOLOR=1
 
 export PS2=".. "

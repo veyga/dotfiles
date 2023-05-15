@@ -11,5 +11,9 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 # complete -C /usr/local/bin/terraform terraform
 
-# [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
 
