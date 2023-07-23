@@ -101,5 +101,6 @@
       "initializationOptions": {},
       "settings": {}
     }
-  }
+  },
+  "java.import.gradle.java.home": "/Users/andrew.stefanich/.sdkman/candidates/java/11.0.12-zulu"
 }

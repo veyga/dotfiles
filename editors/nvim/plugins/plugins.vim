@@ -98,14 +98,14 @@ Plug 'szw/vim-maximizer'
 
 Plug 'martinda/Jenkinsfile-vim-syntax'
 
-Plug 'vim-test/vim-test'
-Plug 'voldikss/vim-floaterm'
+" Plug 'vim-test/vim-test'
+" Plug 'voldikss/vim-floaterm'
 
 " Plug 'tpope/vim-dadbod'
 
 Plug 'alvan/vim-closetag'
 
-Plug 'JamshedVesuna/vim-markdown-preview'
+" Plug 'JamshedVesuna/vim-markdown-preview'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " Plug 'xavierchow/vim-swagger-preview'
@@ -117,7 +117,7 @@ Plug 'JamshedVesuna/vim-markdown-preview'
 " Plug 'benmills/vimux'
 " Plug 'sbdchd/neoformat'
 
-Plug 'github/copilot.vim'
+" Plug 'github/copilot.vim'
 
 call plug#end()
 

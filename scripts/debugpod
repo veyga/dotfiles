@@ -1,0 +1,3 @@
+#!/usr/local/bin/bash
+  
+kubectl run -i --rm --tty debug --image=busybox --restart=Never -- sh  

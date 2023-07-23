@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/bash
 
 # makes a script by touching file and adding shebang header
 # $1 filename
@@ -8,8 +8,18 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+case "$(uname -s)" in
+   Darwin)
+      BASH="/usr/local/bin/bash"
+     ;;
+   Linux)
+      BASH="/bin/bash"
+     ;;
+   *)
+esac
+
 cat << EOF > "$1"
-#!/usr/local/bin/bash
+#!${BASH}
   
   
 EOF

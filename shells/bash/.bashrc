@@ -35,6 +35,7 @@ Darwin)
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 	[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh";;
 Linux)
+  export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 	export POETRY_VENV_HOME="$HOME/.cache.pypoetry/virtualenvs"
 	;;
 esac

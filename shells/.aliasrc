@@ -21,6 +21,8 @@ esac
 
 alias take='function _take(){ mkdir $1; cd $1; };_take'
 alias k="kubectl"
+alias k123="k3"
+alias k124="k4"
 alias tf="terraform"
 alias tg="terragrunt"
 
