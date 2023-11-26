@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+  
+#$1 target chart-name (local ref name)
+#$2 source chart-name (e.g. repo/chartname)
+
+helm3 template "$1" "$2" --output-dir "$(pwd)/${1}"

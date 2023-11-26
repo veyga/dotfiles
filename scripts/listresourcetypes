@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+   
+kubectl api-resources --verbs=list | sort
+# kubectl api-resources --verbs=list --namespaced -o name | sort

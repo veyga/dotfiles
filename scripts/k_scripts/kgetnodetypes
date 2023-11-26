@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+nodes=($(kubectl get nodes | tail -n +2 | awk '{print $1}'))
+
+for node in ${nodes[@]}; do
+  echo "NODE: $node"
+  kubectl describe node $node | rg node.kubernetes.io/instance-type
+  echo
+  echo
+done
+  
+  

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 declare -i STATE
 STATE=`xinput list-props "SYNA2393:00 06CB:7A13 Touchpad" |grep 'Device Enabled'|awk '{print $4}'`

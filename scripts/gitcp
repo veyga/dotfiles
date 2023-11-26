@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+  
+# quick command for small edits
+# git add .
+git commit -am "$@"
+git push

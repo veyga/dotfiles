@@ -12,6 +12,7 @@ case "$(uname -s)" in
    Darwin)
       export BROWSER="chrome"
       export SHELL="/usr/local/bin/bash"
+      [[ -s "/Users/andrew.stefanich/.gvm/scripts/gvm" ]] && source "/Users/andrew.stefanich/.gvm/scripts/gvm"
      ;;
    Linux)
       export BROWSER="firefox"
@@ -24,8 +25,8 @@ esac
 export NVIM_HOME="$HOME/dotfiles/editors/nvim"
 export VIM_HOME="$HOME/dotfiles/editors/vim"
 export SHELLS_HOME="$HOME/dotfiles/shells"
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+# export CC=/usr/bin/gcc
+# export CXX=/usr/bin/g++
 
 # for colored man pages
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -37,3 +38,5 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="/usr/local/bin:/$PATH"
+

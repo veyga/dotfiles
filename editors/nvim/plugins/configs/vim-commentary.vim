@@ -10,6 +10,6 @@ autocmd FileType terraform setlocal commentstring=#\ %s
 autocmd FileType javascript.jsx setlocal commentstring={/*\ %s\ */}
 autocmd FileType javascript setlocal commentstring=//\ %s
 autocmd FileType lua setlocal commentstring=--\ %s
-
+autocmd FileType hcl setlocal commentstring=#\ %s
 autocmd FileType sml setlocal commentstring=(*\ %s\ *)
 

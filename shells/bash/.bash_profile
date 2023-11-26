@@ -17,3 +17,9 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+case "$(uname -s)" in
+Darwin)
+  complete -C /usr/local/Cellar/packer/1.9.4/libexec/bin/packer packer
+  ;;
+esac
+

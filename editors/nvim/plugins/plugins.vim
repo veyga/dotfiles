@@ -118,6 +118,8 @@ Plug 'alvan/vim-closetag'
 " Plug 'sbdchd/neoformat'
 
 " Plug 'github/copilot.vim'
+"
+Plug 'NoahTheDuke/vim-just'
 
 call plug#end()
 

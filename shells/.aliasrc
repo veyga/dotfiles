@@ -3,6 +3,7 @@ case "$(uname -s)" in
       alias la="ls -A"
       alias ll="ls -l"
       alias lal="ls -Alh"
+      alias diver="docker run -ti --rm  -v /var/run/docker.sock:/var/run/docker.sock wagoodman/dive"
      ;;
    Linux)
       alias exal="exa -al"
@@ -25,5 +26,7 @@ alias k123="k3"
 alias k124="k4"
 alias tf="terraform"
 alias tg="terragrunt"
+alias helm="helm3"
+alias helm2="helm"
 
 source $HOME/dotfiles/shells/.private_aliasrc

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+for RES in $(kubectl api-resources --namespaced=true -o name); do echo $RES; kubectl get $RES -o name; done  
