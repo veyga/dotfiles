@@ -28,13 +28,6 @@ export NVM_DIR="$HOME/.nvm"
 
 case "$(uname -s)" in
 Darwin)
-  helm completion bash > /usr/local/etc/bash_completion.d/helm
-  export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-	export POETRY_VENV_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
-  # for Bit
-  export PATH=$HOME/bin:$PATH
-  # for gnu-sed
-  export PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
   [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 	[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh";;
 Linux)
