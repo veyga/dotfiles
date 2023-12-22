@@ -5,3 +5,4 @@ private_scripts/
 local_config.vim
 gtkfilechooser.ini
 pat.txt
+mac/hammerspoon/**/.git
