@@ -11,7 +11,7 @@ if has("termguicolors")
   set termguicolors
 endif
 
-let g:colors_name = 'obsidian'
+let g:colors_name = 'meeahmi'
 
 let s:white =  '#ffffff'
 let s:offwhite =  '#e0e2e4'

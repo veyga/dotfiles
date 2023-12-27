@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+showservices --state=running "$@"

@@ -19,7 +19,6 @@ set -o vi
 
 export PATH=$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/private_scripts:$HOME/dotfiles/scripts/k_scripts:$PATH:/usr/local/bin:/usr/local/opt
 
-
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
@@ -32,16 +31,23 @@ Darwin)
 	[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh";;
 Linux)
 	export POETRY_VENV_HOME="$HOME/.cache.pypoetry/virtualenvs"
+  source /usr/share/nvm/init-nvm.sh
+  [[ -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
+  [[ -f /etc/profile.d/rvm.sh ]] && \
+    . /etc/profile.d/rvm.sh
+  export PATH="$PATH:$HOME/.ghcup/bin"
 	;;
 esac
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
-# if [ -f ~/.inputrc ]; then
-# 	source ~/.inputrc
-# fi
-#
-if command -v gvm &> /dev/null
-then
-  gvm use go1.21.0 &>/dev/null
+if [ -f ~/.inputrc ]; then
+  source ~/.inputrc
 fi
+
+[[ -s "/home/veyga/.gvm/scripts/gvm" ]] && source "/home/veyga/.gvm/scripts/gvm"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

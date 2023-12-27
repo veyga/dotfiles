@@ -66,8 +66,6 @@ case $session in
     i3) 
       # xrandr -s 2560x1440 # resolution for host machine
       exec i3;;
-    xfce4) 
-      exec startxfce4;;
     gnome) 
       exec gnome-session;;
     # No known session, try to run it as command

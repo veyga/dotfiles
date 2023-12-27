@@ -16,13 +16,17 @@ ln -sf $HOME/dotfiles/terminals/.tmux.conf $HOME/.tmux.conf
 ln -sf $HOME/dotfiles/editors/vim/.vim $HOME/.vim
 ln -sf $HOME/dotfiles/editors/vim/.vimrc $HOME/.vimrc
 ln -sf $HOME/dotfiles/editors/nvim $HOME/.config/nvim
-sudo ln -sf $HOME/dotfiles/editors/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
+# sudo ln -sf $HOME/dotfiles/editors/theme/obsidian.vim /usr/share/nvim/runtime/colors/obsidian.vim
+ln -sf $HOME/dotfiles/shells/.inputrc $HOME/.inputrc
 ln -sf $HOME/dotfiles/wms/i3/config $HOME/.config/i3/config
 ln -sf $HOME/dotfiles/wms/i3/.i3status.conf $HOME/.i3status.conf
 ln -sf $HOME/dotfiles/scripts $HOME/.local/scripts
 ln -sf $HOME/dotfiles/X11/.xinitrc $HOME/.xinitrc
 ln -sf $HOME/dotfiles/X11/.Xresources $HOME/.Xresources
-ln -sf $HOME/dotfiles/gtk-3.0 $HOME/.config/gtk-3.0
+ln -sf $HOME/dotfiles/gtk/gtk-2.0 $HOME/.config/gtk-2.0
+ln -sf $HOME/dotfiles/gtk/gtk-3.0 $HOME/.config/gtk-3.0
+ln -sf $HOME/dotfiles/gtk/gtk-4.0 $HOME/.config/gtk-4.0
+sudo ln -sf $HOME/dotfiles/other/pacman.conf /etc/pacman.conf
 
 
 ## Install system packages:
@@ -38,6 +42,8 @@ ripgrep
 fzf 
 node/yarn (needed for CoC)
 sdkman?
+dunst
+.....
 
 ## Install vim plugins
 :PlugInstall  

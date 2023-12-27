@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+STATE=$(xinput list-props "SYNA2393:00 06CB:7A13 Touchpad" | grep 'Device Enabled'| awk '{ print $4 }')
+if [ $STATE -eq 1 ]
+then
+  dunstify "Touchpad Disabled"
+  xinput disable "SYNA2393:00 06CB:7A13 Touchpad"
+else
+  dunstify "Touchpad Enabled"
+  xinput enable "SYNA2393:00 06CB:7A13 Touchpad"
+fi

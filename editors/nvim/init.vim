@@ -53,7 +53,7 @@ set wrap
 " set columns=110
 set colorcolumn=89
 set textwidth=89
-set columns=95
+set columns=93
 set noswapfile
 set noautochdir
 "set list
@@ -129,8 +129,8 @@ nnoremap <M-w> :bp<cr>:bd #<cr>
 nnoremap <M-W> :close<cr>
 " nnoremap <C-W> :close<cr>
 
-" nnoremap <silent> <leader>2 :set columns=200<cr>
-nnoremap <leader>2 :set columns=200<cr>
+" nnoremap <silent> <leader>2 :set columns=185<cr>
+nnoremap <leader>2 :set columns=185<cr>
 
 " display syntax group of selected item in bufferline
 nmap <leader>so :call <SID>SynStack()<CR>
@@ -148,7 +148,6 @@ au BufReadPost terraform.tfstate set filetype=json
 "***************   INITIALIZE THEME *********************
 "********************************************************
 
-" source $HOME/dotfiles/editors/theme/obsidian.vim
 source $HOME/dotfiles/editors/theme/meeahmi.vim
 
 lua <<EOF
