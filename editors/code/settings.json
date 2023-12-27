@@ -71,7 +71,6 @@
   "editor.rulers": [100],
   "editor.minimap.enabled": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.activityBar.visible": true,
   "window.menuBarVisibility": "default",
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"

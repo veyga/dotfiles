@@ -24,7 +24,7 @@ alias k123="k3"
 alias k124="k4"
 alias tf="terraform"
 alias tg="terragrunt"
-alias helm="helm3"
-alias helm2="helm"
+alias helm="/usr/local/bin/helm3"
+alias helm2="/usr/local/bin/helm2"
 
 source $HOME/dotfiles/shells/.private_aliasrc

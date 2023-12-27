@@ -1,6 +1,6 @@
-if [ -f ~/.bash_profile ]; then
-	source ~/.bash_profile
-fi
+# if [ -f ~/.bash_profile ]; then
+# 	source ~/.bash_profile
+# fi
 
 source "$HOME"/.aliasrc
 
