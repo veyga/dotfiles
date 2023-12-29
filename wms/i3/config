@@ -15,7 +15,7 @@ set $mod Mod4
 # is used in the bar {} block below.
 # font pango:Terminus 24px
 # font pango:Monospace 16px
-font pango:Monospace 32px
+font pango:Monospace 34px
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 # font pango:DejaVu Sans Mono 8
