@@ -80,9 +80,6 @@ Plug 'nvim-treesitter/playground'
 " Plug 'pangloss/vim-javascript'
 
 " rust lang support
-"Plug 'rust-lang/rust.vim'
-"Plug 'arzg/vim-rust-syntax-ext'
-
 "Plug 'sakhnik/nvim-gdb', { 'do': ':!./install.sh' }
 
 Plug 'puremourning/vimspector'
@@ -96,28 +93,15 @@ Plug 'szw/vim-maximizer'
 
 " Plug 'mxw/vim-jsx'
 
-Plug 'martinda/Jenkinsfile-vim-syntax'
-
 " Plug 'vim-test/vim-test'
 " Plug 'voldikss/vim-floaterm'
-
-" Plug 'tpope/vim-dadbod'
 
 Plug 'alvan/vim-closetag'
 
 " Plug 'JamshedVesuna/vim-markdown-preview'
 " Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
-" Plug 'xavierchow/vim-swagger-preview'
-"
 " Plug 'dstein64/nvim-scrollview'
-
-" Plug 'jez/vim-better-sml'
-" Plug 'w0rp/ale'
-" Plug 'benmills/vimux'
-" Plug 'sbdchd/neoformat'
-
-" Plug 'github/copilot.vim'
 "
 Plug 'NoahTheDuke/vim-just'
 

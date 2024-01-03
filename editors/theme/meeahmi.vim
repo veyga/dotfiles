@@ -227,3 +227,6 @@ call s:SetHighlight("jsonCommentError", s:darkgray, '', '')
 call s:SetHighlight("jsonBoolean", s:green, '', '')
 
 
+call s:SetHighlight('PreProc', s:purple, '', '')
+call s:SetHighlight('@type.qualifier', s:green, '', '')
+call s:SetHighlight('@type.builtin', s:green, '', '')

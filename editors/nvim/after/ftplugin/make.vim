@@ -5,3 +5,5 @@
 setlocal colorcolumn=88
 setlocal textwidth=88
 setlocal columns=93
+" make requires tabs, not spaces
+set noexpandtab

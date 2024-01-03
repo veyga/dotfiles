@@ -132,6 +132,9 @@ nnoremap <M-W> :close<cr>
 " nnoremap <silent> <leader>2 :set columns=185<cr>
 nnoremap <leader>2 :set columns=185<cr>
 
+" yank current dir
+nnoremap <M-y> :let @+=getcwd()<cr>
+
 " display syntax group of selected item in bufferline
 nmap <leader>so :call <SID>SynStack()<CR>
 function! <SID>SynStack()
@@ -158,6 +161,9 @@ require'nvim-treesitter.configs'.setup {
   -- One of "all", "maintained" (parsers with maintainers), or a list of languages
   ensure_installed = { 
     "bash",
+    "c",
+    "cmake",
+    "cpp",
     "css",
     "dockerfile",
     "go",
@@ -169,6 +175,7 @@ require'nvim-treesitter.configs'.setup {
     "json5",
     "jsonc",
     "lua",
+    "make",
     "markdown",
     "python",
     "scss",

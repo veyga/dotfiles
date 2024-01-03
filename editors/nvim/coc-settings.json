@@ -4,7 +4,7 @@
   "bashIde.formatting.provider": "shfmt",
   "bashIde.formatting.shfmtArgs": ["-w"],
   "sh.formatting.provider": "shfmt",
-  "clangd.inlayHints.enable": false,
+  // "clangd.inlayHints.enable": false,
   "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.stubPath": "typings",
   "python.pythonPath": "~/.pyenv/shims/python",
