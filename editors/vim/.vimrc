@@ -27,3 +27,4 @@ set autochdir
 set nohlsearch
 set noswapfile
 syntax on
+colorscheme elflord
