@@ -1,5 +1,2 @@
-hs.ipc.cliInstall("/opt/homebrew/bin/")
-
-
-stackline = require "stackline"
+stackline = require "stackline.stackline.stackline"
 stackline:init()
