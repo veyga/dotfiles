@@ -26,3 +26,10 @@ cmd - p : screencapture -i ~/Downloads/img.png
 
 # swaps stack (trade left/right positions)
 cmd - s : yabai -m space --mirror y-axis
+
+# cmd - enter : kitty
+cmd + shift - return : open -n -a "kitty"
+
+# reload hammerspoon
+cmd -a : hs -c "hs.reload()"
+

@@ -11,10 +11,10 @@ export PAGER="less"
 case "$(uname -s)" in
    Darwin)
       export SHELL="/usr/local/bin/bash"
+      export TERMINAL="kitty"
       case "${USER}" in
       veyga)
 	      export BROWSER="firefox"
-        export TERMINAL="kitty"
         ;;
       *)
         export BROWSER="chrome"
