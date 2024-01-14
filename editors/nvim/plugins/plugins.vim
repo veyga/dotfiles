@@ -111,10 +111,8 @@ source $NVIM_HOME/plugins/configs/colorizer.vim
 source $NVIM_HOME/plugins/configs/fzf.vim
 source $NVIM_HOME/plugins/configs/indentline.vim
 source $NVIM_HOME/plugins/configs/nerdtree.vim
-" source $NVIM_HOME/plugins/configs/far.vim
 source $NVIM_HOME/plugins/configs/tagbar.vim
 source $NVIM_HOME/plugins/configs/vim-bufferline.vim
-" source $NVIM_HOME/plugins/configs/vim-buftabs.vim
 source $NVIM_HOME/plugins/configs/vim-commentary.vim
 source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
@@ -124,17 +122,7 @@ source $NVIM_HOME/plugins/configs/vim-test.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
 source $NVIM_HOME/plugins/configs/vim-floaterm.vim
-" source $NVIM_HOME/plugins/configs/vim-dadbod.vim
-source $NVIM_HOME/plugins/configs/vim-closetag.vim
 source $NVIM_HOME/plugins/configs/vim-markdown-preview.vim
-" source $NVIM_HOME/plugins/configs/vim-jsx.vim
 source $NVIM_HOME/plugins/configs/gitsigns.lua
-" source $NVIM_HOME/plugins/configs/treesitter/treesitter.lua
 source $NVIM_HOME/plugins/configs/treesitter/playground.vim
-
 source $NVIM_HOME/plugins/configs/local_config.vim
-
-" source $NVIM_HOME/plugins/configs/vim-better-sml.vim
-" source $NVIM_HOME/plugins/configs/neoformat.vim
-
-

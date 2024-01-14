@@ -59,3 +59,7 @@ coc-pairs
 
 ## Install font (nerd font needed for vim dev icons)
 sudo install -Dm0644 $HOME/dotfiles/fonts/DejaVu-Sans-Mono-Nerd-Font-Complete.ttf /usr/share/fonts/TTF
+
+# for mac
+brew tap homebrew/cask-fonts
+brew install --cask font-dejavu-sans-mono-nerd-font
