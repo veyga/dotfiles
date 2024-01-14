@@ -1,4 +1,4 @@
-# This is the first thing loaded on login (login shell is zsh)
+# This is the first thing loaded on login (if login shell is zsh)
 
 # load globals
 if [ -f ~/.profile ]; then

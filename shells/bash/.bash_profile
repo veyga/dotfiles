@@ -1,11 +1,6 @@
-echo "bash_profile loaded" | tee "/Users/veyga/bash_profile.log"
-
-export BASH_PROFILE_LOADED=true
-
-# if [ -f ~/.profile ]; then
-#	source ~/.profile
-# fi
-
+if [ -f ~/.profile ]; then
+ source ~/.profile
+fi
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash

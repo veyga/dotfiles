@@ -1,6 +1,6 @@
-# if [ -f ~/.bash_profile ]; then
-# 	source ~/.bash_profile
-# fi
+if [ -f ~/.bash_profile ]; then
+  source ~/.bash_profile
+fi
 
 source "$HOME"/.aliasrc
 
@@ -18,5 +18,3 @@ set -o vi
 if [ -f ~/.inputrc ]; then
   source ~/.inputrc
 fi
-[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
-[ -s ~/.luaver/completions/luaver.bash ] && . ~/.luaver/completions/luaver.bash

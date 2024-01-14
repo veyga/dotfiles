@@ -1,4 +1,4 @@
-setlocal colorcolumn=88
+setlocal colorcolumn=89
 setlocal textwidth=88
 setlocal columns=93
 

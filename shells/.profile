@@ -1,7 +1,3 @@
-echo ".profile loaded" | tee "/Users/veyga/profile.log"
-export PROFILE_LOADED=true
-
-
 # use this for environment variables
 # aliases can not be exported from one instance of bash/zsh to another (see ".aliases")
 # echo "LOADING PROFILE"
@@ -18,6 +14,7 @@ case "$(uname -s)" in
       case "${USER}" in
       veyga)
 	      export BROWSER="firefox"
+        export TERMINAL="kitty"
         ;;
       *)
         export BROWSER="chrome"
