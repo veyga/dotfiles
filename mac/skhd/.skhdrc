@@ -19,17 +19,17 @@ shift + cmd - 5 : yabai -m window --space 5
 shift + cmd - 6 : yabai -m window --space 6
 
 # move apps up/down stack
-cmd - u: yabai -m window --swap stack.prev && yabai -m window --focus stack.prev && hs -c "hs.reload()"
-cmd - d: yabai -m window --swap stack.next && yabai -m window --focus stack.next && hs -c "hs.reload()"
+cmd + shift - u: yabai -m window --swap stack.prev && yabai -m window --focus stack.prev && hs -c "hs.reload()"
+cmd + shift - d: yabai -m window --swap stack.next && yabai -m window --focus stack.next && hs -c "hs.reload()"
 
 cmd - p : screencapture -i ~/Downloads/img.png
 
 # swaps stack (trade left/right positions)
-cmd - s : yabai -m space --mirror y-axis
+cmd + shift - s : yabai -m space --mirror y-axis
 
 # cmd - enter : kitty
 cmd + shift - return : open -n -a "kitty"
 
 # reload hammerspoon
-cmd -a : hs -c "hs.reload()"
+cmd + shift -a : hs -c "hs.reload()"
 

@@ -39,3 +39,5 @@ export CXX=/usr/bin/g++
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
 
+export HAMMERSPOON_DIR="$(dirname $(which hs))"
+
