@@ -1,4 +1,4 @@
--- set in ~/.profile [comp dependent]
+-- set in ~/.bash_profile [comp dependent]
 local hs_dir = os.getenv("HAMMERSPOON_DIR")
 
 -- needed for hs reload calls from yabai
