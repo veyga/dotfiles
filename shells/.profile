@@ -1,25 +1,35 @@
 # use this for environment variables
 # aliases can not be exported from one instance of bash/zsh to another (see ".aliases")
 export BASH_SILENCE_DEPRECATION_WARNING=1
-export VISUAL="vim"
-export EDITOR="nvim"
-# leave this commented as it conflicts with tmux
-# export TERM="xterm-256color"
 export LANG="en_US.UTF-8"
 export PAGER="less"
+export VISUAL="nvim"
+export EDITOR="nvim"
+export NVIM_HOME="$HOME/dotfiles/editors/nvim"
+export VIM_HOME="$HOME/dotfiles/editors/vim"
+export SHELLS_HOME="$HOME/dotfiles/shells"
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/g++
+# leave this commented as it conflicts with tmux
+# export TERM="xterm-256color"
+
+# for colored man pages
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANROFFOPT="-P -c"
+
 case "$(uname -s)" in
    Darwin)
       export SHELL="/usr/local/bin/bash"
       export TERMINAL="kitty"
       case "${USER}" in
-      veyga)
-	      export BROWSER="firefox"
+        veyga)
+          export BROWSER="firefox"
+          ;;
+        andrew.stefanich)
+          export BROWSER="chrome"
+          ;;
+        esac
         ;;
-      *)
-        export BROWSER="chrome"
-        ;;
-      esac
-      ;;
    Linux)
       export TERMINAL="xterm"
       export BROWSER="firefox"
@@ -29,12 +39,3 @@ case "$(uname -s)" in
      ;;
    *)
 esac
-export NVIM_HOME="$HOME/dotfiles/editors/nvim"
-export VIM_HOME="$HOME/dotfiles/editors/vim"
-export SHELLS_HOME="$HOME/dotfiles/shells"
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
-
-# for colored man pages
-export MANPAGER="less -R --use-color -Dd+r -Du+b"
-export MANROFFOPT="-P -c"
