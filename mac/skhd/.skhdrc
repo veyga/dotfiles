@@ -28,7 +28,7 @@ cmd - p : screencapture -i ~/Downloads/img.png
 cmd + shift - s : yabai -m space --mirror y-axis
 
 # cmd - enter : kitty
-cmd + shift - return : open -n -a "kitty"
+cmd + shift - return : open -n -a kitty --args -e tmux
 
 # reload hammerspoon
 cmd + shift -a : hs -c "hs.reload()"
