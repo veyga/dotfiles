@@ -6,7 +6,7 @@ if [ -f ~/.git-completion.bash ]; then
 	. ~/.git-completion.bash
 fi
 
-export PATH=$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/private_scripts:$HOME/dotfiles/scripts/k_scripts:/usr/local/bin:/usr/local/opt:$PATH
+export PATH=$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/private_scripts:$HOME/dotfiles/scripts/k_scripts:/usr/local/bin:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
 set_python() {
@@ -49,7 +49,9 @@ Darwin)
 		# node
 		eval "$(fnm env --use-on-cd)"
 		;;
-	*)
+	andrew.stefanich)
+    # this brew installs to /usr/local/bin and /usr/local/opt
+		export PATH="/usr/local/opt:$PATH"
 		set_python
 		load_gnu_utils "/usr/local/opt"
 		load_bash_completions "/usr/local/etc"
@@ -58,6 +60,9 @@ Darwin)
 		# for Bit
 		export PATH=$HOME/bin:$PATH
 		;;
+  *)
+    echo "no bash_profile for ${USER}; skipping..."
+    ;;
 	esac
 	;;
 Linux)
