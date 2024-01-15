@@ -25,12 +25,17 @@ load_gnu_utils() {
 
 # brew install bash-completion@2 [completions for common tools]
 load_bash_completions() {
-	[[ -r "${1}/profile.d/bash_completion.sh" ]] && . "${1}/profile.d/bash_completion.sh"
+  local completion_path="${1}/profile.d/bash_completion.sh"
+	[[ -r ${completion_path} ]] && . ${completion_path}
 }
 
 case "$(uname -s)" in
 Darwin)
-	export POETRY_VENV_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
+  export POETRY_VENV_HOME="$HOME/Library/Caches/pypoetry/virtualenvs"
+  asdf_path="$(brew --prefix asdf)/libexec/asdf.sh"
+  [[ -r ${asdf_path} ]] && . ${asdf_path}
+  asdf_completion_path="$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
+	[[ -r ${asdf_completion_path} ]] && . ${asdf_completion_path}
 	case "${USER}" in
 	veyga)
 		export PATH="/opt/homebrew/bin:$PATH"
@@ -79,3 +84,4 @@ export HAMMERSPOON_DIR="$(dirname $(which hs))"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+

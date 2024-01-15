@@ -45,8 +45,8 @@ yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 
 # open new apps in the current stack (isn't always reliable)
 # see https://github.com/koekeishiya/yabai/issues/674
-yabai -m signal --add event=window_focused action='yabai -m window $YABAI_WINDOW_ID --insert stack'
-yabai -m signal --add event=application_front_switched action='yabai -m window --insert stack'
-yabai -m signal --add event=application_terminated action='yabai -m window --insert stack'
-yabai -m signal --add event=window_destroyed action='yabai -m window --insert stack'
-yabai -m config insert_feedback_color 0x00FFFFFF
+# yabai -m signal --add event=window_focused action='yabai -m window $YABAI_WINDOW_ID --insert stack'
+# yabai -m signal --add event=application_front_switched action='yabai -m window --insert stack'
+# yabai -m signal --add event=application_terminated action='yabai -m window --insert stack'
+# yabai -m signal --add event=window_destroyed action='yabai -m window --insert stack'
+# yabai -m config insert_feedback_color 0x00FFFFFF
