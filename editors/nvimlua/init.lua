@@ -25,34 +25,4 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local plugins = {
- {
-    'nvim-telescope/telescope.nvim',
-    tag = '0.1.5',
-    dependencies = { 'nvim-lua/plenary.nvim' },
-    opts = {
-      defaults = {
-        layout_strategy = "vertical",
-      }
-    }
- },
- { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-}
-local opts = {}
-
-require("lazy").setup(plugins, opts)
-
-local builtin = require("telescope.builtin")
-vim.keymap.set("n", "<leader>f", builtin.find_files, {})
-vim.keymap.set("n", "<leader>r", builtin.live_grep, {})
-
-
-local config = require("nvim-treesitter.configs")
-config.setup({
-  highlight = { enable = true },
-  indent = { enable = true },
-  ensure_installed = { 
-    "lua", 
-    "javascript",
-  },
-})
+require("lazy").setup("plugins")
