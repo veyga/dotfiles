@@ -1,6 +1,5 @@
 # use this for environment variables
 # aliases can not be exported from one instance of bash/zsh to another (see ".aliases")
-# echo "LOADING PROFILE"
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export VISUAL="vim"
 export EDITOR="nvim"

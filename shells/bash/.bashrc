@@ -6,15 +6,14 @@ source "$HOME"/.aliasrc
 
 export CLICOLOR=1
 
-export PS2=".. "
-# autoload edit-command-line; zle -N edit-command-line
-
 export PS1="
 \[\033[01;95m\]╭─ [\u@\H] \w
 ╰─\[\033[0m\] "
 
+export PS2=".. "
+
 set -o vi
 
 if [ -f ~/.inputrc ]; then
-  source ~/.inputrc
+  bind -f ~/.inputrc
 fi
