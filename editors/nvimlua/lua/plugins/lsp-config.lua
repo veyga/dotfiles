@@ -29,6 +29,7 @@ return {
       lspconfig.jsonls.setup({})
       lspconfig.helm_ls.setup({})
       lspconfig.dockerls.setup({})
+      lspconfig.docker_compose_language_service.setup({})
       lspconfig.bashls.setup({})
       lspconfig.clangd.setup({})
       lspconfig.lua_ls.setup({})
