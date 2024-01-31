@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+  
+current=$(git branch --show-current)
+echo "current branch \"${current}\" copied to clipboard"
+echo -n "${current}" | pbcopy
+
+

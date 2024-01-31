@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+  
+current=$(pwd)
+echo "current dir \"${current}\" copied to clipboard"
+echo -n "${current}" | pbcopy

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+  
+case $1 in
+  on)
+    echo "toggling on $2"
+    kubectl patch daemonset $2 --type json -p='[{"op": "remove", "path": "/spec/template/spec/nodeSelector/non-existing"}]'
+  ;;
+  off)
+    echo "toggling off $2"
+    kubectl patch daemonset $2 -p '{"spec": {"template": {"spec": {"nodeSelector": {"non-existing": "true"}}}}}'
+  ;;
+  *)
+    echo "\$1 = on/off; \$2 = daemonset name"
+    exit 1
+  ;;
+esac

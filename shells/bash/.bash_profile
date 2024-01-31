@@ -64,6 +64,8 @@ Darwin)
 		export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 		# for Bit
 		export PATH=$HOME/bin:$PATH
+		# node
+		eval "$(fnm env --use-on-cd)"
 		;;
   *)
     echo "no bash_profile for ${USER}; skipping..."
