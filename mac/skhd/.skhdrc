@@ -22,7 +22,7 @@ shift + cmd - 6 : yabai -m window --space 6
 cmd + shift - u: yabai -m window --swap stack.prev && yabai -m window --focus stack.prev && hs -c "hs.reload()"
 cmd + shift - d: yabai -m window --swap stack.next && yabai -m window --focus stack.next && hs -c "hs.reload()"
 
-cmd - p : screencapture -i ~/Downloads/img.png
+cmd - p : screencapture -i ~/Downloads/img.png && rename_cap
 
 # swaps stack (trade left/right positions)
 cmd + shift - s : yabai -m space --mirror y-axis

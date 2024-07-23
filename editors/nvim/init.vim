@@ -53,7 +53,7 @@ set wrap
 " set columns=110
 set colorcolumn=89
 set textwidth=89
-set columns=93
+set columns=94
 set noswapfile
 set noautochdir
 "set list
@@ -131,6 +131,7 @@ nnoremap <M-W> :close<cr>
 
 " nnoremap <silent> <leader>2 :set columns=185<cr>
 nnoremap <leader>2 :set columns=185<cr>
+nnoremap <leader>1 :set columns=93<cr>
 
 " yank current dir
 nnoremap <M-y> :let @+=getcwd()<cr>
@@ -241,7 +242,7 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = true,
   },
   indent = {
-    enable = true
+    enable = false
   }
 }
 EOF

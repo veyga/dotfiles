@@ -1,4 +1,4 @@
-nnoremap <leader>h :History<CR>
+nnoremap <leader>s :History<CR>
 nmap <leader>b :Buffers<CR>
 nnoremap <leader>f :Files<CR>
 nnoremap <leader>r :Rg<CR>

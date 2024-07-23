@@ -123,5 +123,8 @@
     "activityBarBadge.background": "#E95378",
     "activityBarBadge.foreground": "#06060C"
   },
-  "window.zoomLevel": -1
+  "window.zoomLevel": -1,
+  "terminal.integrated.env.osx": {
+    "CW_NEW_SESSION": "1"
+  }
 }

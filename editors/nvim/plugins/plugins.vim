@@ -40,7 +40,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 
 " better git blames
-Plug 'nvim-lua/plenary.nvim'
+" Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 
 " show git status in nerdtree
@@ -122,7 +122,7 @@ source $NVIM_HOME/plugins/configs/vim-test.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
 source $NVIM_HOME/plugins/configs/vim-floaterm.vim
-source $NVIM_HOME/plugins/configs/vim-markdown-preview.vim
+" source $NVIM_HOME/plugins/configs/vim-markdown-preview.vim
 source $NVIM_HOME/plugins/configs/gitsigns.lua
 source $NVIM_HOME/plugins/configs/treesitter/playground.vim
 source $NVIM_HOME/plugins/configs/local_config.vim

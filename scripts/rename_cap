@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+  
+# skhd can't save file dynamic file names??
+# this command is run after `screencapture`
+time=$(date +%s)
+cd ~/Downloads
+mv img.png "img_${time}.png"

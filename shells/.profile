@@ -3,7 +3,7 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 export LANG="en_US.UTF-8"
 export PAGER="less"
-export VISUAL="vim"
+export VISUAL="nvim"
 export EDITOR="nvim"
 export NVIM_HOME="$HOME/dotfiles/editors/nvim"
 export VIM_HOME="$HOME/dotfiles/editors/vim"

@@ -52,7 +52,7 @@ Darwin)
 		export RBENV_ROOT="$HOME/.rbenv"
 		export PATH="$RBENV_ROOT/shims:$PATH"
 		# node
-		eval "$(fnm env --use-on-cd)"
+		# eval "$(fnm env --use-on-cd)"
 		;;
 	andrew.stefanich)
     # this brew installs to /usr/local/bin and /usr/local/opt
@@ -65,7 +65,7 @@ Darwin)
 		# for Bit
 		export PATH=$HOME/bin:$PATH
 		# node
-		eval "$(fnm env --use-on-cd)"
+		# eval "$(fnm env --use-on-cd)"
 		;;
   *)
     echo "no bash_profile for ${USER}; skipping..."

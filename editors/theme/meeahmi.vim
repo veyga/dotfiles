@@ -122,7 +122,7 @@ call s:SetHighlight('Conditional', s:green, '', '')
 call s:SetHighlight('Constructor', s:green, '', '')
 call s:SetHighlight('Error', '', s:darkred, '')
 call s:SetHighlight('Exception', s:green, '', '')
-call s:SetHighlight('Function', '', '', '')
+call s:SetHighlight('Function', s:offwhite, '', '')
 call s:SetHighlight('Identifier', s:offwhite, '', '')
 call s:SetHighlight('Include', s:purple, '', '')
 call s:SetHighlight('Keyword', s:green, '', '')
@@ -202,7 +202,10 @@ call s:SetHighlight('TSVariableBuiltin', s:beige, '', '')
 " **************************************************
 " ####### Python ######
 " can't override explicitly set things from TreeSitter
-hi pythonDecorator guifg=#ff0000 gui=bold
+" hi pythonDecorator guifg=#ff0000 gui=bold
+call s:SetHighlight('pythonDecoratorName', s:red, '', '')
+" hi pythonDecorator guifg=#ff0000 gui=bold
+hi pythonFunction guifg=#ffffff
 call s:SetHighlight('pyDocString', s:midgray, '', '')
 hi pyDocString guifg=#00ff00 guibg=None
 
@@ -230,3 +233,5 @@ call s:SetHighlight("jsonBoolean", s:green, '', '')
 call s:SetHighlight('PreProc', s:purple, '', '')
 call s:SetHighlight('@type.qualifier', s:green, '', '')
 call s:SetHighlight('@type.builtin', s:green, '', '')
+call s:SetHighlight('@attribute.builtin', s:purple, '', '')
+call s:SetHighlight('@variable.builtin', s:offwhite, '', '')
