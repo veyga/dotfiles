@@ -3,6 +3,7 @@ alias ls="ls --color=auto"
 alias lal="ls -Alh --color=auto"
 alias lsg="ls -lh --group-directories-first --color=auto"
 alias lalg="ls -Alh --group-directories-first --color=auto"
+alias tre="tree -I '__pycache__|.git'"
 
 case "$(uname -s)" in
    Darwin)
