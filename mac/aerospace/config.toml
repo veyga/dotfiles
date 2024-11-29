@@ -1,16 +1,11 @@
 after-login-command = []
 after-startup-command = []
 start-at-login = true
-
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
-
 accordion-padding = 20
 default-root-container-layout = 'accordion'
-default-root-container-orientation = 'horizontal'
-
-# Mouse follows focus when focused monitor changes
-# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+default-root-container-orientation = 'vertical'
 
 [gaps]
 inner.horizontal = 10
@@ -26,21 +21,14 @@ cmd-j =         'focus down'
 cmd-k =         'focus up'
 cmd-l =         'focus right'
 
-cmd-i = 'exec-and-forget open -a /Applications/Firefox.app'
+cmd-shift-y = 'join-with left'
+cmd-shift-o = 'join-with right'
+cmd-shift-h = 'move left'
+cmd-shift-l = 'move right'
 
-cmd-shift-h = 'join-with left'
-cmd-shift-j = 'join-with down'
-cmd-shift-k = 'join-with up'
-cmd-shift-l = 'join-with right'
-
-cmd-shift-y = 'move left'
-cmd-shift-u = 'move down'
-cmd-shift-i = 'move up'
-cmd-shift-o = 'move right'
-
-cmd-f = 'fullscreen'
+cmd--f = 'fullscreen'
 cmd-s = 'layout v_accordion'
-cmd-u = 'layout h_tiles'
+
 
 cmd-1 = 'workspace 1'
 cmd-2 = 'workspace 2'
@@ -53,18 +41,16 @@ cmd-8 = 'workspace 8'
 cmd-9 = 'workspace 9'
 cmd-0 = 'workspace 10'
 
-cmd-shift-1 = 'move-node-to-workspace 1'
-cmd-shift-2 = 'move-node-to-workspace 2'
-cmd-shift-3 = 'move-node-to-workspace 3'
-cmd-shift-4 = 'move-node-to-workspace 4'
-cmd-shift-5 = 'move-node-to-workspace 5'
-cmd-shift-6 = 'move-node-to-workspace 6'
-cmd-shift-7 = 'move-node-to-workspace 7'
-cmd-shift-8 = 'move-node-to-workspace 8'
-cmd-shift-9 = 'move-node-to-workspace 9'
-cmd-shift-0 = 'move-node-to-workspace 10'
-
-cmd-shift-c = 'reload-config'
+cmd-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
+cmd-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+cmd-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+cmd-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+cmd-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+cmd-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+cmd-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
+cmd-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
+cmd-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
+cmd-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
 
 cmd-r = 'mode resize'
 
