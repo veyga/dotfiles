@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+echo "font_size ${1}.0" > ~/dotfiles/terminals/kitty/device-specific.conf
