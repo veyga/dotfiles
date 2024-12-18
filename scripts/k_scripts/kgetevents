@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+# kubectl get events --sort-by='metadata.creationTimestamp'
+kubectl get events --sort-by='.lastTimestamp'

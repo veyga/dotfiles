@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+k run -i --rm --tty test-pod --image=busybox --restart=Never -- sh  

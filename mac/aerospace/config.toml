@@ -52,7 +52,7 @@ cmd-shift-5 = 'move-node-to-workspace 6 --focus-follows-window'
 # cmd-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 # cmd-shift-0 = 'move-node-to-workspace 10 --focus-follows-window'
 
-cmd-r = 'mode resize'
+cmd-shift-r = 'mode resize'
 
 [mode.resize.binding]
 h = 'resize width -50'

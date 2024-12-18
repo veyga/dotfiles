@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+POD=$(kubectl get pods | rg "${1}" | head -n 1 | awk '{print $1}')
+echo -n "${POD}" | tee >(pbcopy) # ">(x) process substitution"
