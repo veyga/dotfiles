@@ -1,0 +1,48 @@
+{
+  "configurations": {
+    "server": {
+      "adapter": "js-debug",
+      "configuration": {
+        "breakpoints": {
+          "exception": {
+            "raised": "N",
+            "caught": "N",
+            "uncaught": "N",
+            "userUnhandled": "N"
+          }
+        },
+        "request": "attach",
+        "port": 9229,
+        "stopOnEntry": false,
+        "cwd": "${workspaceRoot}",
+        "pathMappings": [],
+        "skipFiles": [
+          "<node_internals>/**",
+          "**/node_modules/**"
+        ]
+      }
+    },
+    "test": {
+      "adapter": "js-debug",
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "caught": "N",
+          "uncaught": "N",
+          "userUnhandled": "N"
+        }
+      },
+      "configuration": {
+        "request": "attach",
+        "port": 9230,
+        "stopOnEntry": false,
+        "cwd": "${workspaceRoot}",
+        "pathMappings": [],
+        "skipFiles": [
+          "<node_internals>/**",
+          "**/node_modules/**"
+        ]
+      }
+    }
+  }
+}

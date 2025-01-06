@@ -1,0 +1,43 @@
+_default:
+  just --list
+
+build:
+  #!/usr/bin/env bash
+  cd ..
+  export NODE_ENV=
+  export AWS_REGION=
+  export AWS_ACCESS_KEY_ID=
+  export AWS_SECRET_ACCESS_KEY=
+  pnpm buildEnv
+
+# start the server in debug mode
+start:
+  pnpm run start:watch
+
+# start the server in debug mode
+dstart:
+  pnpm run start:debug
+
+# run api tests
+tests:
+  pnpm run test:api
+
+# run individual test
+test +arg:
+  pnpm run test {{arg}}
+
+# debug individual test
+dtest +arg:
+  pnpm exec node --inspect-brk=9230 -r tsconfig-paths/register -r ts-node/register node_modules/jest/bin/jest.js --no-warnings --runInBand {{arg}}
+
+# run hardcoded test
+testit:
+  just test hello.controller.spec.ts
+
+# run hardcoded test
+dtestit:
+  just dtest hello.controller.spec.ts
+
+# lint-staged
+lint:
+  pnpm lint-staged
