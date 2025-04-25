@@ -4,7 +4,8 @@
 set number relativenumber
 set hidden
 set autoread
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
+set clipboard=unnamed
 "unnamed  = one line deletes/yanks will cycle through registers
 "set termguicolors
 set splitright

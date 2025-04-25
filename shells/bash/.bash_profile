@@ -12,6 +12,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 set_python() {
 	export PYENV_ROOT="$HOME/.pyenv"
 	export PATH="$PYENV_ROOT/bin:$PATH"
+	export PATH="$HOME/.local/bin:$PATH" # for pipx/uv installations?
 	eval "$(pyenv init --path)"
 }
 
@@ -38,10 +39,10 @@ Darwin)
 	[[ -r ${asdf_completion_path} ]] && . ${asdf_completion_path}
 	case "${USER}" in
 	veyga)
-		export PATH="/opt/homebrew/bin:$PATH"
-		set_python
+		# set_python
 		load_gnu_utils "/opt/homebrew/opt"
 		load_bash_completions "/opt/homebrew/etc"
+		export PATH="/opt/homebrew/bin:$PATH"
 		# go
 		export GOENV_ROOT="$HOME/.goenv"
 		export PATH="$GOENV_ROOT/bin:$PATH"
@@ -54,18 +55,28 @@ Darwin)
 		# node
 		# eval "$(fnm env --use-on-cd)"
 		;;
-	andrew.stefanich)
-    # this brew installs to /usr/local/bin and /usr/local/opt
-		export PATH="/usr/local/opt:$PATH"
+	andrewstefanich)
+    # this brew installs to /opt/homebrew/opt
 		set_python
-		load_gnu_utils "/usr/local/opt"
-		load_bash_completions "/usr/local/etc"
+    # # uv
+    # export PATH="/Users/andrewstefanich/.local/bin:$PATH"
+		load_gnu_utils "/opt/homebrew/opt"
+		load_bash_completions "/opt/homebrew/etc"
+		export PATH="/opt/homebrew/bin:$PATH"
 		# kube/helm
 		export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 		# for Bit
 		export PATH=$HOME/bin:$PATH
+    export PATH="$HOME/.tfenv/bin:$PATH"
+		# export VOLTA_HOME="$HOME/.volta"
+		# export PATH="$VOLTA_HOME/bin:$PATH"
 		# node
 		# eval "$(fnm env --use-on-cd)"
+    # needed for some compilers to find zlib bzip2(after brew install zlib bzip2)
+    # this is from install python 3.6
+    export LDFLAGS="-L/opt/homebrew/opt/zlib/lib -L/opt/homebrew/opt/bzip2/lib"
+    export CPPFLAGS="-I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/bzip2/include"
+    complete -C /opt/homebrew/bin/terragrunt terragrunt
 		;;
   *)
     echo "no bash_profile for ${USER}; skipping..."
@@ -81,9 +92,10 @@ Linux)
 esac
 
 # used for hammerspoon/init.lua
-export HAMMERSPOON_DIR="$(dirname $(which hs))"
+# export HAMMERSPOON_DIR="$(dirname $(which hs))"
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
+# export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 

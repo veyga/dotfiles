@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+  
+# assumes an IAM role (callee must be in the trust policy)
+# (callee remains that role for remainder of 'script' or until env vars are unset)
+# $1: the target account number (required)
+# $2: target role name (required)
+# $3: role session name (required)
+
+# export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
+#         $(aws sts assume-role \
+#         --role-arn arn:aws:iam::$1:role/$2 \
+#         --role-session-name $3 \
+#         --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
+#         --output text))
+
+# aws sts get-caller-identity
+aws sts assume-role \
+  --role-arn arn:aws:iam::$1:role/$2 \
+  --role-session-name $3 \
+  --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
+  --output json
+
+  

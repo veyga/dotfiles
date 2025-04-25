@@ -1,4 +1,12 @@
 #!/usr/bin/env bash
   
 # for RES in $(kubectl api-resources --namespaced=true -o name); do echo $RES; done  
-for RES in $(kubectl api-resources --namespaced=true -o name); do echo $RES; kubectl get $RES -o name; done  
+for RES in $(kubectl api-resources --namespaced=true -o name); do 
+  if [[ $1 != "-q" ]]; then
+    echo $RES
+    kubectl get $RES -o name
+    echo
+  else
+    kubectl get $RES -o name
+  fi
+done  

@@ -1,4 +1,5 @@
 " defaults to .plugged
+"
 call plug#begin('~/dotfiles/editors/nvim/plugged')
 
 " display buffers under statusline
@@ -51,8 +52,11 @@ Plug 'kshenoy/vim-signature'
 
 " filetype icons
 Plug 'ryanoasis/vim-devicons'
-
+" Plug 'kyazdani42/nvim-web-devicons'
 " color to icons (this must come AFTER vim-devicons)
+" Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" Plug 'nvim-tree/nvim-web-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " enhanced start screen
@@ -92,10 +96,6 @@ Plug 'liuchengxu/vim-which-key'
 Plug 'szw/vim-maximizer'
 
 " Plug 'mxw/vim-jsx'
-
-" Plug 'vim-test/vim-test'
-" Plug 'voldikss/vim-floaterm'
-
 Plug 'alvan/vim-closetag'
 
 " Plug 'JamshedVesuna/vim-markdown-preview'
@@ -104,6 +104,11 @@ Plug 'alvan/vim-closetag'
 " Plug 'dstein64/nvim-scrollview'
 "
 Plug 'NoahTheDuke/vim-just'
+
+
+Plug 'pearofducks/ansible-vim'
+
+" Plug 'github/copilot.vim'
 
 call plug#end()
 
@@ -118,11 +123,9 @@ source $NVIM_HOME/plugins/configs/vim-highlightedyank.vim
 source $NVIM_HOME/plugins/configs/coc/coc-general.vim
 source $NVIM_HOME/plugins/configs/vim-startify.vim
 source $NVIM_HOME/plugins/configs/vim-which-key.vim
-source $NVIM_HOME/plugins/configs/vim-test.vim
 source $NVIM_HOME/plugins/configs/vimspector.vim
 source $NVIM_HOME/plugins/configs/vim-maximizer.vim
-source $NVIM_HOME/plugins/configs/vim-floaterm.vim
-" source $NVIM_HOME/plugins/configs/vim-markdown-preview.vim
+" " source $NVIM_HOME/plugins/configs/vim-markdown-preview.vim
 source $NVIM_HOME/plugins/configs/gitsigns.lua
 source $NVIM_HOME/plugins/configs/treesitter/playground.vim
 source $NVIM_HOME/plugins/configs/local_config.vim

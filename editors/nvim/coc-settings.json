@@ -1,4 +1,5 @@
 {
+  "diagnostic.showUnused": false,
   "coc.preferences.formatOnType": false,
   "codeLens.enable": false,
   "bashIde.formatting.provider": "shfmt",
@@ -9,8 +10,8 @@
   "pyright.enable": true,
   "python.analysis.diagnosticMode": "all",
   // "python.analysis.stubPath": "typings",
-  "python.pythonPath": "~/.pyenv/shims/python",
-  "python.venvPath": "$POETRY_VENV_HOME",
+  // "python.pythonPath": "~/.pyenv/shims/python",
+  // "python.venvPath": "$POETRY_VENV_HOME",
   // use in coc-pyright
   "python.formatting.provider": "ruff",
   "python.linting.ruffEnabled": true,
@@ -119,6 +120,12 @@
       "initializationOptions": {},
       "settings": {}
     },
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    },
     "haskell": {
       "command": "haskell-language-server-wrapper",
       "args": ["--lsp"],
@@ -126,5 +133,5 @@
       "filetypes": ["haskell", "lhaskell"]
     }
   },
-  "java.import.gradle.java.home": "/Users/andrew.stefanich/.sdkman/candidates/java/11.0.12-zulu"
+  // "java.import.gradle.java.home": "/Users/andrew.stefanich/.sdkman/candidates/java/11.0.12-zulu"
 }

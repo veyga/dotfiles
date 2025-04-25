@@ -7,3 +7,4 @@ gtkfilechooser.ini
 pat.txt
 scripts/helmv2/
 terminals/kitty/device-specific.conf
+private/

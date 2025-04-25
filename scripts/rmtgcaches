@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+# remove all terragrunt cache dirs from a root dir
+find . -type d -name '.terragrunt-cache' -prune -exec rm -rf {} \;

@@ -19,13 +19,13 @@ export MANROFFOPT="-P -c"
 
 case "$(uname -s)" in
    Darwin)
-      export SHELL="/usr/local/bin/bash"
+      export SHELL="/opt/homebrew/bin/bash"
       export TERMINAL="kitty"
       case "${USER}" in
         veyga)
           export BROWSER="firefox"
           ;;
-        andrew.stefanich)
+        andrewstefanich)
           export BROWSER="chrome"
           ;;
         esac

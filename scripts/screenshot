@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+ screencapture -i ~/Downloads/img.png
+ echo "saved to Downloads/img.png"

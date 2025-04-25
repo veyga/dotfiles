@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+# activate a py venv
+source .venv/bin/activatee

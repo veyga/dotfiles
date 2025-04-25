@@ -167,3 +167,5 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 [[ -s "/Users/andrew.stefanich/.gvm/scripts/gvm" ]] && source "/Users/andrew.stefanich/.gvm/scripts/gvm"
 
 complete -o nospace -C /usr/local/Cellar/packer/1.9.4/libexec/bin/packer packer
+
+complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt

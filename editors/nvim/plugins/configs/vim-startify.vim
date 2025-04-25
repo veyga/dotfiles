@@ -1,3 +1,17 @@
+let header = "
+ \    [[                                             ]]\n
+ \    [[                                             ]]\n
+ \    [[                                             ]]\n
+ \    [[                                             ]]\n
+ \    [[                                       ]]\n
+ \    [[                                             ]]\n
+ \    [[                                             ]]\n
+ \    [[                                             ]]"
+
+let g:startify_custom_header =
+       \ startify#pad(split(header, '\n'))
+       " \ startify#pad(split(system('figlet -w 100 VIM2020'), '\n'))
+
 let g:startify_bookmarks = [
             \ { 'b': '~/.bashrc' },
             \ { 'c': '~/.config/i3/config' },
