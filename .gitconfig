@@ -1,6 +1,6 @@
 [user]
+	email = andrewstefanich@gmail.com
 	name = Andrew Stefanich
-	email = andrew.stefanich@buoyhealth.com
 
 [alias]
 	hist = log --all --graph --decorate --oneline
@@ -9,16 +9,17 @@
 	la = log --pretty=fmt --date=short --all
 	ll = log --pretty=fmt --date=short
 	lf = log --pretty=fuller --stat
+  mergeshow = "!f() { ref=${1:-HEAD}; git diff \"$ref\"^1 \"$ref\"; }; f"
 
 [pretty]
 	fmt = %C(auto)%h %C(magenta)%ad %C(cyan)%an%C(auto)%d %s
 
 [core]
-	  excludesfile = /Users/andrew.stefanich/.gitignore_global
-    pager = delta
+	excludesfile = /Users/andrew.stefanich/.gitignore_global
+  pager = delta
 
 [interactive]
-    diffFilter = delta --color-only
+  diffFilter = delta --color-only
 
 [delta]
     features = side-by-side line-numbers decorations

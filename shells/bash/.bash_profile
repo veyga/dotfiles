@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.pre.bash"
 if [ -f ~/.profile ]; then
 	source ~/.profile
 fi
@@ -77,6 +79,7 @@ Darwin)
     export LDFLAGS="-L/opt/homebrew/opt/zlib/lib -L/opt/homebrew/opt/bzip2/lib"
     export CPPFLAGS="-I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/bzip2/include"
     complete -C /opt/homebrew/bin/terragrunt terragrunt
+    export DOCKER_BUILDKIT=0
 		;;
   *)
     echo "no bash_profile for ${USER}; skipping..."
@@ -98,4 +101,9 @@ esac
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bash_profile.post.bash"
 
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

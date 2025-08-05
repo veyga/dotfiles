@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Check if the first argument is a file and if it's a UV script
+if [[ -f "$1" ]] && head -n 1 "$1" | grep -q "uv run --script"; then
+    # It's a UV script, run with UV and enable debug
+    PYDEVD_DISABLE_FILE_VALIDATION=1 ENABLE_DEBUG=1 uv run "$@"
+else
+    # Regular python script
+    PYDEVD_DISABLE_FILE_VALIDATION=1 python -m debugpy --listen 0.0.0.0:5680 --wait-for-client "$@"
+fi

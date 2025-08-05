@@ -22,7 +22,7 @@ set nobackup
 set mouse=nv
 " set colorcolumn=100
 " set textwidth=100
-set wrap
+set nowrap
 set noswapfile
 set autochdir
 set nohlsearch

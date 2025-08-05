@@ -1,3 +1,5 @@
+# Amazon Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/profile.pre.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/profile.pre.bash"
 # use this for environment variables
 # aliases can not be exported from one instance of bash/zsh to another (see ".aliases")
 export BASH_SILENCE_DEPRECATION_WARNING=1
@@ -39,3 +41,6 @@ case "$(uname -s)" in
      ;;
    *)
 esac
+
+# Amazon Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/profile.post.bash"

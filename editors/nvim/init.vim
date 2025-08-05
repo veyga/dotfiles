@@ -147,6 +147,7 @@ endfunc
 
 au BufReadPost *.tfvars set filetype=terraform
 au BufReadPost terraform.tfstate set filetype=json
+au BufReadPost justfile.local set filetype=just
 
 "********************************************************
 "***************   INITIALIZE THEME *********************

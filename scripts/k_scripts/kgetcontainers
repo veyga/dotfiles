@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+  
+# kubectl get pod $1 -o jsonpath='{.spec.containers[*].name}'  
+kubectl get pod $1 -o custom-columns="CONTAINER:.spec.containers[*].name,IMAGE:.spec.containers[*].image"
+

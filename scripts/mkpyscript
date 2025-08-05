@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+# makes a py script without explicit venv
+# requires uv
+# $1 filename
+
+if [ -z "$1" ]; then
+  echo 'Missing $1: provide a script name'
+  exit 1
+fi
+
+fname="${1%.py}.py"
+cat << EOF > "$fname"
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.13"
+# dependencies = [
+# "debugpy",
+# "coloredlogs",
+# ]
+# ///
+
+import os, coloredlogs, logging
+
+if os.getenv("ENABLE_DEBUG"):
+    import debugpy
+
+    debugpy.listen(("0.0.0.0", 5680))
+    debugpy.wait_for_client()
+
+log = logging.getLogger("${fname}")
+coloredlogs.install(
+    level="DEBUG",
+    fmt="%(asctime)s %(name)s %(levelname)-8s %(message)s",
+    field_styles={"levelname": {"color": "cyan", "bold": False}},
+)
+
+
+def main():
+    log.debug("hello world")
+     
+
+if __name__ == "__main__":
+    main()
+EOF
+chmod u+x "$fname"
+
+"$EDITOR" -c 'call cursor(28,5) | star' "$fname"

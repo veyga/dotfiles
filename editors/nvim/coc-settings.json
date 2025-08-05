@@ -67,9 +67,9 @@
   // "prettier.printWidth": 100,
   // "prettier.bracketSpacing": true,
   "coc.preferences.formatOnSaveFiletypes": [],
-  "yaml.schemas": {
-    "kubernetes": "*.yaml"
-  },
+  // "yaml.schemas": {
+  //   "kubernetes": "*.yaml"
+  // },
   "json.schemaDownload.enable": {
     "type": "boolean",
     "default": true,
