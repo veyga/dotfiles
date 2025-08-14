@@ -1,1 +1,2 @@
+kubectl get node $node -o custom-columns=INSTANCE:.metadata.labels."node\.kubernetes\.io/instance-type",IP:.status.addresses[0].address --no-headers
 kubectl get pods --all-namespaces -o wide --field-selector spec.nodeName=$1
