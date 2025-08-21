@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+kubectx $1  
+kubens $2
