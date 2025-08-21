@@ -178,3 +178,5 @@ complete -o nospace -C /opt/homebrew/bin/terragrunt terragrunt
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+[[ -s "/Users/andrewstefanich/.gvm/scripts/gvm" ]] && source "/Users/andrewstefanich/.gvm/scripts/gvm"

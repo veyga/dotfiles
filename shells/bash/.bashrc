@@ -37,11 +37,16 @@ export CLICOLOR=1
 # export PS1="
 # \[\033[01;95m\]╭─ [\u@\H] \w\$(kube_prompt)
 # ╰─\[\033[0m\] "
+#
+export PS1="
+\[\033[01;95m\]╭─ \w\$(echo "")
+╰─\[\033[0m\] "
 
 # no name, with kube
 export PS1="
 \[\033[01;95m\]╭─ \w\$(kube_prompt)
 ╰─\[\033[0m\] "
+
 
 export PS2=".. "
 
@@ -50,6 +55,8 @@ set -o vi
 if [ -f ~/.inputrc ]; then
   bind -f ~/.inputrc
 fi
+
+eval "$(zoxide init bash)"
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/bashrc.post.bash"

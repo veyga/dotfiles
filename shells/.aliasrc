@@ -28,4 +28,6 @@ alias tg="terragrunt"
 # alias helm="/usr/local/bin/helm3"
 # alias helm2="/usr/local/bin/helm2"
 
+alias z="zoxide"
+
 source $HOME/dotfiles/shells/.private_aliasrc

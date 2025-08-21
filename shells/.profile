@@ -44,3 +44,5 @@ esac
 
 # Amazon Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/profile.post.bash" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/profile.post.bash"
+
+[[ -s "/Users/andrewstefanich/.gvm/scripts/gvm" ]] && source "/Users/andrewstefanich/.gvm/scripts/gvm"

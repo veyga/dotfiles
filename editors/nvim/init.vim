@@ -66,6 +66,8 @@ set noautochdir
 
 " change directory of current window to the directory of the current buffer
 command! CD :exec('lcd %:p:h')
+command! CPDIR :exec('!bash cpdir')
+command! CPD :exec('!bash cpdir')
 " get the syntax group for selected item
 command! SynId :exec('echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")')
 command! Src :exec('source $NVIM_HOME/init.vim')
@@ -169,6 +171,7 @@ require'nvim-treesitter.configs'.setup {
     "css",
     -- "dockerfile",
     "go",
+    "gomod",
     "hcl",
     "html",
     "javascript",

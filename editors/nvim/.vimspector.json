@@ -4,7 +4,7 @@
       "port": "5680",
       "launch": {
         "remote": {
-          "launchCommmand": [
+          "launchCommand": [
             "python",
             "-m",
             "debugpy",
@@ -21,8 +21,7 @@
         "remote": {
           "launchCommand": [
             "dlv",
-            "connect",
-            "127.0.0.1:5681"
+            "attach"
           ]
         }
       }
@@ -33,11 +32,19 @@
         "host": "127.0.0.1",
         "port": 5681
       },
-      "adapter": "vscode-go",
+      "adapter": "delve",
       "mode": "remote"
     }
   },
   "configurations": {
+    "wtf": {
+          "name": "Remote Go Debug",
+          "type": "go",
+          "request": "attach",
+          "host": "localhost",
+          "port": 5681,
+          "trace": true
+    },
     "py": {
       "adapter": "python-remote-5680",
       "breakpoints": {
@@ -59,7 +66,7 @@
         ]
       }
     },
-    "go": {
+    "godelve": {
       "adapter": "go-remote-delve",
       "breakpoints": {
         "exception": {
@@ -71,6 +78,33 @@
       "remote-request": "attach",
       "configuration": {
         "request": "attach",
+        "mode": "remote",
+        "host": "127.0.0.1",
+        "port": 5681,
+        "justMyCode": true,
+        "pathMappings": [
+          {
+            "localRoot": "${workspaceRoot}",
+            "remoteRoot": "${workspaceRoot}"
+          }
+        ]
+      }
+    },
+    "govs": {
+      "adapter": "go-remote-vs",
+      "breakpoints": {
+        "exception": {
+          "raised": "N",
+          "uncaught": "N",
+          "userUnhandled": "N"
+        }
+      },
+      "remote-request": "attach",
+      "configuration": {
+        "request": "attach",
+        "mode": "remote",
+        "host": "127.0.0.1",
+        "port": 5681,
         "justMyCode": true,
         "pathMappings": [
           {
