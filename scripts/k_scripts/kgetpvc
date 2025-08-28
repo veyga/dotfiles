@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+  
+
+if [[ $1 = "-A" ]]; then
+  NS="-A"
+else
+  NS=""
+fi
+
+kubectl get pvc $NS -o json | jq '.items[] | {namespace: .metadata.namespace, name: .metadata.name, status: .status.phase, volume: (.spec.volumeName // ""), capacity: (.status.capacity.storage // ""), accessModes: (.spec.accessModes // []), storageClass: .spec.storageClassName, volumeAttributesClass: (.spec.volumeAttributesClassName // "<unset>"), age: (.metadata.creationTimestamp | fromdateiso8601 | (now - .) / 86400 | floor | tostring + "d")}'
+  

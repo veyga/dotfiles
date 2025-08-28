@@ -75,6 +75,15 @@ def get_label_value(node: Dict[str, Any], label_key: str) -> str:
     return labels.get(label_key, "<none>")
 
 
+def get_node_ip(node: Dict[str, Any]) -> str:
+    """Get node internal IP address."""
+    addresses = node.get("status", {}).get("addresses", [])
+    for address in addresses:
+        if address.get("type") == "InternalIP":
+            return address.get("address", "<none>")
+    return "<none>"
+
+
 def print_nodes_table(nodes: List[Dict[str, Any]]):
     """Print formatted table of nodes."""
     # Prepare data rows
@@ -87,8 +96,10 @@ def print_nodes_table(nodes: List[Dict[str, Any]]):
         instance_type = get_label_value(node, "node.kubernetes.io/instance-type")
         nodepool = get_label_value(node, "karpenter.sh/nodepool")
         capacity = get_label_value(node, "karpenter.sh/capacity-type")
+        zone = get_label_value(node, "topology.kubernetes.io/zone")
+        ip = get_node_ip(node)
 
-        rows.append([name, status, taints, age, instance_type, nodepool, capacity])
+        rows.append([name, status, taints, age, instance_type, nodepool, capacity, zone, ip])
 
     # Calculate column widths
     headers = [
@@ -99,6 +110,8 @@ def print_nodes_table(nodes: List[Dict[str, Any]]):
         "INSTANCE_TYPE",
         "NODEPOOL",
         "CAPACITY",
+        "ZONE",
+        "IP",
     ]
     widths = [len(header) for header in headers]
 

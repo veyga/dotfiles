@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+kubectl get events --field-selector "involvedObject.name=${1}" --sort-by='.lastTimestamp'  

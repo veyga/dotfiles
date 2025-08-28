@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+  
+
+# Show PVs and their availability zones
+kubectl get pv -o custom-columns=NAME:.metadata.name,CLAIM:.spec.claimRef.name,NAMESPACE:.spec.claimRef.namespace,STORAGECLASS:.spec.storageClassName,ZONE:.spec.nodeAffinity.required.nodeSelectorTerms[0].matchExpressions[0].values[0]
+  

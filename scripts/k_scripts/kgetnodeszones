@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+kubectl get nodes \
+  -o custom-columns="NAME:.metadata.name,ZONE:.metadata.labels.topology\.kubernetes\.io/zone" | sort -k2
