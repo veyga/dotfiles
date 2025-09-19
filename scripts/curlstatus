@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+  
+if [ -z $1 ]; then
+  echo "supply a URL to check"
+  exit 1
+fi
+
+curl -o /dev/null -s -w "%{http_code}\n" $1

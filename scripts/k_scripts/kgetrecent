@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+  
+# this sort oldest first
+kubectl get $1 --sort-by='.metadata.creationTimestamp' --no-headers "${@:2}" | tac
+
+
+# kubectl get "$1" -o json "${@:2}" \
+#   | jq '.items |= sort_by(.metadata.creationTimestamp) | .items |= reverse | .items[] | {name: .metadata.name, created: .metadata.creationTimestamp}'

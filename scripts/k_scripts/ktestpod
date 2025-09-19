@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+  
+# kubectl run -i --rm --tty test-pod --image=busybox --restart=Never -- sh  
+# kubectl run -i --rm --tty test-pod --image=nicolaka/netshoot --restart=Never -- sh  
+kubectl run -i --rm --tty test-podnet --image=nicolaka/netshoot --restart=Never -- sh  

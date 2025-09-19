@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# gets logs of killed container using a label
+kubectl logs -l "app=$1" --tail=50

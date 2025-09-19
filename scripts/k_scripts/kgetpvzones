@@ -2,5 +2,5 @@
   
 
 # Show PVs and their availability zones
-kubectl get pv -o custom-columns=NAME:.metadata.name,CLAIM:.spec.claimRef.name,NAMESPACE:.spec.claimRef.namespace,STORAGECLASS:.spec.storageClassName,ZONE:.spec.nodeAffinity.required.nodeSelectorTerms[0].matchExpressions[0].values[0]
+kubectl get pv -o custom-columns=NAME:.metadata.name,ZONE:.spec.nodeAffinity.required.nodeSelectorTerms[0].matchExpressions[0].values[0],NAMESPACE:.spec.claimRef.namespace,CLAIM:.spec.claimRef.name,STORAGECLASS:.spec.storageClassName --sort-by='.spec.nodeAffinity.required.nodeSelectorTerms[0].matchExpressions[0].values[0]'
   

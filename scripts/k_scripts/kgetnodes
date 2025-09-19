@@ -84,6 +84,17 @@ def get_node_ip(node: Dict[str, Any]) -> str:
     return "<none>"
 
 
+def get_instance_id(node: Dict[str, Any]) -> str:
+    """Extract EC2 instance ID from provider ID."""
+    provider_id = node.get("spec", {}).get("providerID", "")
+    if provider_id and provider_id.startswith("aws://"):
+        # Format: aws:///us-west-2a/i-0e2b7529d1f556c1b
+        parts = provider_id.split("/")
+        if len(parts) >= 2:
+            return parts[-1]  # Last part is the instance ID
+    return "<none>"
+
+
 def print_nodes_table(nodes: List[Dict[str, Any]]):
     """Print formatted table of nodes."""
     # Prepare data rows
@@ -98,8 +109,12 @@ def print_nodes_table(nodes: List[Dict[str, Any]]):
         capacity = get_label_value(node, "karpenter.sh/capacity-type")
         zone = get_label_value(node, "topology.kubernetes.io/zone")
         ip = get_node_ip(node)
+        instance_id = get_instance_id(node)
 
-        rows.append([name, status, taints, age, instance_type, nodepool, capacity, zone, ip])
+        rows.append([name, status, taints, age, instance_type, nodepool, capacity, zone, ip, instance_id])
+
+    # Sort rows by nodepool (index 5)
+    rows.sort(key=lambda row: row[5])
 
     # Calculate column widths
     headers = [
@@ -112,6 +127,7 @@ def print_nodes_table(nodes: List[Dict[str, Any]]):
         "CAPACITY",
         "ZONE",
         "IP",
+        "INSTANCE_ID",
     ]
     widths = [len(header) for header in headers]
 

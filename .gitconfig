@@ -9,7 +9,21 @@
 	la = log --pretty=fmt --date=short --all
 	ll = log --pretty=fmt --date=short
 	lf = log --pretty=fuller --stat
+	mergediff = "!f() { git diff \"$1\"^1 \"$1\"; }; f"
+  # shows the diff of a merge commit, given the hash of the merge commit
   mergeshow = "!f() { ref=${1:-HEAD}; git diff \"$ref\"^1 \"$ref\"; }; f"
+  # shows the diff of a entire merge, given a single commit hash
+  mergeshowp = "!f() { \
+    default_branch=$(git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || echo 'main'); \
+    merge=$(git log --merges --ancestry-path --pretty=format:'%H' \"$1\"..$default_branch | tail -n1); \
+    if [ -z \"$merge\" ]; then \
+      echo 'No merge commit found including that commit'; \
+      exit 1; \
+    fi; \
+    echo \"Showing diff for merge commit: $merge\"; \
+    git diff \"$merge\"^1 \"$merge\"; \
+  }; f"
+  sync-tags = "!git tag -d $(git tag -l) && git fetch --tags"
 
 [pretty]
 	fmt = %C(auto)%h %C(magenta)%ad %C(cyan)%an%C(auto)%d %s
