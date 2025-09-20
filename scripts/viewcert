@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
+
+# views a local cert file
   
 openssl x509 -in $1 -text -noout  

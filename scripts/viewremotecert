@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# Usage: viewremotecert <hostname:port> or viewremotecert <hostname> (defaults to port 443)
+
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <hostname[:port]>"
+    echo "Example: $0 vault.netx.us"
+    echo "Example: $0 vault.netx.us:8443"
+    exit 1
+fi
+
+HOST_PORT="$1"
+
+# Add default port 443 if not specified
+if [[ ! "$HOST_PORT" =~ ":" ]]; then
+    HOST_PORT="${HOST_PORT}:443"
+fi
+
+HOST=$(echo "$HOST_PORT" | cut -d: -f1)
+PORT=$(echo "$HOST_PORT" | cut -d: -f2)
+
+echo "Checking certificate for $HOST:$PORT"
+echo "=================================="
+
+# Get certificate details
+openssl s_client -connect "$HOST:$PORT" -servername "$HOST" </dev/null 2>/dev/null | openssl x509 -text -noout
+
+echo ""
+echo "Certificate Fingerprints:"
+echo "========================"
+
+# SHA1 fingerprint (used by AWS OIDC)
+echo -n "SHA1: "
+openssl s_client -connect "$HOST:$PORT" -servername "$HOST" </dev/null 2>/dev/null | openssl x509 -fingerprint -sha1 -noout | cut -d= -f2
+
+# SHA256 fingerprint
+echo -n "SHA256: "
+openssl s_client -connect "$HOST:$PORT" -servername "$HOST" </dev/null 2>/dev/null | openssl x509 -fingerprint -sha256 -noout | cut -d= -f2
