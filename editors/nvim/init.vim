@@ -51,9 +51,9 @@ set wrap
 " set colorcolumn=100
 " set textwidth=100
 " set columns=110
-set colorcolumn=89
-set textwidth=89
-set columns=94
+set colorcolumn=91
+set textwidth=91
+set columns=95
 set noswapfile
 set noautochdir
 "set list
@@ -67,7 +67,8 @@ set noautochdir
 " change directory of current window to the directory of the current buffer
 command! CD :exec('lcd %:p:h')
 command! CPDIR :exec('!bash cpdir')
-command! CPD :exec('!bash cpdir')
+command! CPD :exec('lcd %:p:h') | exec('!bash cpdir')
+command! CPF :exec('lcd %:p:h') | exec('!bash cpdir "%:p"')
 " get the syntax group for selected item
 command! SynId :exec('echo synIDattr(synIDtrans(synID(line("."), col("."), 1)), "fg")')
 command! Src :exec('source $NVIM_HOME/init.vim')

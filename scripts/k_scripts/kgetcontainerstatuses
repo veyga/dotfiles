@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [ -z $1 ]; then
+  cmd="get pods"
+  jsonpath='{range .items[*]}{.metadata.name}{"\n"}{range.status.containerStatuses[*]}{"\t"}{.name}{"\t"}{.state}{"\n"}{end}{"\n"}{end}'
+else
+  cmd="get pod $1"
+  jsonpath='{.metadata.name}{"\n"}{range.status.containerStatuses[*]}{"\t"}{.name}{"\t"}{.state}{"\n"}{end}'
+fi
+
+kubectl $cmd -o jsonpath="$jsonpath"

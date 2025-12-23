@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+  
+# convert an epoch time to human readable
+
+date -d "@${1}"

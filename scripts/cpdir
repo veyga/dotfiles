@@ -1,5 +1,14 @@
 #!/usr/bin/env bash
   
-current=$(pwd)
-echo "current dir \"${current}\" copied to clipboard"
-echo -n "${current}" | pbcopy
+# current=$(pwd)
+# echo "current dir \"${current}\" copied to clipboard"
+# echo -n "${current}" | pbcopy
+
+if [ $# -eq 0 ]; then
+    current=$(pwd)
+    echo "current dir \"${current}\" copied to clipboard"
+    echo -n "${current}" | pbcopy
+else
+    echo "\"$1\" copied to clipboard"
+    echo -n "$1" | pbcopy
+fi

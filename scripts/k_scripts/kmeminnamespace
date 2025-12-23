@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+  
+# show the amount of mem being consumed in a namespace
+
+kubectl top pods -n $1 --no-headers | awk '{sum += $3} END {print "Total Memory: " sum "Mi"}'  

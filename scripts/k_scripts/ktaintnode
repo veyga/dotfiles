@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+  
+# taints a single node with k v
+# $1 node
+# $2 key
+# $3 value
+
+kubectl taint node $1 "${2}=${3}:NoSchedule"
+
+# to untaint 
+# kubectl taint node $1 "temp=exclude:NoSchedule-"
