@@ -8,6 +8,11 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
+if [ -f "$1" ]; then
+  echo "file already exists"
+  exit 1
+fi
+
 case "$(uname -s)" in
    Darwin)
       BASH="/usr/local/bin/bash"

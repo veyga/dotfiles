@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+kubectl --context $1 get nodes -o custom-columns="NODE:.metadata.name,CPU:.status.capacity.cpu" --no-headers | awk '{print $1 ": " $2 " cores (" $2*1000 "m)"}'

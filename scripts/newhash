@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+git commit --allow-empty -m "new hash"
+GIT_SEQUENCE_EDITOR="sed -i '2s/pick/f/'" git rebase -i HEAD~2
