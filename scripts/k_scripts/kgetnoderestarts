@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+kubectl --context kdc get nodes -o custom-columns='NAME:.metadata.name,READY-SINCE:.status.conditions[?(@.type=="Ready")].lastTransitionTime'  

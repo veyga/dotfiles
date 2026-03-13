@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+  
+if [ $# -ne 2 ]; then
+    echo "Usage: namespace labels (e.g. kresources kube-system app.kubernetes.io/name=rke2-coredns)"
+fi
+
+kubectl get pods -n $1 -l "${2}" -o \
+  jsonpath='{range .items[*]}{.metadata.name}{"\n"}{range .spec.containers[*]}  container:
+  {.name}{"\n"}  cpu request: {.resources.requests.cpu}{"\n"}  cpu limit:
+  {.resources.limits.cpu}{"\n"}  memory request: {.resources.requests.memory}{"\n"}  memory
+  limit: {.resources.limits.memory}{"\n"}{end}{end}'
+  

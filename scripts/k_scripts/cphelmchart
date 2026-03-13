@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+  
+if [ -z $1 ]; then
+  echo "provide chart name (repo/chart)"
+  exit 1
+fi
+
+helm pull ${1} --untar --untardir $(pwd)  
