@@ -49,6 +49,7 @@ export PS1="
 \[\033[01;95m\]╭─ \w\$(kube_prompt)
 ╰─\[\033[0m\] "
 
+export NVIM_HOME="~/dotfiles/editors/nvim"
 
 export PS2=".. "
 
@@ -68,3 +69,7 @@ export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/bashrc.post.bash"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
