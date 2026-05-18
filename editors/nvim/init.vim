@@ -20,6 +20,7 @@ let g:netrw_bufsettings = 'nu'
 "********************************************************
 "**************   INITIALIZE PLUGINS ********************
 "********************************************************
+execute 'set runtimepath+=' . stdpath('data') . '/site'
 source $NVIM_HOME/plugins/plugins.vim
 
 
@@ -159,96 +160,12 @@ au BufReadPost justfile.local set filetype=just
 source $HOME/dotfiles/editors/theme/meeahmi.vim
 
 lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  -- List of parsers to ignore installing
-  ignore_install = { "all" },
+require('nvim-treesitter').setup()
 
-  -- One of "all", "maintained" (parsers with maintainers), or a list of languages
-  ensure_installed = { 
-    "bash",
-    "c",
-    "cmake",
-    "cpp",
-    "css",
-    -- "dockerfile",
-    "go",
-    "gomod",
-    "hcl",
-    "html",
-    "javascript",
-    "jsdoc",
-    "json",
-    "json5",
-    "jsonc",
-    "lua",
-    "make",
-    "markdown",
-    "python",
-    "scss",
-    "toml",
-    "tsx",
-    "terraform",
-    "typescript",
-    "vim",
-    "yaml",
-    },
-
-  -- Install languages synchronously (only applied to `ensure_installed`)
-  sync_install = true,
-
-  -- textobjects = {
-  --     select = {
-  --       enable = true,
-
-  --       -- Automatically jump forward to textobj, similar to targets.vim
-  --       lookahead = true,
-  --       swap = {
-  --         enable = true,
-  --         swap_next = {
-  --           ["<leader>e"] = "@parameter.inner",
-  --         },
-  --         swap_previous = {
-  --           ["<leader>E"] = "@parameter.inner",
-  --         },
-  --       },
-
-  --       keymaps = {
-  --         -- You can use the capture groups defined in textobjects.scm
-  --         ["if"] = "@function.inner",
-  --         ["af"] = "@function.outer",
-  --         ["il"] = "@loop.inner",
-  --         ["al"] = "@loop.outer",
-  --         ["ic"] = "@conditional.inner",
-  --         ["ac"] = "@conditional.outer",
-
-  --         -- Or you can define your own textobjects like this
-  --        --  ["iF"] = {
-  --        --    python = "(function_definition) @function",
-  --        --    cpp = "(function_definition) @function",
-  --        --    c = "(function_definition) @function",
-  --        --    java = "(method_declaration) @function",
-  --        --  },
-  --       },
-  --     },
-  --   },
-
-  -- custom_captures = {
-  --   ["decorator"] = "Annotation"
-  -- },
-  highlight = {
-    -- `false` will disable the whole extension
-    enable = true,
-    disable = { "dockerfile" },
-
-    -- list of language that will be disabled
-    -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-    -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-    -- Using this option may slow down your editor, and you may see some duplcate highlights.
-    -- Instead of true it can also be a list of languages
-    additional_vim_regex_highlighting = false,
-  },
-  indent = {
-    enable = false
-  }
-}
+-- enable treesitter highlighting for every filetype that has a parser
+vim.api.nvim_create_autocmd('FileType', {
+  callback = function()
+    pcall(vim.treesitter.start)
+  end,
+})
 EOF

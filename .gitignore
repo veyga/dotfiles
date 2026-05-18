@@ -1,6 +1,7 @@
 plugged/
 *netrwhist
 private_scripts/
+fg_scripts/
 .private_aliasrc
 local_config.vim
 gtkfilechooser.ini
@@ -8,3 +9,4 @@ pat.txt
 scripts/helmv2/
 terminals/kitty/device-specific.conf
 private/
+.DS_STORE

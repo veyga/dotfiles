@@ -1,0 +1,100 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+usage() {
+  echo "Usage: $(basename "$0") <pem-file>"
+  exit 1
+}
+
+[[ $# -ne 1 ]] && usage
+
+PEM_FILE="$1"
+
+if [[ ! -f "$PEM_FILE" ]]; then
+  echo "Error: '$PEM_FILE' not found."
+  exit 1
+fi
+
+KNOWN_HEADERS=(
+  "-----BEGIN OPENSSH PRIVATE KEY-----"
+  "-----BEGIN RSA PRIVATE KEY-----"
+  "-----BEGIN EC PRIVATE KEY-----"
+  "-----BEGIN DSA PRIVATE KEY-----"
+  "-----BEGIN PRIVATE KEY-----"
+)
+
+raw=$(cat "$PEM_FILE")
+
+header=""
+footer=""
+for h in "${KNOWN_HEADERS[@]}"; do
+  if [[ "$raw" == *"$h"* ]]; then
+    header="$h"
+    footer="${h/BEGIN/END}"
+    break
+  fi
+done
+
+if [[ -z "$header" ]]; then
+  echo "Error: No recognized private key header found in '$PEM_FILE'."
+  exit 1
+fi
+
+if [[ "$raw" != *"$footer"* ]]; then
+  echo "Error: Header found but footer '$footer' is missing — file is truncated or corrupt."
+  exit 1
+fi
+
+needs_fix=false
+
+# Check 1: header and footer must each be on their own line
+if ! grep -qxF -- "$header" "$PEM_FILE" || ! grep -qxF -- "$footer" "$PEM_FILE"; then
+  needs_fix=true
+fi
+
+# Check 2: body lines should be <= 76 chars (base64 PEM convention)
+if [[ "$needs_fix" == false ]]; then
+  body=$(sed -n "/^${header//\//\\/}$/,/^${footer//\//\\/}$/{ /^-----/d; p; }" "$PEM_FILE")
+  while IFS= read -r line; do
+    if [[ ${#line} -gt 76 ]]; then
+      needs_fix=true
+      break
+    fi
+  done <<< "$body"
+fi
+
+# Check 3: permissions
+perms=$(stat -f '%Lp' "$PEM_FILE" 2>/dev/null || stat -c '%a' "$PEM_FILE" 2>/dev/null)
+needs_chmod=false
+if [[ "$perms" != "600" && "$perms" != "400" ]]; then
+  needs_chmod=true
+fi
+
+if [[ "$needs_fix" == false && "$needs_chmod" == false ]]; then
+  echo "OK: '$PEM_FILE' is already valid."
+  exit 0
+fi
+
+if [[ "$needs_fix" == true ]]; then
+  cp "$PEM_FILE" "${PEM_FILE}.bak"
+  echo "Backup saved to ${PEM_FILE}.bak"
+
+  # Extract raw base64 by stripping header, footer, and all whitespace
+  b64=$(echo "$raw" | sed "s|$header||; s|$footer||" | tr -d '[:space:]')
+
+  # Rewrite with proper 70-char wrapped body
+  {
+    echo "$header"
+    echo "$b64" | fold -w 70
+    echo "$footer"
+  } > "$PEM_FILE"
+
+  echo "Fixed: reformatted '$PEM_FILE'."
+fi
+
+if [[ "$needs_chmod" == true ]]; then
+  chmod 600 "$PEM_FILE"
+  echo "Fixed: permissions set to 600."
+fi
+
+echo "Done."

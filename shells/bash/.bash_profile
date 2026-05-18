@@ -11,6 +11,7 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 export PATH=$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/private_scripts:$HOME/dotfiles/scripts/k_scripts:/usr/local/bin:$PATH
+export PATH=$HOME/dotfiles/scripts/fg_scripts:$PATH
 export FZF_DEFAULT_COMMAND='rg --files --hidden -g "!.git" '
 
 set_python() {
@@ -82,7 +83,9 @@ Darwin)
     export CPPFLAGS="-I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/bzip2/include"
     complete -C /opt/homebrew/bin/terragrunt terragrunt
     export DOCKER_BUILDKIT=1
+    export EDITOR="nvim"
     complete -r just 2>/dev/null || true
+    export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
 		;;
   *)
     echo "no bash_profile for ${USER}; skipping..."

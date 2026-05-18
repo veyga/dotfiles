@@ -37,14 +37,6 @@
     }
   },
   "configurations": {
-    "wtf": {
-          "name": "Remote Go Debug",
-          "type": "go",
-          "request": "attach",
-          "host": "localhost",
-          "port": 5681,
-          "trace": true
-    },
     "py": {
       "adapter": "python-remote-5680",
       "breakpoints": {

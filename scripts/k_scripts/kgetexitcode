@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+kubectl get pod ${1} -o jsonpath='Exit Code: {.status.containerStatuses[0].lastState.terminated.exitCode} Reason: {.status.containerStatuses[0].lastState.terminated.reason}'
