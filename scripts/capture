@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 
-screencapture -i ~/Downloads/img.png
+# timestamp=$(date "+%Y-%m-%d-%H%M%S")
+timestamp=$(date "+%m-%d-%H%M%S")
+screencapture -i "~/Downloads/img_${timestamp}.png"

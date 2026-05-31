@@ -49,3 +49,5 @@
 	directory = /precommit
 [rerere]
 	enabled = true
+[credential]
+	helper = osxkeychain

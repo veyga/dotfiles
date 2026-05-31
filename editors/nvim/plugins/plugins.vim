@@ -76,7 +76,7 @@ Plug 'Yggdroot/indentLine'
 
 " additional lang support
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
+" Plug 'nvim-treesitter/playground'
 " Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " typescript syntax highlighting

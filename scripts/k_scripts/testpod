@@ -1,3 +1,12 @@
 #!/usr/bin/env bash
   
-k run -i --rm --tty test-pod --image=busybox --restart=Never -- sh  
+set -euo pipefail
+
+ns=default
+name="test-pod-$$"
+
+if [[ $# -eq 0 ]]; then
+  kubectl -n "$ns" run -i --rm --tty "$name" --image=nicolaka/netshoot --restart=Never -- sh
+else
+  kubectl -n "$ns" run -i --rm "$name" --image=nicolaka/netshoot --restart=Never -- "$@"
+fi

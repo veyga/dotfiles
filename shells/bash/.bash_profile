@@ -59,7 +59,7 @@ Darwin)
 		# node
 		# eval "$(fnm env --use-on-cd)"
 		;;
-	andrewstefanich)
+	astefanich)
     # this brew installs to /opt/homebrew/opt
 		set_python
     # # uv
@@ -83,6 +83,10 @@ Darwin)
     complete -C /opt/homebrew/bin/terragrunt terragrunt
     export DOCKER_BUILDKIT=1
     complete -r just 2>/dev/null || true
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"
+    [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
 		;;
   *)
     echo "no bash_profile for ${USER}; skipping..."

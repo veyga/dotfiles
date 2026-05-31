@@ -30,4 +30,5 @@ alias tg="terragrunt"
 
 alias z="zoxide"
 
+alias nvo='NVIM_APPNAME=nvimold nvim'
 source $HOME/dotfiles/shells/.private_aliasrc

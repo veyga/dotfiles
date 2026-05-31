@@ -107,6 +107,9 @@ call s:SetHighlight('VertSplit', s:darkpurple, '', '')
 call s:SetHighlight('Visual', s:brightpink, s:darkgray, '')
 call s:SetHighlight('WarningMsg', s:red, '', '')
 call s:SetHighlight('WildMenu', s:black, s:cyan, '')
+call s:SetHighlight('NormalFloat', s:offwhite, '#161616', '')
+call s:SetHighlight('FloatBorder', s:red, '#161616', '')
+call s:SetHighlight('IblIndent', '#333333', '', '')
 
 
 " **************************************************

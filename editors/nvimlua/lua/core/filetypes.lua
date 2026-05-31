@@ -1,0 +1,4 @@
+-- -- Filetype detection
+-- vim.api.nvim_create_autocmd('BufReadPost', { pattern = '*.tfvars',        command = 'set filetype=terraform' })
+-- vim.api.nvim_create_autocmd('BufReadPost', { pattern = 'terraform.tfstate', command = 'set filetype=json' })
+-- vim.api.nvim_create_autocmd('BufReadPost', { pattern = 'justfile.local',  command = 'set filetype=just' })

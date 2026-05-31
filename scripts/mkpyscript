@@ -10,6 +10,13 @@ if [ -z "$1" ]; then
 fi
 
 fname="${1%.py}.py"
+
+if [ -f $fname ]; then
+  echo "file already exists"
+  exit 1
+fi
+
+
 cat << EOF > "$fname"
 #!/usr/bin/env -S uv run --script
 # /// script
