@@ -49,26 +49,36 @@ return {
       -- You can put your default mappings / updates / etc. in here
       --  All the info you're looking for is in `:help telescope.setup()`
       defaults = {
-        preview = { treesitter = false },
+        preview = { treesitter = true },
         layout_strategy = 'vertical',
         layout_config = {
           vertical = { preview_cutoff = 1, preview_height = 0.6 },
         },
         mappings = {
           i = {
-            ['<C-k>'] = require('telescope.actions').move_selection_previous,
-            ['<C-j>'] = require('telescope.actions').move_selection_next,
-            ['<C-l>'] = require('telescope.actions').select_default,
+            -- ['<C-k>'] = require('telescope.actions').move_selection_previous,
+            -- ['<C-j>'] = require('telescope.actions').move_selection_next,
+            -- ['<C-l>'] = require('telescope.actions').select_default,
+            ['<A-;>'] = require('telescope.actions').select_default,
+            -- Reverse the default Tab / Shift-Tab directions:
+            -- Tab moves backward (up), Shift-Tab moves forward (down).
+            ['<Tab>'] = require('telescope.actions').move_selection_next,
+            ['<S-Tab>'] = require('telescope.actions').move_selection_previous,
+
+            -- ['<Tab>'] = require('telescope.actions').toggle_selection
+            --   + require('telescope.actions').move_selection_better,
+            -- ['<S-Tab>'] = require('telescope.actions').toggle_selection
+            --   + require('telescope.actions').move_selection_worse,
           },
         },
       },
       pickers = {
         find_files = {
-          file_ignore_patterns = { 'node_modules', '%.git', '%.venv' },
+          file_ignore_patterns = { 'node_modules', '%.git/', '%.venv' },
           hidden = true,
         },
         live_grep = {
-          file_ignore_patterns = { 'node_modules', '%.git', '%.venv' },
+          file_ignore_patterns = { 'node_modules', '%.git/', '%.venv' },
           additional_args = function(_)
             return { '--hidden' }
           end,

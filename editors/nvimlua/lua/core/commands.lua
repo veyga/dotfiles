@@ -15,6 +15,7 @@ end, { nargs = 1 })
 vim.api.nvim_create_user_command('CPDIR', '!bash cpdir', {})
 vim.api.nvim_create_user_command('CPD', 'lcd %:p:h | !bash cpdir', {})
 vim.api.nvim_create_user_command('CPF', 'lcd %:p:h | !bash cpdir "%:p"', {})
+
 vim.api.nvim_create_autocmd('TextYankPost', {
   callback = function()
     vim.highlight.on_yank { timeout = 500 }

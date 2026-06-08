@@ -73,7 +73,7 @@ return {
         -- Fuzzy find all the symbols in your current document.
         --  Symbols are things like variables, functions, types, etc.
         map(
-          '<leader>ds',
+          '<leader>fs',
           require('telescope.builtin').lsp_document_symbols,
           '[D]ocument [S]ymbols'
         )
@@ -101,6 +101,18 @@ return {
         -- Document highlight: when cursor rests on a symbol, LSP highlights all
         -- other references to that symbol in the buffer. Disabled for now.
         local client = vim.lsp.get_client_by_id(event.data.client_id)
+
+        -- Highlighting precedence: prefer treesitter, fall back to semantic
+        -- tokens. LSP semantic tokens normally override treesitter, so when a
+        -- treesitter parser exists for this buffer we stop the server's tokens
+        -- and let treesitter highlight it (see colors/meeahmi.lua). Buffers
+        -- with no parser keep their semantic tokens.
+        if client and client.server_capabilities.semanticTokensProvider then
+          local has_parser, parser = pcall(vim.treesitter.get_parser, event.buf)
+          if has_parser and parser then
+            vim.lsp.semantic_tokens.enable(false, { bufnr = event.buf })
+          end
+        end
         -- if
         --   client
         --   and client:supports_method(

@@ -84,10 +84,14 @@ return { -- Autocompletion
       --
       -- No, but seriously. Please read `:help ins-completion`, it is really good!
       mapping = cmp.mapping.preset.insert {
-        -- Select the [n]ext item
-        ['<C-n>'] = cmp.mapping.select_next_item(),
-        -- Select the [p]revious item
-        ['<C-p>'] = cmp.mapping.select_prev_item(),
+        -- -- Select the [n]ext item
+        -- ['<C-n>'] = cmp.mapping.select_next_item(),
+        -- -- Select the [p]revious item
+        -- ['<C-p>'] = cmp.mapping.select_prev_item(),
+
+        -- Cycle/select completions with C-j/k/l (mirrors the telescope mappings)
+        -- ['<C-j>'] = cmp.mapping.select_next_item(),
+        -- ['<C-k>'] = cmp.mapping.select_prev_item(),
 
         -- Scroll the documentation window [b]ack / [f]orward
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -115,13 +119,20 @@ return { -- Autocompletion
         --    $body
         --  end
         --
-        -- <c-l> will move you to the right of each of the expansion locations.
-        -- <c-h> is similar, except moving you backwards.
-        ['<C-l>'] = cmp.mapping(function()
-          if luasnip.expand_or_locally_jumpable() then
+        -- <c-l> selects the current completion if the menu is open, otherwise
+        -- it moves to the right of each snippet expansion location.
+        -- <c-h> is similar, except moving you backwards through the snippet.
+        ['<C-l>'] = cmp.mapping(function(fallback)
+          if cmp.visible() then
+            cmp.confirm { select = true }
+          elseif luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
+          else
+            fallback()
           end
         end, { 'i', 's' }),
+        -- Accept the current completion with Alt-l
+        ['<A-;>'] = cmp.mapping.confirm { select = true },
         ['<C-h>'] = cmp.mapping(function()
           if luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)

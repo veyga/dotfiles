@@ -39,13 +39,15 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     opts = { signs = false },
   },
-  {
-    -- High-performance color highlighter
-    'norcalli/nvim-colorizer.lua',
-    config = function()
-      require('colorizer').setup()
-    end,
-  },
+  -- results in this error on boot
+  -- vim.tbl_flatten is deprecated. Run ":checkhealth vim.deprecated" for more information
+  -- {
+  --   -- High-performance color highlighter
+  --   'norcalli/nvim-colorizer.lua',
+  --   config = function()
+  --     require('colorizer').setup()
+  --   end,
+  -- },
   {
     'szw/vim-maximizer',
     keys = {
