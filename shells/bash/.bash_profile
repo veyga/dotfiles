@@ -59,7 +59,7 @@ Darwin)
 		# node
 		# eval "$(fnm env --use-on-cd)"
 		;;
-	astefanich)
+	astefanich | andrewstefanich)
     # this brew installs to /opt/homebrew/opt
 		set_python
     # # uv
