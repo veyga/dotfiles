@@ -39,9 +39,9 @@ require('lazy').setup({
   require 'plugins.alpha',
   require 'plugins.indent-blankline',
   require 'plugins.comment',
-  require 'plugins.dap',
   require 'plugins.metals',
-  require 'plugins.vimspector',
+  require 'plugins.dap',
+  -- require 'plugins.vimspector',
   require 'plugins.misc',
 }, {
   install = { missing = true },

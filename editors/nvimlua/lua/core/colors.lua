@@ -4,6 +4,7 @@ return {
   black      = '#000000',
   offblack   = '#111111',
   red        = '#ff5370',
+  redred     = '#ff0000',
   darkred    = '#380015',
   orange     = '#e97600',
   yellow     = '#ffcd22',

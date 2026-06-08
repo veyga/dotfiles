@@ -9,14 +9,17 @@ return {
       showImplicitConversionsAndClasses = true,
       showInferredType = true,
       superMethodLensesEnabled = true,
+      testUserInterface = 'Test Explorer',
     }
 
     -- Pass nvim-cmp capabilities so completion works
     metals_config.capabilities = require('cmp_nvim_lsp').default_capabilities()
 
     metals_config.on_attach = function(client, bufnr)
-      -- Wire up DAP for debugging Scala
       require('metals').setup_dap()
+      local metals = require 'metals'
+      vim.keymap.set('n', '<leader>dt', metals.select_test_suite, { desc = 'Metals: Debug test suite', buffer = bufnr })
+      vim.keymap.set('n', '<leader>dc', metals.select_test_case, { desc = 'Metals: Debug test case', buffer = bufnr })
     end
 
     return metals_config
