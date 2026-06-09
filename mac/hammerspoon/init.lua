@@ -1,7 +1,10 @@
 -- set in ~/.bash_profile [comp dependent]
 local hs_dir = os.getenv("HAMMERSPOON_DIR")
 
--- needed for hs reload calls from yabai
+-- install the `hs` command-line tool (used for reload calls, etc.)
 hs.ipc.cliInstall(hs_dir)
-stackline = require "stackline"
-stackline:init()
+
+-- AeroSpace accordion stack icons.
+-- (Replaces stackline, which only detects yabai-style identical-frame stacks.)
+local aerostack = require "aerostack"
+aerostack:init()
