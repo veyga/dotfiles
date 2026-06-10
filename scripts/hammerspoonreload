@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  
+hs -c 'hs.reload()'  
