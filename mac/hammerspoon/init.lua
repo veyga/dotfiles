@@ -5,6 +5,5 @@ local hs_dir = os.getenv("HAMMERSPOON_DIR")
 hs.ipc.cliInstall(hs_dir)
 
 -- AeroSpace accordion stack icons.
--- (Replaces stackline, which only detects yabai-style identical-frame stacks.)
-local aerostack = require "aerostack"
-aerostack:init()
+-- local aerostack = require "aerostack"
+-- aerostack:init()
