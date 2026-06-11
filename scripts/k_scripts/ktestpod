@@ -1,5 +1,28 @@
 #!/usr/bin/env bash
   
-# kubectl run -i --rm --tty test-pod --image=busybox --restart=Never -- sh  
-# kubectl run -i --rm --tty test-pod --image=nicolaka/netshoot --restart=Never -- sh  
-kubectl run -i --rm --tty test-podnet --image=nicolaka/netshoot --restart=Never -- sh  
+set -euo pipefail
+
+
+# ktestpod                    # netshoot, sh
+# ktestpod curl example.com   # netshoot, runs `curl example.com`
+# ktestpod -c busybox         # busybox, sh
+# ktestpod -c busybox wget x  # busybox, runs `wget x`
+
+ns=default
+name="test-pod-$$"
+image=nicolaka/netshoot
+
+if [[ "${1:-}" == "-c" ]]; then
+  if [[ $# -lt 2 ]]; then
+    echo "error: -c requires a container name" >&2
+    exit 1
+  fi
+  image="$2"
+  shift 2
+fi
+
+if [[ $# -eq 0 ]]; then
+  kubectl -n "$ns" run -i --rm --tty "$name" --image="$image" --restart=Never -- sh
+else
+  kubectl -n "$ns" run -i --rm "$name" --image="$image" --restart=Never -- "$@"
+fi

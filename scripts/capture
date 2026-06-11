@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
-# timestamp=$(date "+%Y-%m-%d-%H%M%S")
 timestamp=$(date "+%m-%d-%H%M%S")
-screencapture -i "~/Downloads/img_${timestamp}.png"
+fname="img_${timestamp}.png"
+screencapture -i "~/Downloads/${fname}"
+echo -n "$fname" | pbcopy
