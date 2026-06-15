@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+  
+# Deletes all homebrew packages not explicitly in the Brewfile
+brew bundle cleanup --file=~/dotfiles/mac/Brewfile
+  

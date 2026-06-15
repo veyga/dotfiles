@@ -76,7 +76,7 @@ export NVM_DIR="$HOME/.nvm"
 # brew install composer php
 # brew install luarocks
 
-source /Users/astefanich/.gvm/scripts/gvm
+# source /Users/astefanich/.gvm/scripts/gvm
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"

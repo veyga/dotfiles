@@ -42,7 +42,7 @@ Darwin)
   asdf_completion_path="$(brew --prefix asdf)/etc/bash_completion.d/asdf.bash"
 	[[ -r ${asdf_completion_path} ]] && . ${asdf_completion_path}
 	case "${USER}" in
-	veyga)
+	dne)
 		# set_python
 		load_gnu_utils "/opt/homebrew/opt"
 		load_bash_completions "/opt/homebrew/etc"
@@ -59,19 +59,19 @@ Darwin)
 		# node
 		# eval "$(fnm env --use-on-cd)"
 		;;
-	astefanich | andrewstefanich)
+	astefanich | andrewstefanich | veyga)
     # this brew installs to /opt/homebrew/opt
-		set_python
     # # uv
     # export PATH="/Users/andrewstefanich/.local/bin:$PATH"
 		load_gnu_utils "/opt/homebrew/opt"
 		load_bash_completions "/opt/homebrew/etc"
 		export PATH="/opt/homebrew/bin:$PATH"
+		set_python
 		# kube/helm
 		export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 		# for Bit
 		export PATH=$HOME/bin:$PATH
-    export PATH="$HOME/.tfenv/bin:$PATH"
+		export PATH="$HOME/.tfenv/bin:$PATH"
 		# export VOLTA_HOME="$HOME/.volta"
 		# export PATH="$VOLTA_HOME/bin:$PATH"
 		# node
@@ -107,6 +107,7 @@ esac
 # export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(pyenv init --path)"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/andrewstefanich/.rd/bin:$PATH"

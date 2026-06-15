@@ -25,14 +25,15 @@ case "$(uname -s)" in
    Darwin)
       export SHELL="/opt/homebrew/bin/bash"
       export TERMINAL="kitty"
-      case "${USER}" in
-        veyga)
-          export BROWSER="firefox"
-          ;;
-        andrewstefanich)
-          export BROWSER="chrome"
-          ;;
-        esac
+      export BROWSER="chrome"
+      # case "${USER}" in
+      #   veyga)
+      #     export BROWSER="firefox"
+      #     ;;
+      #   andrewstefanich)
+      #     export BROWSER="chrome"
+      #     ;;
+      #   esac
         ;;
    Linux)
       export TERMINAL="xterm"

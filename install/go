@@ -1,0 +1,53 @@
+#!/usr/bin/env bash
+
+set +e
+touch ~/dotfiles/shell/.private_aliasrc
+mkdir ~/dotfiles/scripts/private_scripts/
+
+source "$(dirname "${BASH_SOURCE[0]}")/symlinks.sh"
+
+source ~/.bashrc
+
+echo "Installing xcode tools; follow prompts"
+sudo xcode-select --install
+
+echo "homebrew setup"
+if ! command -v brew &> /dev/null
+then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+echo "sdkman setup"
+if ! command -v sdk &> /dev/null
+then
+  curl -s "https://get.sdkman.io" | bash
+fi
+
+source ~/.bashrc
+brewinstall
+
+# PYTHON
+# pip freeze > ~/dotfiles/install/pip-globals.txt
+PY_VERSION="3.14.6" # pyenv install --list
+pyenv install $PY_VERSION
+pyenv global $PY_VERSION
+pip install -r "$(dirname "${BASH_SOURCE[0]}")/pip-globals.txt"
+# pip install uv pynvim bpython ruff
+
+# NODE
+if command -v npm &> /dev/null
+then
+  npm install -g neovim prettier
+fi
+
+# STARTUP APPS
+add_login_item() {
+  local path="$1"
+  osascript -e "tell application \"System Events\" to make login item at end with properties {path:\"$path\", hidden:false}" 2>/dev/null \
+    && echo "Added login item: $path" \
+    || echo "Warning: could not add login item: $path"
+}
+
+add_login_item "/Applications/Hammerspoon.app"
+add_login_item "/Applications/AeroSpace.app"
+add_login_item "/Applications/dmenu-mac.app"
