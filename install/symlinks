@@ -1,0 +1,101 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+SCRIPT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/$(basename "${BASH_SOURCE[0]}")"
+
+# BEGIN_SYMLINKS
+SYMLINKS=(
+  "$HOME/.aliasrc|$HOME/dotfiles/shells/.aliasrc"
+  "$HOME/.bash_profile|$HOME/dotfiles/shells/bash/.bash_profile"
+  "$HOME/.bashrc|$HOME/dotfiles/shells/bash/.bashrc"
+  "$HOME/.claude/keybindings.json|$HOME/dotfiles/claude/keybindings.json"
+  "$HOME/.claude/settings.json|$HOME/dotfiles/claude/settings.json"
+  "$HOME/.config/aerospace/aerospace.toml|$HOME/dotfiles/mac/aerospace/config.toml"
+  "$HOME/.config/borders/bordersrc|$HOME/dotfiles/mac/borders/bordersrc"
+  "$HOME/.config/karabiner|$HOME/dotfiles/mac/karabiner"
+  "$HOME/.config/kitty|$HOME/dotfiles/terminals/kitty/"
+  "$HOME/.config/nvim|$HOME/dotfiles/editors/nvimlua"
+  "$HOME/.hammerspoon|$HOME/dotfiles/mac/hammerspoon/"
+  "$HOME/.inputrc|$HOME/dotfiles/shells/.inputrc"
+  "$HOME/.profile|$HOME/dotfiles/shells/.profile"
+  "$HOME/.skhdrc|$HOME/dotfiles/mac/skhd/.skhdrc"
+  "$HOME/.tmux.conf|$HOME/dotfiles/terminals/.tmux.conf"
+  "$HOME/.tool-versions|$HOME/dotfiles/other/.tool-versions"
+  "$HOME/.vimrc|$HOME/dotfiles/editors/vim/.vimrc"
+  "$HOME/.yabairc|$HOME/dotfiles/mac/yabai/.yabairc"
+  "$HOME/.zprofile|$HOME/dotfiles/shells/zsh/.zprofile"
+  "$HOME/.zshrc|$HOME/dotfiles/shells/zsh/.zshrc"
+)
+# END_SYMLINKS
+
+usage() {
+  echo "Usage: $(basename "$0") [-run | -update]"
+  echo "  -run     Create all defined symlinks, prompting before overwriting"
+  echo "  -update  Discover current dotfiles symlinks and update this script"
+  exit 1
+}
+
+do_run() {
+  echo "Creating symlinks..."
+  for entry in "${SYMLINKS[@]}"; do
+    local link="${entry%%|*}"
+    local target="${entry#*|}"
+    if [[ -L "$link" ]]; then
+      local current; current=$(readlink "$link")
+      if [[ "$current" == "$target" ]]; then
+        echo "  skip (up to date): $link"
+        continue
+      fi
+      read -r -p "  Overwrite $link -> $current with -> $target? [y/N] " confirm
+      [[ "$confirm" =~ ^[Yy]$ ]] || { echo "  skipped."; continue; }
+    elif [[ -e "$link" ]]; then
+      read -r -p "  $link exists and is not a symlink. Replace? [y/N] " confirm
+      [[ "$confirm" =~ ^[Yy]$ ]] || { echo "  skipped."; continue; }
+    fi
+    mkdir -p "$(dirname "$link")"
+    ln -sf "$target" "$link"
+    echo "  linked: $link -> $target"
+  done
+  echo "Done."
+}
+
+do_update() {
+  echo "Discovering dotfiles symlinks..."
+  local tmp_entries; tmp_entries=$(mktemp)
+
+  while IFS= read -r link; do
+    local target; target=$(readlink "$link")
+    if [[ "$target" != /* ]]; then
+      local dir; dir=$(dirname "$link")
+      target=$(cd "$dir" && realpath -m "$target" 2>/dev/null || echo "$dir/$target")
+    fi
+    [[ "$target" == *"/dotfiles"* ]] || continue
+    printf '  "%s|%s"\n' "$link" "$target" >> "$tmp_entries"
+    echo "  found: $link -> $target"
+  done < <(find ~ -maxdepth 5 -type l 2>/dev/null | sort)
+
+  local tmp_script; tmp_script=$(mktemp)
+  awk -v ef="$tmp_entries" '
+    /^# BEGIN_SYMLINKS/ {
+      print
+      print "SYMLINKS=("
+      while ((getline line < ef) > 0) print line
+      print ")"
+      in_block = 1; next
+    }
+    /^# END_SYMLINKS/ { in_block = 0; print; next }
+    !in_block         { print }
+  ' "$SCRIPT_PATH" > "$tmp_script"
+
+  [[ -s "$tmp_script" ]] || { echo "awk produced empty output, aborting."; rm -f "$tmp_script" "$tmp_entries"; exit 1; }
+  mv "$tmp_script" "$SCRIPT_PATH"
+  chmod +x "$SCRIPT_PATH"
+  rm -f "$tmp_entries"
+  echo "Updated $SCRIPT_PATH"
+}
+
+case "${1:-}" in
+  -run)    do_run ;;
+  -update) do_update ;;
+  *)       usage ;;
+esac

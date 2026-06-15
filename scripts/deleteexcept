@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+  
+# deletes all files in a dir not equal to $1
+find . ! -name $1 ! -name '.' -delete

@@ -4,7 +4,10 @@ set +e
 touch ~/dotfiles/shell/.private_aliasrc
 mkdir ~/dotfiles/scripts/private_scripts/
 
-source "$(dirname "${BASH_SOURCE[0]}")/symlinks.sh"
+# source "$(dirname "${BASH_SOURCE[0]}")/symlinks.sh"
+
+./symlinks -run
+
 
 source ~/.bashrc
 
