@@ -1,57 +1,179 @@
-tap "felixkratz/formulae"
-tap "nikitabobko/tap"
+tap "asmvik/formulae"
+tap "felixkratz/formulae", trusted: true
+tap "homebrew/cask-fonts"
+tap "homebrew/services"
+tap "nikitabobko/tap", trusted: true
+tap "virtuslab/scala-cli"
+# Mozilla CA certificate store
 brew "ca-certificates"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# General-purpose data compression with high compression ratio
 brew "xz"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Programmable completion for Bash 4.2+
+brew "bash-completion@2"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Implementation of the DNS protocols
 brew "bind"
+# Tool for emulating mouse and keyboard events
 brew "cliclick"
+# Cross-platform make
+brew "cmake"
+# Documentation for CMake
+brew "cmake-docs"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
+# Dependency Manager for PHP
 brew "composer"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Pure Scala Artifact Fetching
 brew "coursier"
+# Reimplementation of ctags(1)
 brew "ctags"
+# Pack, ship and run any application as a lightweight container
 brew "docker", link: false
+# Isolated development environments using Docker
+brew "docker-compose"
+# Classic UNIX line editor
+brew "ed"
+# Command-line tool to interact with exercism.io
+brew "exercism"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Collection of GNU find, xargs, and locate
+brew "findutils"
+# Fast and simple Node.js version manager
+brew "fnm"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU awk utility
+brew "gawk"
+# GitHub command-line tool
 brew "gh"
+# Installer for the general purpose language Haskell
 brew "ghcup"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Git extension for versioning large files
 brew "git-lfs"
+# Render markdown on the CLI
 brew "glow"
+# GNU implementation of the famous stream editor
+brew "gnu-sed"
+# GNU version of the tar archiving utility
+brew "gnu-tar"
+# GNU Transport Layer Security (TLS) Library
+brew "gnutls"
+# Go version management
+brew "goenv"
+# GNU grep, egrep and fgrep
+brew "grep"
+# Tool for glamorous shell scripts
 brew "gum"
+# Kubernetes package manager
 brew "helm"
+# Improved top (interactive process viewer)
 brew "htop"
+# Interactive jq
 brew "ijq"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
+brew "just"
+# Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Bash completion for Launchctl
+brew "launchctl-completion"
+# Package manager for the Lua programming language
 brew "luarocks"
+# Utility for directing compilation
+brew "make"
+# Incremental parsing library
 brew "tree-sitter"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Manage multiple Node.js versions
 brew "nvm"
+# Bash completion for Pip
+brew "pip-completion"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Tool for managing OCI containers and pods
 brew "podman"
+# Python version management
 brew "pyenv"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# Ruby version manager
+brew "rbenv"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Autoformat shell script source code
 brew "shfmt"
+# Terraform version manager inspired by rbenv
 brew "tfenv"
+# Simplified and community-driven man pages
 brew "tldr"
+# Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Parser generator tool
 brew "tree-sitter-cli"
+# Internet file retriever
+brew "wget"
+# JavaScript package manager
+brew "yarn"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# A window border system for macOS
 brew "felixkratz/formulae/borders"
-cask "nikitabobko/tap/aerospace"
+# Launcher for ScalaCli
+brew "virtuslab/scala-cli/scala-cli", trusted: true
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "nikitabobko/tap/aerospace", trusted: true
+# Tools for building Android applications
+cask "android-studio"
+# Universal database tool and SQL client
+cask "dbeaver-community"
+# Keyboard-only application launcher
 cask "dmenu-mac"
+# Client for the Dropbox cloud storage service
+cask "dropbox"
+# Web browser
+cask "firefox"
+cask "font-dejavu-sans-mono-nerd-font"
+# Web browser
+cask "google-chrome"
+# Desktop automation application
 cask "hammerspoon"
+# Utility to hide menu bar items
 cask "hiddenbar"
+# Keyboard customiser
 cask "karabiner-elements"
+# Open-source keystroke visualiser
+cask "keycastr"
+# GPU-based terminal emulator
 cask "kitty"
-go "golang.org/x/tools/gopls"
-# npm "neovim"
-# npm "prettier"
-# pip "uv"
-# pip "pynvim"
-# pip "ruff"
-# pip "bpython"
+# Software for Logitech devices
+cask "logi-options+"
+# Visual tool to design, develop and administer MySQL servers
+cask "mysqlworkbench"
+# Video communication and virtual meeting platform
+cask "zoom"
+npm "@anthropic-ai/claude-code"
+npm "corepack"
+npm "neovim"
+npm "prettier"
