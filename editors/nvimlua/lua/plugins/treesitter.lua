@@ -59,6 +59,22 @@ return { -- Highlight, edit, and navigate code
     },
     indent = { enable = true, disable = { 'ruby' } },
   },
+-- Workaround: in Neovim 0.12, treesitter match captures return lists of nodes
+-- instead of single nodes. nvim-treesitter directives (set-lang-from-info-string! etc.)
+-- don't handle this, causing a crash. Unwrap single-element lists transparently.
+-- allows for treesitter to handle language blocks inside markdown files like so:
+-- ```lang
+-- val x = 4
+-- ```
+  config = function(_, opts)
+    local _orig_get_node_text = vim.treesitter.get_node_text
+    vim.treesitter.get_node_text = function(node, source, node_opts)
+      if type(node) == "table" then node = node[1] end
+      if not node then return "" end
+      return _orig_get_node_text(node, source, node_opts)
+    end
+    require('nvim-treesitter.configs').setup(opts)
+  end,
   -- There are additional nvim-treesitter modules that you can use to interact
   -- with nvim-treesitter. You should go explore a few and see what interests you:
   --
