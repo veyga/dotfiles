@@ -52,7 +52,9 @@ vim.keymap.set('n', '<M-y>', ':let @+=getcwd()<cr>', opts)
 vim.keymap.set('n', '<leader>so', vim.show_pos, { desc = 'Show highlight groups under cursor' })
 
 -- Comment toggle
-vim.keymap.set('n', '<leader>/', '<Plug>(comment_toggle_linewise_current)', opts)
+vim.keymap.set('n', '<leader>/', function()
+  require('Comment.api').toggle.linewise.count(vim.v.count1)
+end, opts)
 vim.keymap.set('v', '<leader>/', '<Plug>(comment_toggle_linewise_visual)', opts)
 
 -- Format using none-ls (ruff for Python, prettier for html/json/yaml, etc.)

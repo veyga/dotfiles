@@ -36,8 +36,8 @@ return {
           style = 'none', -- Options: 'icon', 'underline', 'none'
         },
         icon_pinned = '󰐃',
-        minimum_padding = 1,
-        maximum_padding = 5,
+        minimum_padding = 0,
+        maximum_padding = 1,
         maximum_length = 15,
         sort_by = 'insert_at_end',
       },
