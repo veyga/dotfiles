@@ -8,3 +8,4 @@ pat.txt
 scripts/helmv2/
 terminals/kitty/device-specific.conf
 private/
+**/automatic_backups/*
