@@ -72,14 +72,18 @@ Darwin)
 		# for Bit
 		export PATH=$HOME/bin:$PATH
 		export PATH="$HOME/.tfenv/bin:$PATH"
+		export PATH="/opt/homebrew/opt/bzip2/bin:$PATH"
 		# export VOLTA_HOME="$HOME/.volta"
 		# export PATH="$VOLTA_HOME/bin:$PATH"
 		# node
 		# eval "$(fnm env --use-on-cd)"
-    # needed for some compilers to find zlib bzip2(after brew install zlib bzip2)
-    # this is from install python 3.6
-    export LDFLAGS="-L/opt/homebrew/opt/zlib/lib -L/opt/homebrew/opt/bzip2/lib"
-    export CPPFLAGS="-I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/bzip2/include"
+		# needed for some compilers to find zlib bzip2(after brew install zlib bzip2)
+		# this is from install python 3.6
+		# export LDFLAGS="-L/opt/homebrew/opt/zlib/lib -L/opt/homebrew/opt/bzip2/lib"
+		# export CPPFLAGS="-I/opt/homebrew/opt/zlib/include -I/opt/homebrew/opt/bzip2/include"
+		export LDFLAGS="-L/opt/homebrew/opt/bzip2/lib"
+		export CPPFLAGS="-I/opt/homebrew/opt/bzip2/include"
+
     complete -C /opt/homebrew/bin/terragrunt terragrunt
     export DOCKER_BUILDKIT=1
     complete -r just 2>/dev/null || true

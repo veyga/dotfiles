@@ -12,8 +12,8 @@ export EDITOR="nvim"
 export NVIM_HOME="$HOME/dotfiles/editors/nvim"
 export VIM_HOME="$HOME/dotfiles/editors/vim"
 export SHELLS_HOME="$HOME/dotfiles/shells"
-export CC=/usr/bin/gcc
-export CXX=/usr/bin/g++
+export CC=/usr/bin/clang
+export CXX=/usr/bin/clang++
 # leave this commented as it conflicts with tmux
 # export TERM="xterm-256color"
 
