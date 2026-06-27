@@ -122,6 +122,8 @@ brew "qemu"
 brew "rbenv"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Used as a compiler wrapper and avoids compilation when possible
+brew "sccache"
 # Autoformat shell script source code
 brew "shfmt"
 # Terraform version manager inspired by rbenv
@@ -179,7 +181,7 @@ cask "logi-options+"
 cask "mysqlworkbench"
 # Video communication and virtual meeting platform
 cask "zoom"
+cargo "cargo-truce"
 npm "@anthropic-ai/claude-code"
-npm "corepack"
 npm "neovim"
 npm "prettier"
