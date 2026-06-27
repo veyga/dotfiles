@@ -53,3 +53,4 @@ function swagger_preview() {
       echo "Converting to json failed!"
     fi
 }
+. "$HOME/.cargo/env"
