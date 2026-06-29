@@ -63,7 +63,10 @@ vim.keymap.set('n', '<leader>F', function()
   vim.lsp.buf.format {
     async = true,
     filter = function(client)
-      return client.name == 'null-ls' or client.name == 'metals' or client.name == 'rust_analyzer'
+      return client.name == 'null-ls'
+        or client.name == 'metals'
+        or client.name == 'rust_analyzer'
+        or client.name == 'zls'
     end,
   }
 end, opts)

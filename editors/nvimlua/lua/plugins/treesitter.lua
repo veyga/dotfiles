@@ -47,6 +47,7 @@ return { -- Highlight, edit, and navigate code
       'vim',
       'vimdoc',
       'yaml',
+      'zig',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

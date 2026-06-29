@@ -235,6 +235,7 @@ return {
       ts_ls = {},
       -- tsserver = {},
       yamlls = {},
+      zls = {}, -- Zig (provides completion + `zig fmt` formatting via LSP)
     }
 
     -- Ensure the servers and tools above are installed
