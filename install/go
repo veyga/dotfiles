@@ -28,6 +28,8 @@ fi
 
 source ~/.bashrc
 brewinstall
+echo /opt/homebrew/bin/bash | sudo tee -a /etc/shells
+chsh -s /opt/hombrew/bin/bash
 
 # PYTHON
 # pip freeze > ~/dotfiles/install/pip-globals.txt

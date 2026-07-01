@@ -76,14 +76,18 @@ export NVM_DIR="$HOME/.nvm"
 # brew install composer php
 # brew install luarocks
 
-# source /Users/astefanich/.gvm/scripts/gvm
+set +e
+source "$HOME/.gvm/scripts/gvm"
+# source "$HOME/.gvm/scripts/gvm/scripts"
+# source /Users/astefanich/.gvm/scripts
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-. "$HOME/.cargo/env" || true
 
-# ZVM
-export ZVM_INSTALL="$HOME/.zvm/self"
-export PATH="$PATH:$HOME/.zvm/bin"
-export PATH="$PATH:$ZVM_INSTALL/"
+# . "$HOME/.cargo/env" || true
+# 
+# # ZVM
+# export ZVM_INSTALL="$HOME/.zvm/self"
+# export PATH="$PATH:$HOME/.zvm/bin"
+# export PATH="$PATH:$ZVM_INSTALL/"

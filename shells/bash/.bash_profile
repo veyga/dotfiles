@@ -124,4 +124,3 @@ export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
 
 # Disable just completions
 complete -r just 2>/dev/null || true
-. "$HOME/.cargo/env"

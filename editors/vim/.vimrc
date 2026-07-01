@@ -9,7 +9,7 @@ set clipboard=unnamed
 "unnamed  = one line deletes/yanks will cycle through registers
 "set termguicolors
 set splitright
-set nohlsearch
+" set nohlsearch
 set splitbelow
 set expandtab
 set autoindent

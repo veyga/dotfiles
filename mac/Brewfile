@@ -153,7 +153,7 @@ brew "virtuslab/scala-cli/scala-cli", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace", trusted: true
 # Tools for building Android applications
-cask "android-studio"
+# cask "android-studio"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Keyboard-only application launcher
@@ -164,7 +164,7 @@ cask "dropbox"
 cask "firefox"
 cask "font-dejavu-sans-mono-nerd-font"
 # Web browser
-cask "google-chrome"
+# cask "google-chrome"
 # Desktop automation application
 cask "hammerspoon"
 # Utility to hide menu bar items
@@ -176,11 +176,11 @@ cask "keycastr"
 # GPU-based terminal emulator
 cask "kitty"
 # Software for Logitech devices
-cask "logi-options+"
+# cask "logi-options+"
 # Visual tool to design, develop and administer MySQL servers
-cask "mysqlworkbench"
+# cask "mysqlworkbench"
 # Video communication and virtual meeting platform
-cask "zoom"
+# cask "zoom"
 cargo "cargo-truce"
 npm "@anthropic-ai/claude-code"
 npm "neovim"
