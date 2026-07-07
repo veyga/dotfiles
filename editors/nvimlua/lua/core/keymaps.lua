@@ -57,17 +57,12 @@ vim.keymap.set('n', '<leader>/', function()
 end, opts)
 vim.keymap.set('v', '<leader>/', '<Plug>(comment_toggle_linewise_visual)', opts)
 
--- Format using none-ls (ruff for Python, prettier for html/json/yaml, etc.)
+-- Format using conform (stylua, ruff, prettier, shfmt, etc.)
 -- Falls back to any available LSP formatter (e.g. metals for Scala)
 vim.keymap.set('n', '<leader>F', function()
-  vim.lsp.buf.format {
+  require('conform').format {
     async = true,
-    filter = function(client)
-      return client.name == 'null-ls'
-        or client.name == 'metals'
-        or client.name == 'rust_analyzer'
-        or client.name == 'zls'
-    end,
+    lsp_format = 'fallback',
   }
 end, opts)
 
