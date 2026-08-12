@@ -102,11 +102,6 @@ return {
     dap.listeners.after.disconnect['dapui_config'] = dapui.close
 
     -- Python (debugpy installed via Mason)
-    dap.adapters.python = {
-      type = 'executable',
-      command = vim.fn.stdpath 'data' .. '/mason/packages/debugpy/venv/bin/python',
-      args = { '-m', 'debugpy.adapter' },
-    }
     dap.adapters.python_remote_5680 = {
       type = 'server',
       host = '127.0.0.1',
@@ -123,7 +118,6 @@ return {
         request = 'attach',
         name = 'Attach to debugpy (5680)',
         justMyCode = true,
-        disconnect = { terminateDebuggee = false },
         pathMappings = {
           {
             localRoot = vim.fn.getcwd(),
@@ -136,7 +130,6 @@ return {
         request = 'attach',
         name = 'Attach to debugpy (5681)',
         justMyCode = true,
-        disconnect = { terminateDebuggee = false },
         pathMappings = {
           {
             localRoot = vim.fn.getcwd(),
@@ -196,8 +189,12 @@ return {
     vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'DAP: Open REPL' })
     vim.keymap.set('n', '<leader>du', dapui.toggle, { desc = 'DAP: Toggle UI' })
     vim.keymap.set('n', '<leader>dx', function()
-      dap.terminate()
+      dap.disconnect({ terminateDebuggee = false })
+      for _, s in pairs(dap.sessions()) do
+        s:close()
+      end
       dapui.close()
-    end, { desc = 'DAP: Reset session' })
+      vim.notify('DAP session closed', vim.log.levels.INFO)
+    end, { desc = 'DAP: Disconnect (keep process)' })
   end,
 }
