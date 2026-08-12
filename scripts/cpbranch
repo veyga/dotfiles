@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
   
 current=$(git branch --show-current)
-echo "current branch \"${current}\" copied to clipboard"
+if [[ "${1:-}" != "-q" ]]; then
+  echo $current
+fi
 echo -n "${current}" | pbcopy
-
-

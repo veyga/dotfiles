@@ -8,9 +8,11 @@ set -euo pipefail
 # ktestpod -c busybox         # busybox, sh
 # ktestpod -c busybox wget x  # busybox, runs `wget x`
 
-ns=default
+ns=cf-platform-services
+# ns=default
 name="test-pod-$$"
-image=nicolaka/netshoot
+image="nexus-new.thejellyfish.net/jf/docker.io/nicolaka/netshoot:v0.16"
+# image="nexus-new.thejellyfish.net/jf/nicolaka/netshoot:latest"
 
 if [[ "${1:-}" == "-c" ]]; then
   if [[ $# -lt 2 ]]; then

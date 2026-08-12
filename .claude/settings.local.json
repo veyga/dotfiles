@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(kubectl get *)",
+      "Bash(kubectl describe *)",
+      "Bash(python3 -c \"import json,sys; app=json.load\\(sys.stdin\\); [print\\(r['kind'], r['name'], r.get\\('status',''\\), r.get\\('message',''\\)\\) for r in app['status'].get\\('resources',[]\\) if r.get\\('status'\\) != 'Synced' or r.get\\('health',{}\\).get\\('status',''\\) not in \\('','Healthy'\\)]\")",
+      "WebFetch(domain:docs.upbound.io)",
+      "WebFetch(domain:blog.upbound.io)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:stackoverflow.com)",
+      "WebFetch(domain:docs.crossplane.io)",
+      "WebFetch(domain:help.sonatype.com)",
+      "WebFetch(domain:marketplace.upbound.io)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "WebFetch(domain:www.upbound.io)",
+      "Bash(python3 *)",
+      "Bash(kubectl kustomize *)",
+      "Bash(kustomize version *)",
+      "Bash(terraform-ls --help)",
+      "Read(//Users/andrewstefanich/.config/**)",
+      "Read(//Users/andrewstefanich/**)",
+      "Bash(kubectl explain *)"
+    ]
+  }
+}

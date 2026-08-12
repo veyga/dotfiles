@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+
+TOKEN_FILE=$(find ~/.kube/cache/oidc-login -type f ! -name "*.lock" 2>/dev/null | head -1)
+
+if [[ -z "$TOKEN_FILE" ]]; then
+  echo "No cached OIDC token found." >&2
+  exit 1
+fi
+
+TOKEN_DATA=$(python3 -c "
+import json
+data = json.load(open('$TOKEN_FILE'))
+print(data['id_token'])
+print('yes' if 'refresh_token' in data else 'no')
+")
+ID_TOKEN=$(echo "$TOKEN_DATA" | head -1)
+HAS_REFRESH=$(echo "$TOKEN_DATA" | tail -1)
+PAYLOAD=$(echo "$ID_TOKEN" | cut -d. -f2 | base64 -d 2>/dev/null)
+
+echo "$PAYLOAD" | python3 -c "
+import json, sys
+from datetime import datetime, timezone
+
+payload = json.load(sys.stdin)
+exp = payload.get('exp', 0)
+iat = payload.get('iat', 0)
+now = int(datetime.now(timezone.utc).timestamp())
+
+print(json.dumps(payload, indent=2))
+print()
+print(f'Issued:  {datetime.fromtimestamp(iat, tz=timezone.utc).strftime(\"%Y-%m-%d %H:%M:%S UTC\")}')
+print(f'Expires: {datetime.fromtimestamp(exp, tz=timezone.utc).strftime(\"%Y-%m-%d %H:%M:%S UTC\")}')
+print(f'TTL:     {(exp - iat) // 60} minutes')
+if now > exp:
+    print(f'Status:  EXPIRED ({(now - exp) // 60}m ago)')
+else:
+    print(f'Status:  VALID ({(exp - now) // 60}m remaining)')
+"
+
+if [[ "$HAS_REFRESH" == "yes" ]]; then
+  echo "Refresh: ENABLED"
+else
+  echo "Refresh: NOT ENABLED (offline_access scope may be missing)"
+fi

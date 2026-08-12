@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+  
+link="https://linear.app/jellyfishco/issue/${1}/"
+echo -n "$link" | pbcopy
+
+open -a "Google Chrome" "$link"
+
+

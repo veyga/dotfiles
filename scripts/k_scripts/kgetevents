@@ -2,3 +2,5 @@
   
 # kubectl get events --sort-by='metadata.creationTimestamp'
 kubectl get events --sort-by='.lastTimestamp'
+
+# kubectl get events -n cf-platform-services --sort-by='.lastTimestamp' 2>&1

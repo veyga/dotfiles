@@ -1,0 +1,107 @@
+#!/usr/bin/env bash
+
+# ktestpod                    # netshoot, sh
+# ktestpod curl example.com   # netshoot, runs `curl example.com`
+# ktestpod -c busybox         # busybox, sh
+# ktestpod -c busybox wget x  # busybox, runs `wget x`
+
+set -euo pipefail
+ns=cf-platform-services
+name="test-pod-$$"
+# image="nexus-new.thejellyfish.net/jf/docker.io/nicolaka/netshoot:v0.16"
+image="nexus-new.thejellyfish.net/jf/nicolaka/netshoot:v0.16"
+
+if [[ "${1:-}" == "-c" ]]; then
+  if [[ $# -lt 2 ]]; then
+    echo "error: -c requires an image name" >&2
+    exit 1
+  fi
+  image="$2"
+  shift 2
+fi
+
+if [[ $# -eq 0 ]]; then
+  cmd='["sh"]'
+  stdin_tty='"stdin": true, "tty": true,'
+else
+  args=$(printf '"%s",' "$@")
+  cmd="[${args%,}]"
+  stdin_tty='"stdin": true,'
+fi
+
+
+
+kubectl -n "$ns" run -i --rm "$name" \
+  --image="$image" --restart=Never \
+  --overrides="{
+    \"spec\": {
+      \"nodeSelector\": {
+        \"cf-platform-services\": \"true\"
+      },
+      \"containers\": [{
+        \"name\": \"$name\",
+        \"image\": \"$image\",
+        \"command\": $cmd,
+        $stdin_tty
+        \"resources\": {
+          \"limits\":   {\"memory\": \"128Mi\"}
+        }
+      }],
+      \"tolerations\": [{
+        \"key\": \"cf-platform-services\",
+        \"operator\": \"Exists\",
+        \"effect\": \"NoSchedule\"
+      }]
+    }
+  }"
+
+# kubectl -n "$ns" run -i --rm "$name" \
+#   --image="$image" --restart=Never \
+#   --overrides="{
+#     \"spec\": {
+#       \"containers\": [{
+#         \"name\": \"$name\",
+#         \"image\": \"$image\",
+#         \"command\": $cmd,
+#         $stdin_tty
+#         \"resources\": {
+#           \"limits\":   {\"memory\": \"128Mi\"}
+#         }
+#       }],
+#       \"affinity\": {
+#         \"nodeAffinity\": {
+#           \"requiredDuringSchedulingIgnoredDuringExecution\": {
+#             \"nodeSelectorTerms\": [{
+#               \"matchExpressions\": [{
+#                 \"key\": \"cf-platform-services\",
+#                 \"operator\": \"In\",
+#                 \"values\": [\"true\"]
+#               }]
+#             }]
+#           }
+#         }
+#       },
+#       \"tolerations\": [{
+#         \"key\": \"cf-platform-services\",
+#         \"operator\": \"Exists\",
+#         \"effect\": \"NoSchedule\"
+#       }]
+#     }
+#   }"
+
+
+# kubectl -n "$ns" run -i --rm "$name" \
+#   --image="$image" --restart=Never \
+#   --overrides="{
+#     \"spec\": {
+#       \"containers\": [{
+#         \"name\": \"$name\",
+#         \"image\": \"$image\",
+#         \"command\": $cmd,
+#         $stdin_tty
+#         \"resources\": {
+#           \"limits\":   {\"memory\": \"128Mi\"}
+#         }
+#       }]
+#     }
+#   }"

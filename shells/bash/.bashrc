@@ -58,6 +58,8 @@ fi
 
 eval "$(zoxide init bash)"
 
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
@@ -91,3 +93,12 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # export ZVM_INSTALL="$HOME/.zvm/self"
 # export PATH="$PATH:$HOME/.zvm/bin"
 # export PATH="$PATH:$ZVM_INSTALL/"
+eval "$(mise activate bash)"
+
+# if command -v op &> /dev/null
+# then
+#   eval $(op signin)
+# fi
+
+export DIRENV_LOG_FORMAT=''
+eval "$(direnv hook bash)"

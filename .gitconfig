@@ -1,5 +1,5 @@
 [user]
-	email = andrewstefanich@gmail.com
+	email = andrew.stefanich@jellyfish.co
 	name = Andrew Stefanich
 
 [alias]
@@ -51,3 +51,5 @@
 	enabled = true
 [credential]
 	helper = osxkeychain
+[init]
+	defaultBranch = main

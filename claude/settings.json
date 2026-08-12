@@ -1,4 +1,19 @@
 {
+  "awsAuthRefresh": "aws sso login",
+  "env": {
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "arn:aws:bedrock:us-east-1:686150682967:application-inference-profile/1nil8tuydhgz",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "arn:aws:bedrock:us-east-1:686150682967:application-inference-profile/0bgcxnwo1pnm",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "arn:aws:bedrock:us-east-1:686150682967:application-inference-profile/vgz4zbsrb75u"
+  },
+  "extraKnownMarketplaces": {
+    "jellyfish-marketplace": {
+      "source": {
+        "source": "git",
+        "url": "git@github.com:Jellyfish-AI/jf-claude-plugins.git"
+      }
+    }
+  },
   "theme": "dark",
   "editorMode": "vim"
 }

@@ -124,3 +124,9 @@ export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
 
 # Disable just completions
 complete -r just 2>/dev/null || true
+
+export DIRENV_LOG_FORMAT=''
+eval "$(direnv hook bash)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export JF_MANAGED_HOMEBREW=true
+

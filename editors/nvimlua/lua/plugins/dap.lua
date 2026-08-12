@@ -19,7 +19,7 @@
 -- ├─────────────┼────────────────────────┤
 -- │ <leader>ds  │ Stop                   │
 -- ├─────────────┼────────────────────────┤
--- │ <leader>dx  │ Terminate / reset      │
+-- │ <leader>dx  │ Disconnect             │
 -- ├─────────────┼────────────────────────┤
 -- │ <leader>db  │ Toggle breakpoint      │
 -- ├─────────────┼────────────────────────┤
@@ -99,6 +99,7 @@ return {
     dap.listeners.after.event_initialized['dapui_config'] = dapui.open
     dap.listeners.before.event_terminated['dapui_config'] = dapui.close
     dap.listeners.before.event_exited['dapui_config'] = dapui.close
+    dap.listeners.after.disconnect['dapui_config'] = dapui.close
 
     -- Python (debugpy installed via Mason)
     dap.adapters.python = {
@@ -106,34 +107,40 @@ return {
       command = vim.fn.stdpath 'data' .. '/mason/packages/debugpy/venv/bin/python',
       args = { '-m', 'debugpy.adapter' },
     }
-    dap.adapters.python_remote = {
+    dap.adapters.python_remote_5680 = {
       type = 'server',
       host = '127.0.0.1',
       port = 5680,
     }
+    dap.adapters.python_remote_5681 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5681,
+    }
     dap.configurations.python = {
-      -- {
-      --   type = 'python',
-      --   request = 'launch',
-      --   name = 'Launch file',
-      --   program = '${file}',
-      --   pythonPath = function()
-      --     local venv = vim.fn.getcwd() .. '/.venv/bin/python'
-      --     if vim.fn.executable(venv) == 1 then
-      --       return venv
-      --     end
-      --     return vim.fn.exepath 'python3' or vim.fn.exepath 'python'
-      --   end,
-      -- },
       {
-        type = 'python_remote',
+        type = 'python_remote_5680',
         request = 'attach',
         name = 'Attach to debugpy (5680)',
         justMyCode = true,
+        disconnect = { terminateDebuggee = false },
         pathMappings = {
           {
             localRoot = vim.fn.getcwd(),
-            remoteRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5681',
+        request = 'attach',
+        name = 'Attach to debugpy (5681)',
+        justMyCode = true,
+        disconnect = { terminateDebuggee = false },
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
           },
         },
       },
@@ -188,6 +195,9 @@ return {
     end, { desc = 'DAP: Evaluate with prompt' })
     vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'DAP: Open REPL' })
     vim.keymap.set('n', '<leader>du', dapui.toggle, { desc = 'DAP: Toggle UI' })
-    vim.keymap.set('n', '<leader>dx', dap.terminate, { desc = 'DAP: Terminate' })
+    vim.keymap.set('n', '<leader>dx', function()
+      dap.terminate()
+      dapui.close()
+    end, { desc = 'DAP: Reset session' })
   end,
 }

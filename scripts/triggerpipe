@@ -1,4 +1,8 @@
 #!/usr/bin/env bash
   
-git commit --allow-empty -m "Trigger Pipeline" && git push
+if [ -n "$1" ]; then
+  git commit -m "fix(${1}): triggerpipe" --allow-empty && git push
+else
+  git commit --allow-empty -m "Trigger Pipeline" && git push
+fi
   

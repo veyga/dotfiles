@@ -184,3 +184,9 @@ export PATH="/Users/andrewstefanich/.rd/bin:$PATH"
 
 # Kiro CLI post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/kiro-cli/shell/zshrc.post.zsh"
+
+export DIRENV_LOG_FORMAT=''
+eval "$(direnv hook zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+export JF_MANAGED_HOMEBREW=true
+

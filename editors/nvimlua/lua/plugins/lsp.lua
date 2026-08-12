@@ -231,7 +231,11 @@ return {
       ruff = {},
       rust_analyzer = {},
       sqlls = {},
-      terraformls = {},
+      terraformls = {
+        on_attach = function(client, bufnr)
+          client.server_capabilities.codeLensProvider = nil
+        end,
+      },
       ts_ls = {},
       -- tsserver = {},
       yamlls = {},
@@ -243,6 +247,7 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
       'debugpy', -- Python DAP adapter, used by nvim-dap
+      'checkmake',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

@@ -20,4 +20,36 @@ aws sts assume-role \
   --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
   --output json
 
+assumerole() {
+export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
+        $(aws sts assume-role \
+        --role-arn $1 \
+        --role-session-name $2 \
+        --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
+        --output text))
+}
+
+assumerole() {
+    local external_id_flag=""
+    if [ -n "$3" ]; then
+      external_id_flag="--external-id $3"
+    fi
+export $(printf "AWS_ACCESS_KEY_ID=%s AWS_SECRET_ACCESS_KEY=%s AWS_SESSION_TOKEN=%s" \
+        $(aws sts assume-role \
+        --role-arn $1 \
+        --role-session-name $2 \
+        $external_id_flag \
+        --query "Credentials.[AccessKeyId,SecretAccessKey,SessionToken]" \
+        --output text))
+}
+
+assumerole arn:aws:iam::082707300345:role/JFWellKnownCustDataAccess mysessiona
+
+assumerole arn:aws:iam::294150216284:role/crossplane/test-dummy-role-ns mysession
+assumerole arn:aws:iam::294150216284:role/crossplane/test-dummy-role-ns mysession "90d3da48d008bae110419ea1aee7e8c20a57c15eabe135d6895694616fe840b8"
+
+assumerole arn:aws:iam::082707300345:role/JFWellKnownCustDataAccess mysessiona
+assumerole arn:aws:iam::294150216284:role/crossplane/test-dummy-role-ns mysession "90d3da48d008bae110419ea1aee7e8c20a57c15eabe135d6895694616fe840b7"
+
+
   

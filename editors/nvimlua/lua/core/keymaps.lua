@@ -42,6 +42,9 @@ vim.keymap.set('n', '<leader>2', ':set columns=180<cr>', opts)
 -- Yank cwd to clipboard
 vim.keymap.set('n', '<M-y>', ':let @+=getcwd()<cr>', opts)
 
+-- Replace to EOL with clipboard (black hole delete so clipboard isn't clobbered)
+vim.keymap.set('n', '<leader>R', '"_C<C-r>+<Esc>', { desc = 'Replace to EOL with clipboard' })
+
 -- -- Show syntax stack under cursor
 -- vim.keymap.set('n', '<leader>so', function()
 --   local stack = vim.fn.synstack(vim.fn.line '.', vim.fn.col '.')
