@@ -25,7 +25,7 @@
 -- ├─────────────┼────────────────────────┤
 -- │ <leader>dB  │ Conditional breakpoint │
 -- ├─────────────┼────────────────────────┤
--- │ <leader>dC  │ Clear all breakpoints  │
+-- │ <leader>dl  │ Clear all breakpoints  │
 -- ├─────────────┼────────────────────────┤
 -- │ <leader>dl  │ List breakpoints       │
 -- ├─────────────┼────────────────────────┤
@@ -112,11 +112,56 @@ return {
       host = '127.0.0.1',
       port = 5681,
     }
+    dap.adapters.python_remote_5682 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5682,
+    }
+    dap.adapters.python_remote_5683 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5683,
+    }
+    dap.adapters.python_remote_5699 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5699,
+    }
+    dap.adapters.python_remote_5684 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5684,
+    }
+    dap.adapters.python_remote_5687 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5687,
+    }
+    dap.adapters.python_remote_5688 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5688,
+    }
+    dap.adapters.python_remote_5681_local = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5681,
+    }
+    dap.adapters.python_remote_5686_local = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5686,
+    }
+    dap.adapters.python_remote_6000 = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5688,
+    }
     dap.configurations.python = {
       {
         type = 'python_remote_5680',
         request = 'attach',
-        name = 'Attach to debugpy (5680)',
+        name = 'Attach to debugpy (5680) - wrapper api',
         justMyCode = true,
         pathMappings = {
           {
@@ -128,7 +173,7 @@ return {
       {
         type = 'python_remote_5681',
         request = 'attach',
-        name = 'Attach to debugpy (5681)',
+        name = 'Attach to debugpy (5681) - wrapper script',
         justMyCode = true,
         pathMappings = {
           {
@@ -136,6 +181,165 @@ return {
             remoteRoot = '/app',
           },
         },
+      },
+      {
+        type = 'python_remote_5682',
+        request = 'attach',
+        name = 'Attach to debugpy (5682) - wrapper test',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5683',
+        request = 'attach',
+        name = 'Attach to debugpy (5683) - django server',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5683',
+        request = 'attach',
+        name = 'Attach to debugpy (5683) - django server local',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = vim.fn.getcwd(),
+          },
+        },
+      },
+      {
+        type = 'python_remote_5699',
+        request = 'attach',
+        name = 'Attach to debugpy (5699) - django server local',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = vim.fn.getcwd(),
+          },
+        },
+      },
+      {
+        type = 'python_remote_6000',
+        request = 'attach',
+        name = 'Attach to debugpy (6000) - mcp server',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = "/app",
+          },
+        },
+      },
+      {
+        type = 'python_remote_5699',
+        request = 'attach',
+        name = 'Attach to debugpy (5699) - django server other worker',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5684',
+        request = 'attach',
+        name = 'Attach to debugpy (5684)',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5687',
+        request = 'attach',
+        name = 'Attach to debugpy (5687) - svca server',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5688',
+        request = 'attach',
+        name = 'Attach to debugpy (5688) - svcb server',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = '/app',
+          },
+        },
+      },
+      {
+        type = 'python_remote_5681_local',
+        request = 'attach',
+        name = 'Attach to debugpy cwd (5681)',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = vim.fn.getcwd(),
+          },
+        },
+      },
+      {
+        type = 'python_remote_5686_local',
+        request = 'attach',
+        name = 'Attach to debugpy cwd (5686) - e2e tests',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = vim.fn.getcwd(),
+          },
+        },
+      },
+    }
+
+    -- Kotlin (kotlin-debug-adapter installed via Mason)
+    dap.adapters.kotlin = {
+      type = 'executable',
+      command = vim.fn.stdpath('data') .. '/mason/bin/kotlin-debug-adapter',
+    }
+    dap.configurations.kotlin = {
+      {
+        type = 'kotlin',
+        request = 'attach',
+        name = 'Attach to Kotlin JVM (port 5005)',
+        hostName = 'localhost',
+        port = 5005,
+        timeout = 10000,
+        projectRoot = vim.fn.getcwd(),
+        sourcePaths = { vim.fn.getcwd() .. '/src' },
+      },
+      {
+        type = 'kotlin',
+        request = 'launch',
+        name = 'Launch Kotlin (main class)',
+        projectRoot = vim.fn.getcwd(),
+        mainClass = function()
+          return vim.fn.input('Main class: ')
+        end,
       },
     }
 
@@ -186,8 +390,10 @@ return {
     vim.keymap.set('n', '<leader>de', function()
       dapui.eval(vim.fn.input 'Evaluate: ')
     end, { desc = 'DAP: Evaluate with prompt' })
+    vim.keymap.set('n', '<leader>dd', dap.continue, { desc = 'DAP: Launch / continue' })
     vim.keymap.set('n', '<leader>dr', dap.repl.open, { desc = 'DAP: Open REPL' })
     vim.keymap.set('n', '<leader>du', dapui.toggle, { desc = 'DAP: Toggle UI' })
+    vim.keymap.set('n', '<leader>dc', dap.clear_breakpoints, { desc = 'DAP: Clear all breakpoints' })
     vim.keymap.set('n', '<leader>dx', function()
       dap.disconnect({ terminateDebuggee = false })
       for _, s in pairs(dap.sessions()) do

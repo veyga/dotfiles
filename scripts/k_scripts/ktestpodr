@@ -6,10 +6,11 @@
 # ktestpod -c busybox wget x  # busybox, runs `wget x`
 
 set -euo pipefail
-ns=cf-platform-services
+ns=default
 name="test-pod-$$"
 # image="nexus-new.thejellyfish.net/jf/docker.io/nicolaka/netshoot:v0.16"
-image="nexus-new.thejellyfish.net/jf/nicolaka/netshoot:v0.16"
+# image="nexus-new.thejellyfish.net/jf/alpine:3.20"
+image="nexus-new.thejellyfish.net/jf/alpine:3.20"
 
 if [[ "${1:-}" == "-c" ]]; then
   if [[ $# -lt 2 ]]; then
@@ -31,13 +32,20 @@ fi
 
 
 
+# if the default user of an image is root, we allow 
+# (cant statically check that via kyverno)
+# OK
+# \"securityContext\": {\"privileged\": false},
+# \"securityContext\": {\"runAsNonRoot\": true, \"runAsUser\": 1000},
+
+# NOT OK
+# \"securityContext\": {\"privileged\": true},
+# \"securityContext\": {\"runAsUser\": 0},
+# \"securityContext\": {\"runAsNonRoot\": false},
 kubectl -n "$ns" run -i --rm "$name" \
   --image="$image" --restart=Never \
   --overrides="{
     \"spec\": {
-      \"nodeSelector\": {
-        \"cf-platform-services\": \"true\"
-      },
       \"containers\": [{
         \"name\": \"$name\",
         \"image\": \"$image\",
@@ -46,11 +54,6 @@ kubectl -n "$ns" run -i --rm "$name" \
         \"resources\": {
           \"limits\":   {\"memory\": \"128Mi\"}
         }
-      }],
-      \"tolerations\": [{
-        \"key\": \"cf-platform-services\",
-        \"operator\": \"Exists\",
-        \"effect\": \"NoSchedule\"
       }]
     }
   }"

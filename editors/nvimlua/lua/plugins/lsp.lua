@@ -29,6 +29,7 @@ return {
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
   },
+-- :lua vim.print(vim.lsp.get_clients())
   config = function()
     vim.api.nvim_create_autocmd('LspAttach', {
       group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
@@ -227,7 +228,7 @@ return {
       --     },
       --   },
       -- },
-      pyright = {},
+      ty = {},
       ruff = {},
       rust_analyzer = {},
       sqlls = {},
@@ -240,6 +241,17 @@ return {
       -- tsserver = {},
       yamlls = {},
       zls = {}, -- Zig (provides completion + `zig fmt` formatting via LSP)
+      kotlin_language_server = {
+        settings = {
+          kotlin = {
+            compiler = {
+              jvm = {
+                target = "21",
+              },
+            },
+          },
+        },
+      },
     }
 
     -- Ensure the servers and tools above are installed
@@ -247,6 +259,7 @@ return {
     vim.list_extend(ensure_installed, {
       'stylua', -- Used to format Lua code
       'debugpy', -- Python DAP adapter, used by nvim-dap
+      'kotlin-debug-adapter',
       'checkmake',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }

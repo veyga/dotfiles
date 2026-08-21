@@ -19,7 +19,10 @@
       "Bash(terraform-ls --help)",
       "Read(//Users/andrewstefanich/.config/**)",
       "Read(//Users/andrewstefanich/**)",
-      "Bash(kubectl explain *)"
+      "Bash(kubectl explain *)",
+      "Bash(.venv/bin/ty --version)",
+      "Bash(.venv/bin/ty --help)",
+      "Bash(ty --help)"
     ]
   }
 }
