@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+  
+  
+current=$(git log -1 --format=%h)
+if [[ "${1:-}" != "-q" ]]; then
+  echo $current
+fi
+echo -n "${current}" | pbcopy

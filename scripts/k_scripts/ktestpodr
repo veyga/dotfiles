@@ -51,10 +51,12 @@ kubectl -n "$ns" run -i --rm "$name" \
         \"image\": \"$image\",
         \"command\": $cmd,
         $stdin_tty
+        \"securityContext\": {\"runAsNonRoot\": true, \"runAsUser\": 1000, \"allowPrivilegeEscalation\": false, \"capabilities\": {\"drop\": [\"ALL\"]}},
         \"resources\": {
           \"limits\":   {\"memory\": \"128Mi\"}
         }
-      }]
+      }],
+      \"securityContext\": {\"runAsNonRoot\": true, \"seccompProfile\": {\"type\": \"RuntimeDefault\"}}
     }
   }"
 

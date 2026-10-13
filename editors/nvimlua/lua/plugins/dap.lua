@@ -152,10 +152,15 @@ return {
       host = '127.0.0.1',
       port = 5686,
     }
+    dap.adapters.python_remote_5680_local = {
+      type = 'server',
+      host = '127.0.0.1',
+      port = 5680,
+    }
     dap.adapters.python_remote_6000 = {
       type = 'server',
       host = '127.0.0.1',
-      port = 5688,
+      port = 6000,
     }
     dap.configurations.python = {
       {
@@ -186,7 +191,7 @@ return {
         type = 'python_remote_5682',
         request = 'attach',
         name = 'Attach to debugpy (5682) - wrapper test',
-        justMyCode = true,
+        justMyCode = false,
         pathMappings = {
           {
             localRoot = vim.fn.getcwd(),
@@ -306,6 +311,18 @@ return {
         type = 'python_remote_5686_local',
         request = 'attach',
         name = 'Attach to debugpy cwd (5686) - e2e tests',
+        justMyCode = true,
+        pathMappings = {
+          {
+            localRoot = vim.fn.getcwd(),
+            remoteRoot = vim.fn.getcwd(),
+          },
+        },
+      },
+      {
+        type = 'python_remote_5680_local',
+        request = 'attach',
+        name = 'Attach to debugpy cwd (5680)',
         justMyCode = true,
         pathMappings = {
           {

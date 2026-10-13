@@ -260,6 +260,7 @@ return {
       'stylua', -- Used to format Lua code
       'debugpy', -- Python DAP adapter, used by nvim-dap
       'kotlin-debug-adapter',
+      'ktlint',
       'checkmake',
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
